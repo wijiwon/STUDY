@@ -1,0 +1,258 @@
+<!-- 과제 2 
+묵찌빠를 추가하자.
+초기자금(플레이어, 컴퓨터): 난이도 - 쉬움 (100,000원) / 어려움 (50,000원) / 매우어려움 (10,000원)
+종료조건: 플레이어 또는 컴퓨터가 소지금을 모두 소비했을 때
+배팅금액: 2~3000원 / 플레이어와 컴퓨터는 동일한 배팅금을 지닌다.
+지는 사람이 배팅 금액의 2~3배의 금액을 지불한다.
+컴퓨터와 플레이어는 생성자 함수로 객체를 만들어서 작업진행 -->
+
+<!-- 필요한 기능 -->
+<!-- 
+1. 생성자 함수로 플레이어, 컴퓨터 객체 생성
+    이름, 초기자금
+2. 난이도 생성
+    난이도에 따라 초기자금 설정
+3. 배팅금 설정
+4. 가위바위보 설정 및 진행
+    가위바위보와 묵찌빠의 진행을 나눠서 값을....
+5. 결과에 따른 배팅금 지불 및 추가
+    소지금에 적용이 되어야 한다.
+6. 최종 결과를 적용 - 플레이어나 컴퓨터의 소지금이 떨어질 때까지 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>묵찌빠</title>
+    <style>
+        .player-select,
+        .com-select {
+            width: 180px;
+            height: 154px;
+            background-image: url('https://sites.google.com/site/hafsrsp/_/rsrc/1468855017636/config/customLogo.gif?revision=2');
+            background-repeat: no-repeat;
+            border: 1px solid;
+            background-size: 440px;
+            background-position-x: 25px;
+        }
+
+        .rock {
+            background-position-x: 25px;
+        }
+
+        .paper {
+            background-position-x: -269px;
+        }
+
+        .scissors {
+            background-position-x: -122px;
+        }
+
+        .game-wrap {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <!--버튼 가위 바위 보-->
+    <div class="ground2">
+        <h2 class="sub">난이도를 선택하세요!</h2>
+
+        <button class="level-btn easy">쉬움</button>
+        <button class="level-btn hard">어려움</button>
+        <button class="level-btn veryhard">매우 어려움</button>
+    </div>
+    <div class="re">
+
+    </div>
+    <div class="game-wrap">
+        <!--player 선택한 이미지-->
+        <div class="player-select"></div>
+        <div class="com-select"></div>
+    </div>
+    <p>배팅금: <span class="batmoney"></span></p>
+    <h3>플레이어 소지금: <span class="Pmoney"></span></h3>
+    <h3>컴퓨터 소지금: <span class="Cmoney"></span></h3>
+    <h1 class="result">결과</h1>
+    <p class="subResult">내용</p>
+    <button class="player-btn">가위</button>
+    <button class="player-btn">보</button>
+    <button class="player-btn">바위</button>
+</body>
+<script>
+
+    let player = new game({ _name: "플레이어", _money: 0 });
+    let com = new game({ _name: "컴퓨터", _money: 0 });
+
+    function game({ _name, _money }) {
+        this.name = _name;
+        this.money = _money;
+    }
+    console.log(document.querySelectorAll(".level-btn")[0].textContent);
+
+    document.querySelectorAll(".level-btn").forEach(function (a, b, c) {
+        a.addEventListener('click', whatlevel);
+
+        // console.log(a);     
+        // /*결과: <button class="level-btn easy">쉬움</button>
+        //     <button class="level-btn hard">어려움</button>
+        //     <button class="level-btn veryhard">매우어려움</button>
+        // */
+        // console.log(b);
+        // /* 결과: 0, 1, 2
+        // */
+        // console.log(c);
+        // /* 결과: 
+        // NodeList(3) [button.level-btn.easy, button.level-btn.hard, button.level-btn.veryhard]
+        // 0: button.level-btn.easy
+        // 1: button.level-btn.hard
+        // 2: button.level-btn.veryhard
+        // length: 3
+        // */
+    })
+    let batting;
+    function whatlevel() {
+        console.log(this.textContent);
+        document.querySelector(".ground2").style.display = "none";
+        switch (this.textContent) {
+            case "쉬움":
+                player.money = 100000;
+                com.money = 100000;
+                // document.querySelector('.re').innerHTML = "난"
+                break;
+            case "어려움":
+                player.money = 50000;
+                com.money = 50000;
+                break;
+            case "매우 어려움":
+                player.money = 10000;
+                com.money = 10000;
+                break;
+        }
+        document.querySelector('.re').innerHTML = `${this.textContent}`;
+        console.log(player.money);
+        console.log(com.money);
+    }
+    // floor는 
+
+
+
+
+    //클래스의 이름으로 사용하고 결과에서도 사용할 가위 바위 보를 담은 문자열 배열을 만들자
+    let gameArr = ["scissors", "paper", "rock"];
+    //버튼들을 담아놓고
+    let playerBtns = document.querySelectorAll('.player-btn');
+    //player화면 선택한 결과를 보여줄 태그
+    let playerSelect = document.querySelector('.player-select')
+
+    //컴퓨터의 결과를 보여줄 태그
+
+
+
+    function init() {
+        batting = Math.floor(Math.random() * 1000 + 2001);
+        document.querySelector('.batmoney').innerHTML = `${batting}`;
+        gameArr.forEach(function (item, index) {
+            //"scissors", "paper", "rock" 순서대로 item에 담긴다.
+            //index = 0, 1, 2이 순서대로
+            //playerBtns[0], playerBtns[1], playerBtns[2]
+            //첫 번째 버튼, 두 번째 버튼, 세 번째 버튼
+            playerBtns[index].addEventListener('click', function () {
+
+                //player 화면 선택한 가위나 바위 보 이미지를 보여주는 태그
+                //클래스를 추가하되 player-select를 유지하고 새로운 클래스를 추가해주자.
+                if (player.money > 0 && com.money > 0) {
+                    playerSelect.className = "player-select " + item;
+                    //구조분해 할당으로 받고
+                    let { value, text } = gameStart(item);
+                    //결과
+                    document.querySelector('.result').innerHTML = value;
+                    //내용
+                    document.querySelector('.subResult').innerHTML = text;
+                }
+                else {
+                    window.location.reload();
+                    alert("게임 안돼");
+
+                }
+
+            })
+        })
+    }
+    init();
+
+    let value = 0;  //가위바위보와 묵찌빠를 결정해주는 변수
+    let winlose = 0;    //묵찌빠 결과를 결정하는 변수
+    function gameStart(play) {
+        document.querySelector('.Pmoney').innerHTML = `${player.money}`;
+        document.querySelector('.Cmoney').innerHTML = `${com.money}`;
+        //랜덤 값으로 gameArr베열 안에 가위, 바위, 보를 가져오자
+        let comSelect = gameArr[Math.floor(Math.random() * gameArr.length)];
+        document.querySelector('.com-select').className = 'com-select ' + comSelect;
+        //무승부 거르고 시작
+        if (play == comSelect) {
+            if (value == 0) {
+                return { value: "무승부", text: "다시하세요" };
+            }
+            else if (value == 1) {
+                if (winlose == 0) {
+                    player.money -= batting * 2;
+                    com.money += batting * 2;
+                    console.log(player.money);
+                    console.log(com.money);
+                    document.querySelector('.Pmoney').innerHTML = `${player.money}`;
+                    document.querySelector('.Cmoney').innerHTML = `${com.money}`;
+                    return { value: "최종패배", text: "배팅금을 잃습니다." };
+                }
+                else if (winlose == 1) {
+                    player.money += batting * 2;
+                    com.money -= batting * 2;
+                    console.log(player.money);
+                    console.log(com.money);
+                    document.querySelector('.Pmoney').innerHTML = `${player.money}`;
+                    document.querySelector('.Cmoney').innerHTML = `${com.money}`;
+                    return { value: "최종승리", text: "배팅금을 얻습니다." };
+                }
+            }
+        }
+        //&&: 둘 다 true일 때
+        //||: 둘 중 하나가 true일 때
+        else if (play == "rock" && comSelect == "scissors" ||
+            play == "paper" && comSelect == "rock" ||
+            play == "scissors" && comSelect == "paper") {
+            //여기서 이기는 조건을 만들어보자
+            if (value == 0) {
+                value = 1;  //묵찌빠 이동
+                winlose = 1;
+                return { value: "승리", text: "플레이어 주도권" };
+            }
+            else if (value == 1) {
+                winlose = 1;
+                return { value: "승리", text: "플레이어 주도권." };
+
+            }
+
+        }
+
+        else {
+            if (value == 0) {
+                winlose = 0;
+                value = 1;
+                return { value: "패배", text: "컴퓨터 주도권." };
+
+            }
+            else if (value == 1) {
+                winlose = 0;
+                return { value: "패배", text: "컴퓨터 주도권." };
+            }
+        }
+        //함수 실행하면 반환값이 객체다...
+    }
+</script>
+
+</html>

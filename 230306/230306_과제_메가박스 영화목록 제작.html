@@ -1,0 +1,1491 @@
+<!--메가 박스 전체 영화 페이지 따라하기
+    tep 만들기 (탭 마다 영화 12개씩 노출)
+    영화명 검색창 작성-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>메가 박스 전체영화</title>
+        <link rel="stylesheet" href="./230306_과제_메가박스 영화목록 제작.css">
+    </head>
+    <body>
+            <div class="tab_menu">
+                <input class="b.o" type="radio" id="b.o" name="tabmenu" checked>
+                <label for="b.o">박스오피스</label>
+                
+                <input class="s.y" type="radio" id="s.y" name="tabmenu">
+                <label for="s.y">상영예정작</label>
+    
+                <input class="t.s" type="radio" id="t.s" name="tabmenu">
+                <label for="t.s">특별상영</label>
+    
+                <input class="f.s" type="radio" id="f.s" name="tabmenu">
+                <label for="f.s">필름소아이어티</label>
+    
+                <input class="c.s" type="radio" id="c.s" name="tabmenu">
+                <label for="c.s">클래식소사이어티</label>
+            
+                <div class="search">
+                    <input type="text" id="search">
+            </div>
+                <!--박스오피스-->
+                <div class="box movies1">
+
+                    <div class="movies">
+
+                        <div class="movie01">
+                            
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/06/7gFJhWRalgHSihiVTu9oOoKRXxMH5mKe_420.jpg" alt="스즈메의 문단속 포스터">
+                                <div class="hov">규슈의 한적한 마을에 살고 있는 소녀 ‘스즈메’는
+                                    문을 찾아 여행 중인 청년 ‘소타’를 만난다.
+                                    
+                                그의 뒤를 쫓아 산속 폐허에서 발견한 낡은 문.
+                                ‘스즈메’가 무언가에 이끌리듯 문을 열자 마을에 재난의 위기가 닥쳐오고
+                                가문 대대로 문 너머의 재난을 봉인하는 ‘소타’를 도와 간신히 문을 닫는다.
+                                </div>
+                                <p>1</p>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">스즈메의 문단속</p>
+                            <p class="sub">예매율 46.2% <span> </span> 개봉일 2023.03.08</p>
+                            <button class="like">♡ 3.3k</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                    
+                        <div class="movie02">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/whzCk46ejtIoWU1eavvF9lJ8rC2Wbvf7_420.jpg" alt="슬램덩크 포스터">
+                                <div class="hov">전국 제패를 꿈꾸는 북산고 농구부 5인방의 꿈과 열정, 멈추지 않는 도전을 그린 영화</div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">더 퍼스트 슬램덩크</p>
+                            <p class="sub">예매율 11.4% <span> </span> 개봉일 2023.01.04</p>
+                            <button class="like">♡ 4k</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                    
+                        <div class="movie03">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/28/iveXQFGytM222BMdayVvR3GB7PbPR1ts_420.jpg" alt="[LIVE] 2023 WBC 한국 VS 일본 포스터">
+                                <div class="hov">1. 상영 안내
+                                    - 일시: 3월 10일 금요일 19:00
+                                    - 러닝타임: 4시간 (당일 실제 경기시간에 따라 변동가능)
+
+                                    2. 예매 안내
+                                    - 가격: 20,000원
+                                    - 티켓 예매오픈: 2023년 3월 3일(금) 12:00~
+                                    - 구매처: 메가박스 홈페이지, 모바일 어플 및 현장
+                                    - 당일 환불 불가 (3/10(금) 중계는 3/9(목) 24:00까지 환불 가능)
+                                    * 본 라이브중계의 경우, 일반 영화와 동일한 방식으로 예매가 진행됩니다. 상영작을 선택하신 후 예매를 진행해주시기 바랍니다.
+                                    * 본 상영은 이벤트 상영인 관계로 결제 시 제휴, 할인카드 적용이 불가합니다.
+                                    * 티켓의 높은 가격의 재판매 및 암표 판매 등은 엄격히 제한하고 있으며, 정가 이상의 티켓판매로 피해고객의 클레임이 당사로 신고·접수될 경우 해당 티켓 구매 고객의 관람 및 홈페이지 이용에 제한이 따를 수 있습니다.
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">[LIVE]2023 WBC 한국VS일본</p>
+                            <p class="sub">예매율 8.5% <span> </span> 개봉일 2023.03.10</p>
+                            <button class="like">♡ 280</button>
+                            <button class="order_2">예매</button>
+                        </div>
+
+                        <div class="movie04">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/15/IpTaEfgzehL3kJd6JEhxRLCpQz0TKIjl_420.jpg" alt="똑똑똑 포스터">
+                                <div class="hov">똑똑똑, 휴가를 즐기는 가족에게 찾아온 선택의 그림자
+                                    휴가를 떠난 한 가족은 별장에 무단침입한 낯선 방문자들과 대치하게 된다.
+
+                                    ‘레너드’(데이브 바티스타)와 낯선 방문자들은 세상의 종말을 막으러 왔다며,
+                                    가족 중 한 명을 희생시켜야만 인류의 멸망을 막을 수 있다는 잔혹한 선택을 하게 하는데…
+
+                                    가족을 살리면 인류가 멸망하고, 인류를 살리면 가족이 죽는다!
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">똑똑똑</p>
+                            <p class="sub">예매율 6.3% <span> </span> 개봉일 2023.03.08</p>
+                            <button class="like">♡ 203</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                
+                        <div class="movie05">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/75Ix2G0OqnRlPeFnJGwsFIpTSZK2vXaK_420.jpg" alt="대외비 포스터">
+                                <div class="hov">“몰랐나? 원래 세상은 더럽고, 인생은 서럽다.”
+                                    1992년 부산, 밑바닥 정치 인생을 끝내고 싶은 만년 국회의원 후보 ‘해웅’.
+                                    ‘해웅’은 이번 선거에서만큼은 금뱃지를 달 것이라 확신했지만,
+                                    정치판을 뒤흔드는 권력 실세 ‘순태’에게 버림받으며 지역구 공천에서 탈락한다.
+
+                                    “누가 센 지는 손에 뭘 쥐고 있는가 보라 안 했습니까?”
+                                    ‘순태’에 의해 짜여진 선거판을 뒤집기 위해 부산 지역 재개발 계획이 담긴 대외비 문서를 입수한 ‘해웅’.
+                                    행동파 조폭 ‘필도’를 통해 선거 자금까지 마련한 ‘해웅’은 무소속으로 선거판에 뛰어들어 승승장구한다.
+                                    ‘순태’ 역시 ‘해웅’이 가진 대외비 문서의 존재를 알게 되고, 점차 ‘해웅’의 숨통을 조여오는데…
+
+                                    대한민국을 뒤집을 비밀 문서,
+                                    이 판을 뒤집는 놈이 대한민국을 뒤집는다!
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">대외비</p>
+                            <p class="sub">예매율 4.8% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 386</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>     
+                        </div>
+                        
+                        <div class="movie06">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/20/EQoaQIsVW7Ygf1ZKkoAUG0Eppbdumyg5_420.jpg" alt="소울메이트 포스터">
+                                <div class="hov">“날도 더웠고 수업도 지루했고.. 그렇게 졸리고 나른하던 날에 너를 처음 만났어”
+                                    1998년, 처음 만났다
+                                    
+                                    “누굴 좋아하면 용기내야 된대”
+                                    2004년, 첫사랑이 생겼다
+                                    
+                                    “몰랐어? 나 원래 이렇게 살아”
+                                    2010년, 각자 어른이 되어간다
+                                    
+                                    “가장 그리운 건…너였어”
+                                    2014년, 흔적을 따라간다
+                                    
+                                    “이젠 니 얼굴을 그리고 싶어. 사랑없인 그릴 수조차 없는 그림 말이야”
+                                    지금, 그리움을 그리다
+                                    
+                                    2023년 3월 15일, 당신의 <소울메이트>가 찾아옵니다.
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">소울메이트</p>
+                            <p class="sub">예매율 4.6% <span> </span> 개봉일 2023.03.15</p>
+                            <button class="like">♡ 314</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie07">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/02/UmgxlJgwWqM6ueiP32rhQhr2Cpq2GA5P_420.jpg" alt="서치2 포스터">
+                                <div class="hov">여행을 끝내고 월요일 귀국을 알린 엄마의 영상통화
+                                    그리고 마중 나간 딸
+                                    그러나 엄마가 사라졌다
+                                    
+                                    경찰에 도움을 요청하지만, 결정적인 단서들이 나오지 않는 가운데
+                                    딸 ‘준’은 엄마의 흔적을 찾기 위해
+                                    엄마가 방문한 호텔의 CCTV, 같이 간 지인의 SNS,
+                                    거리뷰 지도까지 온라인에 남아있는 모든 흔적을 검색하는데…
+                                    
+                                    이번에는 딸이 사라진 엄마의 흔적을 검색하다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">서치 2</p>
+                            <p class="sub">예매율 1.8% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 708</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie08">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/28/EbmyhBe0qF97CySaA1RHQE77oTY9iXnS_420.jpg" alt="[live] 2023 wbc 한국vs중국 포스터">
+                                <div class="hov">1. 상영 안내
+                                    - 일시: 3월 13일 월요일 19:00
+                                    - 러닝타임: 4시간 (당일 실제 경기시간에 따라 변동가능
+                                    2. 예매 안내
+                                    - 가격: 20,000원
+                                    - 티켓 예매오픈: 2023년 3월 3일(금) 12:00~
+                                    - 구매처: 메가박스 홈페이지, 모바일 어플 및 현장
+                                    - 당일 환불 불가 (3/13(월) 중계는 3/12(일) 24:00까지 환불 가능)
+                                    * 본 라이브중계의 경우, 일반 영화와 동일한 방식으로 예매가 진행됩니다. 상영작을 선택하신 후 예매를 진행해주시기 바랍니다.
+                                    * 본 상영은 이벤트 상영인 관계로 결제 시 제휴, 할인카드 적용이 불가합니다.
+                                    * 티켓의 높은 가격의 재판매 및 암표 판매 등은 엄격히 제한하고 있으며, 정가 이상의 티켓판매로 피해고객의 클레임이 당사로 신고·접수될 경우 해당 티켓 구매 고객의 관람 및 홈페이지 이용에 제한이 따를 수 있습니다.
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">[LIVE]2023 WBC 한국VS중국</p>
+                            <p class="sub">예매율 1.6% <span> </span> 개봉일 2023.03.13</p>
+                            <button class="like">♡ 52</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie09">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/DisAMP8RHmWtMPLRamfLXx4CiXdstLar_420.jpg" alt="카운트 포스터">
+                                <div class="hov">마이웨이, 오직 직진!
+                                    한번 물면 절대 놓지 않는 킹받는 美친 개가 온다!
+
+                                    1988년 올림픽 금메달리스트지만
+                                    1998년 지금은 평범한 고등학교 선생인 ‘시헌’(진선규).
+                                    선수 생활 은퇴 후 남은 건 고집뿐,
+                                    모두를 킹받게 하는 마이웨이 행보로 주변 사람들의 속을 썩인다.
+
+                                    그러던 어느 날, 우연히 참석한 대회에서 뛰어난 실력에도 불구하고
+                                    승부 조작으로 기권패를 당한 ‘윤우’(성유빈)를 알게 된 ‘시헌’은
+                                    복싱부를 만들기로 결심한다.
+
+                                    아내 ‘일선’(오나라)의 열렬한 반대와, ‘교장’(고창석)의 끈질긴 만류도 무시한 채,
+                                    ‘시헌’은 독기만 남은 유망주 ‘윤우’와
+                                    영문도 모른 채 레이더망에 걸린 ‘환주’(장동주), ‘복안’(김민호)을 데리고
+                                    본격적인 훈련에 돌입하기 시작하는데...!
+
+                                    쓰리, 투, 원! 2023년 새해, 긍정 파워 풀충전!
+                                    그들만의 가장 유쾌한 카운트가 시작된다
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">카운트</p>
+                            <p class="sub">예매율 1.4% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 359</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie10">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/iwYo6P5BgvBAcjRaQPTAYXnI2oyBqGri_420.jpg" alt="멍뭉이 포스터">
+                                <div class="hov">"'루니'의 새 집사를 찾아라!"
+                                    동생 같은 반려견 ‘루니’를 위해 정시 퇴근에 진심인 ‘민수’
+                                    결혼을 앞둔 그에게 닥친 집사 인생 조기 로그아웃 위기!
+                                    
+                                    야심 차게 오픈한 카페는 말아먹고 인생 자체가 위기인 사촌형 '진국',
+                                    '민수'의 다급한 SOS에 고심하다 새 집사 면접을 제안하게 되고.
+                                    
+                                    완벽한 집사를 찾기 위해 제주도로 향하는 두 형제의 여정에
+                                    느닷없는 멍뭉이들의 등장이 이어지는데!
+                                    
+                                    뜻밖의 ‘견’명적인 만남
+                                    함께 하면 개신나고! 개따뜻한!
+                                    개귀엽 버라이어티 무비!
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">멍뭉이</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 367</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie11">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/16/BhL0pfLDURletyEhaeipllTO4hMKnr2v_420.jpg" alt="앤트맨과 와스프 포스터">
+                                <div class="hov">슈퍼히어로 파트너인 '스캇 랭'(폴 러드)과 '호프 반 다인'(에반젤린 릴리),
+                                    호프의 부모 '재닛 반 다인'(미셸 파이퍼)과 '행크 핌'(마이클 더글라스),
+                                    그리고 스캇의 딸 '캐시 랭'(캐서린 뉴튼)까지
+                                    미지의 ‘양자 영역’ 세계 속에 빠져버린 ‘앤트맨 패밀리’.
+                                    
+                                    그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 '캉'을 만나며,
+                                    그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…
+                                    
+                                    2023년 첫 번째 마블 블록버스터
+                                    2월, 무한한 우주의 정복자가 깨어난다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">앤트맨과 와스프:퀀텀매니아</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.02.15</p>
+                            <button class="like">♡ 1.8k</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie12">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/14/LFLBj2FZIKanUyQOXSo3fxoaIewT7vRd_420.jpg" alt="탑건 매버릭 포스터">
+                                <div class="hov">한순간의 실수도 용납되지 않는 하늘 위, 가장 압도적인 비행이 시작된다!
+                                    
+                                    최고의 파일럿이자 전설적인 인물 매버릭(톰 크루즈)은 자신이 졸업한 훈련학교 교관으로 발탁된다.
+                                    그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만
+                                    실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다.
+                                    
+                                    매버릭의 지휘 아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자
+                                    매버릭은 자신이 가르친 동료들과 함께 마지막이 될지 모를 하늘 위 비행에 나서는데…
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[아카데미]탑건:매버릭</p>
+                            <p class="sub">예매율 1.2% <span> </span> 개봉일 2023.02.24</p>
+                            <button class="like">♡ 294</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--상영예정작-->
+                <div class="box movies2">
+
+                    <div class="movies">
+
+                        <div class="movie01">
+                            
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/15/eKTfDUGc68zMcdBleYw4g1NNFk1TMUyR_420.jpg" alt="[오페라] 메데아 @The Met2023">
+                                <div class="hov">가장 드라마틱한 가창력을 지닌 라드바노프스키의 격정적인 메데아!
+                                    배신한 남편에게 확실하고 치명적인 복수를 계획해 충격과 전율을 일으킨다.
+                                    그러나 유려한 아름다움으로 공감을 불러일으키는 케루비니 음악의 힘!
+                                    
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[오페라] 메데아 @The Met2023</p>
+                            <p class="sub">예매율 0.5% <span> </span> 개봉일 2023.03.07</p>
+                            <button class="like">♡ 103</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie02">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/06/7gFJhWRalgHSihiVTu9oOoKRXxMH5mKe_420.jpg" alt="스즈메의 문단속 포스터">
+                                <div class="hov">“이 근처에 폐허 없니? 문을 찾고 있어”
+                                    규슈의 한적한 마을에 살고 있는 소녀 ‘스즈메’는
+                                    문을 찾아 여행 중인 청년 ‘소타’를 만난다.
+                                    
+                                    그의 뒤를 쫓아 산속 폐허에서 발견한 낡은 문.
+                                    ‘스즈메’가 무언가에 이끌리듯 문을 열자 마을에 재난의 위기가 닥쳐오고
+                                    가문 대대로 문 너머의 재난을 봉인하는 ‘소타’를 도와 간신히 문을 닫는다.
+                                    
+                                    “닫아야만 하잖아요, 여기를!”
+                                    재난을 막았다는 안도감도 잠시,
+                                    수수께끼의 고양이 ‘다이진’이 나타나 ‘소타’를 의자로 바꿔 버리고
+                                    일본 각지의 폐허에 재난을 부르는 문이 열리기 시작하자
+                                    ‘스즈메’는 의자가 된 ‘소타’와 함께 재난을 막기 위한 여정에 나선다.
+                                    
+                                    “꿈이 아니었어”
+                                    규슈, 시코쿠, 고베, 도쿄
+                                    재난을 막기 위해 일본 전역을 돌며 필사적으로 문을 닫아가던 중
+                                    어릴 적 고향에 닿은 ‘스즈메’는 잊고 있던 진실과 마주하게 되는데…</div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">스즈메의 문단속/p>
+                            <p class="sub">예매율 46.6% <span> </span> 개봉일 2023.03.08</p>
+                            <button class="like">♡ 3.3k</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                    
+                        <div class="movie03">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/15/IpTaEfgzehL3kJd6JEhxRLCpQz0TKIjl_420.jpg" alt="똑똑똑 포스터">
+                                <div class="hov">똑똑똑, 휴가를 즐기는 가족에게 찾아온 선택의 그림자
+                                    휴가를 떠난 한 가족은 별장에 무단침입한 낯선 방문자들과 대치하게 된다.
+
+                                    ‘레너드’(데이브 바티스타)와 낯선 방문자들은 세상의 종말을 막으러 왔다며,
+                                    가족 중 한 명을 희생시켜야만 인류의 멸망을 막을 수 있다는 잔혹한 선택을 하게 하는데…
+
+                                    가족을 살리면 인류가 멸망하고, 인류를 살리면 가족이 죽는다!
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">똑똑똑</p>
+                            <p class="sub">예매율 6.3% <span> </span> 개봉일 2023.03.08</p>
+                            <button class="like">♡ 203</button>
+                            <button class="order_2">예매</button>
+                        </div>
+
+                        <div class="movie04">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/17/4CmBMFC2U4oD60XpjGAbEJDYWr8SvW6a_420.jpg" alt="6번칸 포스터">
+                                <div class="hov">고대 암각화를 보러 가기 위해 여행을 떠나는 핀란드 유학생 여자
+                                    무르만스크 행 기차 ‘6번 칸’에서 만난 낯설고 무례한 남자
+                                    거리를 두려는 여자 ----------- 가까워 지려는 남자
+                                    목적지에 다다를수록 두 사람의 관계는 미묘한 변화를 겪게 되고…
+                                    이 여행의 끝에 불완전한 그들은 어떻게 될까?
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">6번 칸</p>
+                            <p class="sub">예매율 0.4% <span> </span> 개봉일 2023.03.08</p>
+                            <button class="like">♡ 125</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                
+                        <div class="movie05">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/75Ix2G0OqnRlPeFnJGwsFIpTSZK2vXaK_420.jpg" alt="대외비 포스터">
+                                <div class="hov">“몰랐나? 원래 세상은 더럽고, 인생은 서럽다.”
+                                    1992년 부산, 밑바닥 정치 인생을 끝내고 싶은 만년 국회의원 후보 ‘해웅’.
+                                    ‘해웅’은 이번 선거에서만큼은 금뱃지를 달 것이라 확신했지만,
+                                    정치판을 뒤흔드는 권력 실세 ‘순태’에게 버림받으며 지역구 공천에서 탈락한다.
+
+                                    “누가 센 지는 손에 뭘 쥐고 있는가 보라 안 했습니까?”
+                                    ‘순태’에 의해 짜여진 선거판을 뒤집기 위해 부산 지역 재개발 계획이 담긴 대외비 문서를 입수한 ‘해웅’.
+                                    행동파 조폭 ‘필도’를 통해 선거 자금까지 마련한 ‘해웅’은 무소속으로 선거판에 뛰어들어 승승장구한다.
+                                    ‘순태’ 역시 ‘해웅’이 가진 대외비 문서의 존재를 알게 되고, 점차 ‘해웅’의 숨통을 조여오는데…
+
+                                    대한민국을 뒤집을 비밀 문서,
+                                    이 판을 뒤집는 놈이 대한민국을 뒤집는다!
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">대외비</p>
+                            <p class="sub">예매율 4.8% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 386</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>     
+                        </div>
+                        
+                        <div class="movie06">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/20/EQoaQIsVW7Ygf1ZKkoAUG0Eppbdumyg5_420.jpg" alt="소울메이트 포스터">
+                                <div class="hov">“날도 더웠고 수업도 지루했고.. 그렇게 졸리고 나른하던 날에 너를 처음 만났어”
+                                    1998년, 처음 만났다
+                                    
+                                    “누굴 좋아하면 용기내야 된대”
+                                    2004년, 첫사랑이 생겼다
+                                    
+                                    “몰랐어? 나 원래 이렇게 살아”
+                                    2010년, 각자 어른이 되어간다
+                                    
+                                    “가장 그리운 건…너였어”
+                                    2014년, 흔적을 따라간다
+                                    
+                                    “이젠 니 얼굴을 그리고 싶어. 사랑없인 그릴 수조차 없는 그림 말이야”
+                                    지금, 그리움을 그리다
+                                    
+                                    2023년 3월 15일, 당신의 <소울메이트>가 찾아옵니다.
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">소울메이트</p>
+                            <p class="sub">예매율 4.6% <span> </span> 개봉일 2023.03.15</p>
+                            <button class="like">♡ 314</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie07">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/02/UmgxlJgwWqM6ueiP32rhQhr2Cpq2GA5P_420.jpg" alt="서치2 포스터">
+                                <div class="hov">여행을 끝내고 월요일 귀국을 알린 엄마의 영상통화
+                                    그리고 마중 나간 딸
+                                    그러나 엄마가 사라졌다
+                                    
+                                    경찰에 도움을 요청하지만, 결정적인 단서들이 나오지 않는 가운데
+                                    딸 ‘준’은 엄마의 흔적을 찾기 위해
+                                    엄마가 방문한 호텔의 CCTV, 같이 간 지인의 SNS,
+                                    거리뷰 지도까지 온라인에 남아있는 모든 흔적을 검색하는데…
+                                    
+                                    이번에는 딸이 사라진 엄마의 흔적을 검색하다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">서치 2</p>
+                            <p class="sub">예매율 1.8% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 708</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie08">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/28/EbmyhBe0qF97CySaA1RHQE77oTY9iXnS_420.jpg" alt="[live] 2023 wbc 한국vs중국 포스터">
+                                <div class="hov">1. 상영 안내
+                                    - 일시: 3월 13일 월요일 19:00
+                                    - 러닝타임: 4시간 (당일 실제 경기시간에 따라 변동가능
+                                    2. 예매 안내
+                                    - 가격: 20,000원
+                                    - 티켓 예매오픈: 2023년 3월 3일(금) 12:00~
+                                    - 구매처: 메가박스 홈페이지, 모바일 어플 및 현장
+                                    - 당일 환불 불가 (3/13(월) 중계는 3/12(일) 24:00까지 환불 가능)
+                                    * 본 라이브중계의 경우, 일반 영화와 동일한 방식으로 예매가 진행됩니다. 상영작을 선택하신 후 예매를 진행해주시기 바랍니다.
+                                    * 본 상영은 이벤트 상영인 관계로 결제 시 제휴, 할인카드 적용이 불가합니다.
+                                    * 티켓의 높은 가격의 재판매 및 암표 판매 등은 엄격히 제한하고 있으며, 정가 이상의 티켓판매로 피해고객의 클레임이 당사로 신고·접수될 경우 해당 티켓 구매 고객의 관람 및 홈페이지 이용에 제한이 따를 수 있습니다.
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">[LIVE]2023 WBC 한국VS중국</p>
+                            <p class="sub">예매율 1.6% <span> </span> 개봉일 2023.03.13</p>
+                            <button class="like">♡ 52</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie09">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/DisAMP8RHmWtMPLRamfLXx4CiXdstLar_420.jpg" alt="카운트 포스터">
+                                <div class="hov">마이웨이, 오직 직진!
+                                    한번 물면 절대 놓지 않는 킹받는 美친 개가 온다!
+
+                                    1988년 올림픽 금메달리스트지만
+                                    1998년 지금은 평범한 고등학교 선생인 ‘시헌’(진선규).
+                                    선수 생활 은퇴 후 남은 건 고집뿐,
+                                    모두를 킹받게 하는 마이웨이 행보로 주변 사람들의 속을 썩인다.
+
+                                    그러던 어느 날, 우연히 참석한 대회에서 뛰어난 실력에도 불구하고
+                                    승부 조작으로 기권패를 당한 ‘윤우’(성유빈)를 알게 된 ‘시헌’은
+                                    복싱부를 만들기로 결심한다.
+
+                                    아내 ‘일선’(오나라)의 열렬한 반대와, ‘교장’(고창석)의 끈질긴 만류도 무시한 채,
+                                    ‘시헌’은 독기만 남은 유망주 ‘윤우’와
+                                    영문도 모른 채 레이더망에 걸린 ‘환주’(장동주), ‘복안’(김민호)을 데리고
+                                    본격적인 훈련에 돌입하기 시작하는데...!
+
+                                    쓰리, 투, 원! 2023년 새해, 긍정 파워 풀충전!
+                                    그들만의 가장 유쾌한 카운트가 시작된다
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">카운트</p>
+                            <p class="sub">예매율 1.4% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 359</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie10">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/iwYo6P5BgvBAcjRaQPTAYXnI2oyBqGri_420.jpg" alt="멍뭉이 포스터">
+                                <div class="hov">"'루니'의 새 집사를 찾아라!"
+                                    동생 같은 반려견 ‘루니’를 위해 정시 퇴근에 진심인 ‘민수’
+                                    결혼을 앞둔 그에게 닥친 집사 인생 조기 로그아웃 위기!
+                                    
+                                    야심 차게 오픈한 카페는 말아먹고 인생 자체가 위기인 사촌형 '진국',
+                                    '민수'의 다급한 SOS에 고심하다 새 집사 면접을 제안하게 되고.
+                                    
+                                    완벽한 집사를 찾기 위해 제주도로 향하는 두 형제의 여정에
+                                    느닷없는 멍뭉이들의 등장이 이어지는데!
+                                    
+                                    뜻밖의 ‘견’명적인 만남
+                                    함께 하면 개신나고! 개따뜻한!
+                                    개귀엽 버라이어티 무비!
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">멍뭉이</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 367</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie11">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/16/BhL0pfLDURletyEhaeipllTO4hMKnr2v_420.jpg" alt="앤트맨과 와스프 포스터">
+                                <div class="hov">슈퍼히어로 파트너인 '스캇 랭'(폴 러드)과 '호프 반 다인'(에반젤린 릴리),
+                                    호프의 부모 '재닛 반 다인'(미셸 파이퍼)과 '행크 핌'(마이클 더글라스),
+                                    그리고 스캇의 딸 '캐시 랭'(캐서린 뉴튼)까지
+                                    미지의 ‘양자 영역’ 세계 속에 빠져버린 ‘앤트맨 패밀리’.
+                                    
+                                    그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 '캉'을 만나며,
+                                    그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…
+                                    
+                                    2023년 첫 번째 마블 블록버스터
+                                    2월, 무한한 우주의 정복자가 깨어난다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">앤트맨과 와스프:퀀텀매니아</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.02.15</p>
+                            <button class="like">♡ 1.8k</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie12">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/14/LFLBj2FZIKanUyQOXSo3fxoaIewT7vRd_420.jpg" alt="탑건 매버릭 포스터">
+                                <div class="hov">한순간의 실수도 용납되지 않는 하늘 위, 가장 압도적인 비행이 시작된다!
+                                    
+                                    최고의 파일럿이자 전설적인 인물 매버릭(톰 크루즈)은 자신이 졸업한 훈련학교 교관으로 발탁된다.
+                                    그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만
+                                    실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다.
+                                    
+                                    매버릭의 지휘 아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자
+                                    매버릭은 자신이 가르친 동료들과 함께 마지막이 될지 모를 하늘 위 비행에 나서는데…
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[아카데미]탑건:매버릭</p>
+                            <p class="sub">예매율 1.2% <span> </span> 개봉일 2023.02.24</p>
+                            <button class="like">♡ 294</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--특별상영-->
+                <div class="box movies3">
+
+                    <div class="movies">
+
+                        <div class="movie01">
+                            
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/07/NLUFEXoXr1YZtcgZ2YhVnhc4CYDvRvVm_420.jpg" alt="[시네마캐슬] 날씨의 아이 포스터">
+                                <div class="hov">“이제 비는 그치고, 우리의 세상이 빛나기 시작할 거야”
+
+                                    비가 그치지 않던 어느 여름날,
+                                    가출 소년 ‘호다카’는 수상한 잡지사에 취직하게 되고
+                                    비밀스러운 소녀 ‘히나’를 우연히 만난다.
+                                    
+                                    “지금부터 하늘이 맑아질 거야”
+                                    
+                                    그녀의 기도에 거짓말 같이 빗줄기는 멈추고,
+                                    사람들의 얼굴에 환한 빛이 내려온다.
+                                    
+                                    “신기해, 날씨 하나에 사람들의 감정이 이렇게나 움직이다니”
+                                    
+                                    하지만, 맑음 뒤 흐림이 찾아오듯
+                                    두 사람은 엄청난 세계의 비밀을 마주하게 되는데…
+                                    
+                                    흐리기만 했던 세상이 빛나기 시작했고, 그 끝에는 네가 있었다.
+                                    
+                                    
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">[시네마캐슬] 날씨의 아이</p>
+                            <p class="sub">예매율 0% <span> </span> 개봉일 2022.10.01</p>
+                            <button class="like">♡ 177</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie02">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/07/uSfaSL4ux0vi8fhPj8Cw1XRQ7yLqexfd_420.jpg" alt="[시네마캐슬] 너의 이름은. 포스터">
+                                <div class="hov">아직 만난 적 없는 너를, 찾고 있어
+
+                                    천년 만에 다가오는 혜성
+                                    기적이 시작된다
+                                    
+                                    도쿄에 사는 소년 ‘타키’와 시골에 사는 소녀 ‘미츠하’는
+                                    서로의 몸이 뒤바뀌는 신기한 꿈을 꾼다
+                                    낯선 가족, 낯선 친구들, 낯선 풍경들...
+                                    반복되는 꿈과 흘러가는 시간 속, 마침내 깨닫는다
+                                    우리, 서로 뒤바뀐 거야?
+                                    
+                                    절대 만날 리 없는 두 사람
+                                    반드시 만나야 하는 운명이 되다
+                                    
+                                    서로에게 남긴 메모를 확인하며
+                                    점점 친구가 되어가는 ‘타키’와 ‘미츠하’
+                                    언제부턴가 더 이상 몸이 바뀌지 않자
+                                    자신들이 특별하게 이어져있었음을 깨달은
+                                    ‘타키’는 ‘미츠하’를 만나러 가는데...
+                                    
+                                    잊고 싶지 않은 사람
+                                    잊으면 안 되는 사람
+                                    너의 이름은?</div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[시네마캐슬] 언어의 정원</p>
+                            <p class="sub">예매율 46.6% <span> </span> 개봉일 2023.03.08</p>
+                            <button class="like">♡ 3.3k</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                    
+                        <div class="movie03">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/01/30/CqrUfjU30vyD3fAsIlebHvONboFXrupp_420.jpg" alt="언어의 정원 포스터">
+                                <div class="hov">구두 디자이너를 꿈꾸는 고등학생 ‘다카오’는
+                                    비가 오는 날이면 도심의 정원으로 구두를 스케치하러 간다.
+                                    
+                                    어느 날 그는 우연히 ‘유키노’라는 여인과 정원에서 만나게 되고,
+                                    예상치 못한 만남은 비가 오는 날이면 계속 이어진다.
+                                    
+                                    그리고 비록 이름조차 모르지만 걷는 법을 잊어버린 그녀를 위해
+                                    ‘다카오’는 구두를 만들어 주기로 결심한다.
+                                    
+                                    그러나 장마가 끝나갈 무렵, 그들 사이에는
+                                    뭔가 말하지 못한 것들이 남아 있는 듯한데…
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[시네마캐슬] 언어의 정원</p>
+                            <p class="sub">예매율 0% <span> </span> 개봉일 2023.02.23</p>
+                            <button class="like">♡ 62</button>
+                            <button class="order_2">예매</button>
+                        </div>
+
+                        <div class="movie04">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/27/E8qRSNFl9CW5d86dhVJmKoKHuLlxmbxU_420.jpg" alt="궁지 쥐 포스터">
+                                <div class="hov">고대 암각화를 보러 가기 위해 여행을 떠나는 핀란드 유학생 여자
+                                    무르만스크 행 기차 ‘6번 칸’에서 만난 낯설고 무례한 남자
+                                    거리를 두려는 여자 ----------- 가까워 지려는 남자
+                                    목적지에 다다를수록 두 사람의 관계는 미묘한 변화를 겪게 되고…
+                                    이 여행의 끝에 불완전한 그들은 어떻게 될까?
+                                </div>
+                            </div>
+                            <p class="age_18">18</p>
+                            <p class="title">[시네마캐슬] 궁지에 몰린 쥐는 치즈 꿈을 꾼다</p>
+                            <p class="sub">예매율 0% <span> </span> 개봉일 2023.02.08</p>
+                            <button class="like">♡ 3</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                
+                        <div class="movie05">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/75Ix2G0OqnRlPeFnJGwsFIpTSZK2vXaK_420.jpg" alt="대외비 포스터">
+                                <div class="hov">“몰랐나? 원래 세상은 더럽고, 인생은 서럽다.”
+                                    1992년 부산, 밑바닥 정치 인생을 끝내고 싶은 만년 국회의원 후보 ‘해웅’.
+                                    ‘해웅’은 이번 선거에서만큼은 금뱃지를 달 것이라 확신했지만,
+                                    정치판을 뒤흔드는 권력 실세 ‘순태’에게 버림받으며 지역구 공천에서 탈락한다.
+
+                                    “누가 센 지는 손에 뭘 쥐고 있는가 보라 안 했습니까?”
+                                    ‘순태’에 의해 짜여진 선거판을 뒤집기 위해 부산 지역 재개발 계획이 담긴 대외비 문서를 입수한 ‘해웅’.
+                                    행동파 조폭 ‘필도’를 통해 선거 자금까지 마련한 ‘해웅’은 무소속으로 선거판에 뛰어들어 승승장구한다.
+                                    ‘순태’ 역시 ‘해웅’이 가진 대외비 문서의 존재를 알게 되고, 점차 ‘해웅’의 숨통을 조여오는데…
+
+                                    대한민국을 뒤집을 비밀 문서,
+                                    이 판을 뒤집는 놈이 대한민국을 뒤집는다!
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">대외비</p>
+                            <p class="sub">예매율 4.8% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 386</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>     
+                        </div>
+                        
+                        <div class="movie06">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/20/EQoaQIsVW7Ygf1ZKkoAUG0Eppbdumyg5_420.jpg" alt="소울메이트 포스터">
+                                <div class="hov">“날도 더웠고 수업도 지루했고.. 그렇게 졸리고 나른하던 날에 너를 처음 만났어”
+                                    1998년, 처음 만났다
+                                    
+                                    “누굴 좋아하면 용기내야 된대”
+                                    2004년, 첫사랑이 생겼다
+                                    
+                                    “몰랐어? 나 원래 이렇게 살아”
+                                    2010년, 각자 어른이 되어간다
+                                    
+                                    “가장 그리운 건…너였어”
+                                    2014년, 흔적을 따라간다
+                                    
+                                    “이젠 니 얼굴을 그리고 싶어. 사랑없인 그릴 수조차 없는 그림 말이야”
+                                    지금, 그리움을 그리다
+                                    
+                                    2023년 3월 15일, 당신의 <소울메이트>가 찾아옵니다.
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">소울메이트</p>
+                            <p class="sub">예매율 4.6% <span> </span> 개봉일 2023.03.15</p>
+                            <button class="like">♡ 314</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie07">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/02/UmgxlJgwWqM6ueiP32rhQhr2Cpq2GA5P_420.jpg" alt="서치2 포스터">
+                                <div class="hov">여행을 끝내고 월요일 귀국을 알린 엄마의 영상통화
+                                    그리고 마중 나간 딸
+                                    그러나 엄마가 사라졌다
+                                    
+                                    경찰에 도움을 요청하지만, 결정적인 단서들이 나오지 않는 가운데
+                                    딸 ‘준’은 엄마의 흔적을 찾기 위해
+                                    엄마가 방문한 호텔의 CCTV, 같이 간 지인의 SNS,
+                                    거리뷰 지도까지 온라인에 남아있는 모든 흔적을 검색하는데…
+                                    
+                                    이번에는 딸이 사라진 엄마의 흔적을 검색하다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">서치 2</p>
+                            <p class="sub">예매율 1.8% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 708</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie08">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/28/EbmyhBe0qF97CySaA1RHQE77oTY9iXnS_420.jpg" alt="[live] 2023 wbc 한국vs중국 포스터">
+                                <div class="hov">1. 상영 안내
+                                    - 일시: 3월 13일 월요일 19:00
+                                    - 러닝타임: 4시간 (당일 실제 경기시간에 따라 변동가능
+                                    2. 예매 안내
+                                    - 가격: 20,000원
+                                    - 티켓 예매오픈: 2023년 3월 3일(금) 12:00~
+                                    - 구매처: 메가박스 홈페이지, 모바일 어플 및 현장
+                                    - 당일 환불 불가 (3/13(월) 중계는 3/12(일) 24:00까지 환불 가능)
+                                    * 본 라이브중계의 경우, 일반 영화와 동일한 방식으로 예매가 진행됩니다. 상영작을 선택하신 후 예매를 진행해주시기 바랍니다.
+                                    * 본 상영은 이벤트 상영인 관계로 결제 시 제휴, 할인카드 적용이 불가합니다.
+                                    * 티켓의 높은 가격의 재판매 및 암표 판매 등은 엄격히 제한하고 있으며, 정가 이상의 티켓판매로 피해고객의 클레임이 당사로 신고·접수될 경우 해당 티켓 구매 고객의 관람 및 홈페이지 이용에 제한이 따를 수 있습니다.
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">[LIVE]2023 WBC 한국VS중국</p>
+                            <p class="sub">예매율 1.6% <span> </span> 개봉일 2023.03.13</p>
+                            <button class="like">♡ 52</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie09">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/DisAMP8RHmWtMPLRamfLXx4CiXdstLar_420.jpg" alt="카운트 포스터">
+                                <div class="hov">마이웨이, 오직 직진!
+                                    한번 물면 절대 놓지 않는 킹받는 美친 개가 온다!
+
+                                    1988년 올림픽 금메달리스트지만
+                                    1998년 지금은 평범한 고등학교 선생인 ‘시헌’(진선규).
+                                    선수 생활 은퇴 후 남은 건 고집뿐,
+                                    모두를 킹받게 하는 마이웨이 행보로 주변 사람들의 속을 썩인다.
+
+                                    그러던 어느 날, 우연히 참석한 대회에서 뛰어난 실력에도 불구하고
+                                    승부 조작으로 기권패를 당한 ‘윤우’(성유빈)를 알게 된 ‘시헌’은
+                                    복싱부를 만들기로 결심한다.
+
+                                    아내 ‘일선’(오나라)의 열렬한 반대와, ‘교장’(고창석)의 끈질긴 만류도 무시한 채,
+                                    ‘시헌’은 독기만 남은 유망주 ‘윤우’와
+                                    영문도 모른 채 레이더망에 걸린 ‘환주’(장동주), ‘복안’(김민호)을 데리고
+                                    본격적인 훈련에 돌입하기 시작하는데...!
+
+                                    쓰리, 투, 원! 2023년 새해, 긍정 파워 풀충전!
+                                    그들만의 가장 유쾌한 카운트가 시작된다
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">카운트</p>
+                            <p class="sub">예매율 1.4% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 359</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie10">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/iwYo6P5BgvBAcjRaQPTAYXnI2oyBqGri_420.jpg" alt="멍뭉이 포스터">
+                                <div class="hov">"'루니'의 새 집사를 찾아라!"
+                                    동생 같은 반려견 ‘루니’를 위해 정시 퇴근에 진심인 ‘민수’
+                                    결혼을 앞둔 그에게 닥친 집사 인생 조기 로그아웃 위기!
+                                    
+                                    야심 차게 오픈한 카페는 말아먹고 인생 자체가 위기인 사촌형 '진국',
+                                    '민수'의 다급한 SOS에 고심하다 새 집사 면접을 제안하게 되고.
+                                    
+                                    완벽한 집사를 찾기 위해 제주도로 향하는 두 형제의 여정에
+                                    느닷없는 멍뭉이들의 등장이 이어지는데!
+                                    
+                                    뜻밖의 ‘견’명적인 만남
+                                    함께 하면 개신나고! 개따뜻한!
+                                    개귀엽 버라이어티 무비!
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">멍뭉이</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 367</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie11">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/16/BhL0pfLDURletyEhaeipllTO4hMKnr2v_420.jpg" alt="앤트맨과 와스프 포스터">
+                                <div class="hov">슈퍼히어로 파트너인 '스캇 랭'(폴 러드)과 '호프 반 다인'(에반젤린 릴리),
+                                    호프의 부모 '재닛 반 다인'(미셸 파이퍼)과 '행크 핌'(마이클 더글라스),
+                                    그리고 스캇의 딸 '캐시 랭'(캐서린 뉴튼)까지
+                                    미지의 ‘양자 영역’ 세계 속에 빠져버린 ‘앤트맨 패밀리’.
+                                    
+                                    그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 '캉'을 만나며,
+                                    그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…
+                                    
+                                    2023년 첫 번째 마블 블록버스터
+                                    2월, 무한한 우주의 정복자가 깨어난다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">앤트맨과 와스프:퀀텀매니아</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.02.15</p>
+                            <button class="like">♡ 1.8k</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie12">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/14/LFLBj2FZIKanUyQOXSo3fxoaIewT7vRd_420.jpg" alt="탑건 매버릭 포스터">
+                                <div class="hov">한순간의 실수도 용납되지 않는 하늘 위, 가장 압도적인 비행이 시작된다!
+                                    
+                                    최고의 파일럿이자 전설적인 인물 매버릭(톰 크루즈)은 자신이 졸업한 훈련학교 교관으로 발탁된다.
+                                    그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만
+                                    실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다.
+                                    
+                                    매버릭의 지휘 아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자
+                                    매버릭은 자신이 가르친 동료들과 함께 마지막이 될지 모를 하늘 위 비행에 나서는데…
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[아카데미]탑건:매버릭</p>
+                            <p class="sub">예매율 1.2% <span> </span> 개봉일 2023.02.24</p>
+                            <button class="like">♡ 294</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <div class="box movies4">
+
+                    <div class="movies">
+
+                        <div class="movie01">
+                            
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/RyVhtmW6ro5wftIY5aOSVqf9m6uGdCbi_420.jpg" alt="더 웨알 포스터">
+                                <div class="hov">“네가 얼마나 놀라운 사람인지 알려주고 싶었어”
+                                    272kg의 거구로 세상을 거부한 채 살아가는 대학 강사 ‘찰리’는
+                                    남은 시간이 얼마 없음을 느끼고
+                                    오랫동안 만나지 못한 10대 딸 ‘엘리’를 집으로 초대한다.
+                                    그리고, 매일 자신을 찾아와 에세이 한 편을 완성하면 전 재산을 주겠다고 제안한다.
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">더 웨일</p>
+                            <p class="sub">예매율 0.6% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 188</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie02">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/17/4tlUtZ2rAYiYbXnBF4fClRTM5er0GIxP_420.jpg" alt="내 친구 다머 포스터">
+                                <div class="hov">청소년기 심리와 행동으로 본 살인마의 탄생 배경
+                                    사건의뢰 범죄 전문가들에게 듣는 “범죄 수사와 범죄 심리 분석” 이야기
+                                    
+                                    [강연 정보]
+                                    - 강연일시 : 23년 03월 19일(일) 오전 11시
+                                    예매오픈 : 23년 02년 27일(월) 오후 5시
+                                    - 강연자 : 염건령 교수
+                                    - 강연장소 : 메가박스 신촌지점
+                                    - 강연시간 : 110분
+                                    
+                                    * 본 프로그램은 영화 속 범죄들을 다루는 강연으로 청소년은 관람이 불가합니다.
+                                    * 영화를 상영하거나 영화 내용을 설명하는 프로그램이 아니므로 예매 전 유의 부탁드립니다.
+                                    * 강연 3일전 ~ 1일전 취소 및 환불 시 수수료가 10% 발생되며, 당일 취소는 불가 합니다.
+                                    ** 관람 고객 전원에게 상영관 입장 전.후 굿즈(수사 키트)와 사건개요 핸드아웃을 제공합니다.
+                                    출력된 티켓을 제시해 주셔야 굿즈 수령이 가능합니다.
+                                    
+                                    [강연 주제]
+                                    당신의 친구는 좋은 사람인가?
+                                    세계에서 가장 악명높은 연쇄살인범 제프리 다머의 고등학교 시절
+                                    그의 청소년기 심리와 행동으로 본 괴물 살인마가 탄생하게 된 원인과 환경 분석
+                                    
+                                    [시놉시스]
+                                    17명의 남성을 살해한 희대의 연쇄살인마 제프리 다머의 고등학교 시절을 그린 영화. 고등학생 제프리는 산성용액에 동물의 사체를 녹여 뼈를 수집하는 등 죽음에 집착하는 모습을 보인다. 불안정한 가정환경과 힘겨운 학교생활로 제프리의 폭력적인 충동은 점점 커져만 가고, 그 욕망은 살인에 대한 욕망으로 이어진다.</div>
+                            </div>
+                            <p class="age_18">18</p>
+                            <p class="title">[사건 읽는 영화관] 내 친구 다머 : 연쇄살인범의 탄생</p>
+                            <p class="sub">예매율 0.5% <span> </span> 개봉일 2023.03.19</p>
+                            <button class="like">♡ 33</button>
+                            <button class="order_2">예매</button>                        </div>
+                    
+                        <div class="movie03">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/17/4CmBMFC2U4oD60XpjGAbEJDYWr8SvW6a_420.jpg" alt="6번칸 포스터">
+                                <div class="hov">고대 암각화를 보러 가기 위해 여행을 떠나는 핀란드 유학생 여자
+                                    무르만스크 행 기차 ‘6번 칸’에서 만난 낯설고 무례한 남자
+                                    거리를 두려는 여자 ----------- 가까워 지려는 남자
+                                    목적지에 다다를수록 두 사람의 관계는 미묘한 변화를 겪게 되고…
+                                    이 여행의 끝에 불완전한 그들은 어떻게 될까?
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">6번 칸</p>
+                            <p class="sub">예매율 0.4% <span> </span> 개봉일 2023.03.08</p>
+                            <button class="like">♡ 125</button>
+                            <button class="order_2">예매</button>
+                        </div>
+
+                        <div class="movie04">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/01/30/rI6oF8r8Dy93x4f1Q9IOekZXFvJ02gwL_420.jpg" alt="TAR 타르 포스터">
+                                <div class="hov">무대를 장악하는 마에스트로, 욕망을 불태우는 괴물,
+                                    베를린 필하모닉 최초의 여성 지휘자 리디아 타르.
+                                    
+                                    이 이야기는 그녀의 정점에서 시작된다.
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">TAR 타르</p>
+                            <p class="sub">예매율 0.2% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 308</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                
+                        <div class="movie05">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/75Ix2G0OqnRlPeFnJGwsFIpTSZK2vXaK_420.jpg" alt="대외비 포스터">
+                                <div class="hov">“몰랐나? 원래 세상은 더럽고, 인생은 서럽다.”
+                                    1992년 부산, 밑바닥 정치 인생을 끝내고 싶은 만년 국회의원 후보 ‘해웅’.
+                                    ‘해웅’은 이번 선거에서만큼은 금뱃지를 달 것이라 확신했지만,
+                                    정치판을 뒤흔드는 권력 실세 ‘순태’에게 버림받으며 지역구 공천에서 탈락한다.
+
+                                    “누가 센 지는 손에 뭘 쥐고 있는가 보라 안 했습니까?”
+                                    ‘순태’에 의해 짜여진 선거판을 뒤집기 위해 부산 지역 재개발 계획이 담긴 대외비 문서를 입수한 ‘해웅’.
+                                    행동파 조폭 ‘필도’를 통해 선거 자금까지 마련한 ‘해웅’은 무소속으로 선거판에 뛰어들어 승승장구한다.
+                                    ‘순태’ 역시 ‘해웅’이 가진 대외비 문서의 존재를 알게 되고, 점차 ‘해웅’의 숨통을 조여오는데…
+
+                                    대한민국을 뒤집을 비밀 문서,
+                                    이 판을 뒤집는 놈이 대한민국을 뒤집는다!
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">대외비</p>
+                            <p class="sub">예매율 4.8% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 386</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>     
+                        </div>
+                        
+                        <div class="movie06">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/20/EQoaQIsVW7Ygf1ZKkoAUG0Eppbdumyg5_420.jpg" alt="소울메이트 포스터">
+                                <div class="hov">“날도 더웠고 수업도 지루했고.. 그렇게 졸리고 나른하던 날에 너를 처음 만났어”
+                                    1998년, 처음 만났다
+                                    
+                                    “누굴 좋아하면 용기내야 된대”
+                                    2004년, 첫사랑이 생겼다
+                                    
+                                    “몰랐어? 나 원래 이렇게 살아”
+                                    2010년, 각자 어른이 되어간다
+                                    
+                                    “가장 그리운 건…너였어”
+                                    2014년, 흔적을 따라간다
+                                    
+                                    “이젠 니 얼굴을 그리고 싶어. 사랑없인 그릴 수조차 없는 그림 말이야”
+                                    지금, 그리움을 그리다
+                                    
+                                    2023년 3월 15일, 당신의 <소울메이트>가 찾아옵니다.
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">소울메이트</p>
+                            <p class="sub">예매율 4.6% <span> </span> 개봉일 2023.03.15</p>
+                            <button class="like">♡ 314</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie07">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/02/UmgxlJgwWqM6ueiP32rhQhr2Cpq2GA5P_420.jpg" alt="서치2 포스터">
+                                <div class="hov">여행을 끝내고 월요일 귀국을 알린 엄마의 영상통화
+                                    그리고 마중 나간 딸
+                                    그러나 엄마가 사라졌다
+                                    
+                                    경찰에 도움을 요청하지만, 결정적인 단서들이 나오지 않는 가운데
+                                    딸 ‘준’은 엄마의 흔적을 찾기 위해
+                                    엄마가 방문한 호텔의 CCTV, 같이 간 지인의 SNS,
+                                    거리뷰 지도까지 온라인에 남아있는 모든 흔적을 검색하는데…
+                                    
+                                    이번에는 딸이 사라진 엄마의 흔적을 검색하다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">서치 2</p>
+                            <p class="sub">예매율 1.8% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 708</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie08">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/28/EbmyhBe0qF97CySaA1RHQE77oTY9iXnS_420.jpg" alt="[live] 2023 wbc 한국vs중국 포스터">
+                                <div class="hov">1. 상영 안내
+                                    - 일시: 3월 13일 월요일 19:00
+                                    - 러닝타임: 4시간 (당일 실제 경기시간에 따라 변동가능
+                                    2. 예매 안내
+                                    - 가격: 20,000원
+                                    - 티켓 예매오픈: 2023년 3월 3일(금) 12:00~
+                                    - 구매처: 메가박스 홈페이지, 모바일 어플 및 현장
+                                    - 당일 환불 불가 (3/13(월) 중계는 3/12(일) 24:00까지 환불 가능)
+                                    * 본 라이브중계의 경우, 일반 영화와 동일한 방식으로 예매가 진행됩니다. 상영작을 선택하신 후 예매를 진행해주시기 바랍니다.
+                                    * 본 상영은 이벤트 상영인 관계로 결제 시 제휴, 할인카드 적용이 불가합니다.
+                                    * 티켓의 높은 가격의 재판매 및 암표 판매 등은 엄격히 제한하고 있으며, 정가 이상의 티켓판매로 피해고객의 클레임이 당사로 신고·접수될 경우 해당 티켓 구매 고객의 관람 및 홈페이지 이용에 제한이 따를 수 있습니다.
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">[LIVE]2023 WBC 한국VS중국</p>
+                            <p class="sub">예매율 1.6% <span> </span> 개봉일 2023.03.13</p>
+                            <button class="like">♡ 52</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie09">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/DisAMP8RHmWtMPLRamfLXx4CiXdstLar_420.jpg" alt="카운트 포스터">
+                                <div class="hov">마이웨이, 오직 직진!
+                                    한번 물면 절대 놓지 않는 킹받는 美친 개가 온다!
+
+                                    1988년 올림픽 금메달리스트지만
+                                    1998년 지금은 평범한 고등학교 선생인 ‘시헌’(진선규).
+                                    선수 생활 은퇴 후 남은 건 고집뿐,
+                                    모두를 킹받게 하는 마이웨이 행보로 주변 사람들의 속을 썩인다.
+
+                                    그러던 어느 날, 우연히 참석한 대회에서 뛰어난 실력에도 불구하고
+                                    승부 조작으로 기권패를 당한 ‘윤우’(성유빈)를 알게 된 ‘시헌’은
+                                    복싱부를 만들기로 결심한다.
+
+                                    아내 ‘일선’(오나라)의 열렬한 반대와, ‘교장’(고창석)의 끈질긴 만류도 무시한 채,
+                                    ‘시헌’은 독기만 남은 유망주 ‘윤우’와
+                                    영문도 모른 채 레이더망에 걸린 ‘환주’(장동주), ‘복안’(김민호)을 데리고
+                                    본격적인 훈련에 돌입하기 시작하는데...!
+
+                                    쓰리, 투, 원! 2023년 새해, 긍정 파워 풀충전!
+                                    그들만의 가장 유쾌한 카운트가 시작된다
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">카운트</p>
+                            <p class="sub">예매율 1.4% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 359</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie10">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/iwYo6P5BgvBAcjRaQPTAYXnI2oyBqGri_420.jpg" alt="멍뭉이 포스터">
+                                <div class="hov">"'루니'의 새 집사를 찾아라!"
+                                    동생 같은 반려견 ‘루니’를 위해 정시 퇴근에 진심인 ‘민수’
+                                    결혼을 앞둔 그에게 닥친 집사 인생 조기 로그아웃 위기!
+                                    
+                                    야심 차게 오픈한 카페는 말아먹고 인생 자체가 위기인 사촌형 '진국',
+                                    '민수'의 다급한 SOS에 고심하다 새 집사 면접을 제안하게 되고.
+                                    
+                                    완벽한 집사를 찾기 위해 제주도로 향하는 두 형제의 여정에
+                                    느닷없는 멍뭉이들의 등장이 이어지는데!
+                                    
+                                    뜻밖의 ‘견’명적인 만남
+                                    함께 하면 개신나고! 개따뜻한!
+                                    개귀엽 버라이어티 무비!
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">멍뭉이</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 367</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie11">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/16/BhL0pfLDURletyEhaeipllTO4hMKnr2v_420.jpg" alt="앤트맨과 와스프 포스터">
+                                <div class="hov">슈퍼히어로 파트너인 '스캇 랭'(폴 러드)과 '호프 반 다인'(에반젤린 릴리),
+                                    호프의 부모 '재닛 반 다인'(미셸 파이퍼)과 '행크 핌'(마이클 더글라스),
+                                    그리고 스캇의 딸 '캐시 랭'(캐서린 뉴튼)까지
+                                    미지의 ‘양자 영역’ 세계 속에 빠져버린 ‘앤트맨 패밀리’.
+                                    
+                                    그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 '캉'을 만나며,
+                                    그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…
+                                    
+                                    2023년 첫 번째 마블 블록버스터
+                                    2월, 무한한 우주의 정복자가 깨어난다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">앤트맨과 와스프:퀀텀매니아</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.02.15</p>
+                            <button class="like">♡ 1.8k</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie12">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/14/LFLBj2FZIKanUyQOXSo3fxoaIewT7vRd_420.jpg" alt="탑건 매버릭 포스터">
+                                <div class="hov">한순간의 실수도 용납되지 않는 하늘 위, 가장 압도적인 비행이 시작된다!
+                                    
+                                    최고의 파일럿이자 전설적인 인물 매버릭(톰 크루즈)은 자신이 졸업한 훈련학교 교관으로 발탁된다.
+                                    그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만
+                                    실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다.
+                                    
+                                    매버릭의 지휘 아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자
+                                    매버릭은 자신이 가르친 동료들과 함께 마지막이 될지 모를 하늘 위 비행에 나서는데…
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[아카데미]탑건:매버릭</p>
+                            <p class="sub">예매율 1.2% <span> </span> 개봉일 2023.02.24</p>
+                            <button class="like">♡ 294</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="box movies5">
+
+                    <div class="movies">
+
+                        <div class="movie01">
+                            
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/15/eKTfDUGc68zMcdBleYw4g1NNFk1TMUyR_420.jpg" alt="[오페라] 메데아 @The Met2023">
+                                <div class="hov">가장 드라마틱한 가창력을 지닌 라드바노프스키의 격정적인 메데아!
+                                    배신한 남편에게 확실하고 치명적인 복수를 계획해 충격과 전율을 일으킨다.
+                                    그러나 유려한 아름다움으로 공감을 불러일으키는 케루비니 음악의 힘!
+                                    
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[오페라] 메데아 @The Met2023</p>
+                            <p class="sub">예매율 0.5% <span> </span> 개봉일 2023.03.07</p>
+                            <button class="like">♡ 103</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie02">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2022/12/28/6axAuOaqs6C9kE60Hj6SvvEqIM4jDxEO_420.jpg" alt="카르멘 포스터">
+                                <div class="hov">100th 베로나 오페라 페스티벌 기념, 화제의 오페라 몰아보기
+                                    고대 로마 원형극장에서 열리는 이탈리아의 가장 유서 깊은 축제, 베로나 오페라 페스티벌
+                                    
+                                    [상영정보]
+                                    - 공연 명칭 : 베로나 오페라 페스티벌 – 카르멘 (앙코르, 오페라 공연으로 한글자막 제공)
+                                    - 상영 일시 : 2023년 2월 21일(화) ~ 3월 18일(토) / 매주 화요일, 토요일
+                                    - 공연 시간 : 약 173분 / 인터미션 없음</div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[베로나 오페라 페스티벌 앙코르] 카르멘</p>
+                            <p class="sub">예매율 0.4% <span> </span> 개봉일 2023.02.21</p>
+                            <button class="like">♡ 162</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie03">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/23/AXHE8dDxknKay9JdswCkPEqYDvkVE3Vn_420.jpg" alt="[유럽 클래식 투어] 파리 에펠탑 콘서트 포스터">
+                                <div class="hov">파리의 야경, 에펠탑을 빛낼 화려한 불꽃놀이와 함께 즐기는 클래식 선율
+                                    고티에 카퓌송, 알리사 사라 오트 등 클래식 스타 총출동
+                                    
+                                    [공연 정보]
+                                    - 공연명칭 : 파리 에펠탑 콘서트 2022 (한글자막 제공)
+                                    - 상영일시 : 2023년 3월 23일 ~ 4월 1일 (목요일, 토요일)
+                                    - 예매오픈 : 2023년 3월 2일 오전 10시
+                                    - 상영지점 : 더 부티크 목동현대백화점, 상암월드컵경기장, 성수, 센트럴, 코엑스, 남양주,
+                                    부천스타필드시티, 분당, 킨텍스, 하남스타필드, 영종, 청추사창, 대전신세계 아트앤사이언스
+                                    대구신세계, 대구이시아, 마산, 부산대, 양산증산
+                                    - 러닝타임 : 100분 / 인터미션 없음
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">[유럽 클래식 투어] 파리 에펠탑 콘서트</p>
+                            <p class="sub">예매율 0.4% <span> </span> 개봉일 2023.03.23</p>
+                            <button class="like">♡ 114</button>
+                            <button class="order_2">예매</button>
+                        </div>
+
+                        <div class="movie04">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/23/Dbga4jgfqlBuFLZ5qzDbqJ3nNK1YX9Iy_420.jpg" alt="[유럽 클래식 투어] 프라하 블타바 강변 콘서트 포스터">
+                                <div class="hov">예술과 낭만의 도시 프라하의 황홀한 야경, 블타바 강을 수놓는 체코 대표 작곡가들의 명곡
+
+                                    [공연 정보]
+                                    - 공연명칭 : 프라하 콘서트 (한글자막 제공)
+                                    - 상영일시 : 2023년 4월 20일 ~ 4월 29일 (목요일, 토요일)
+                                    - 예매오픈 : 2023년 3월 30일 오전 10시
+                                    - 상영지점 : 더 부티크 목동현대백화점, 상암월드컵경기장, 성수, 센트럴, 코엑스, 남양주,
+                                    부천스타필드시티, 분당, 킨텍스, 하남스타필드, 영종, 청추사창, 대전신세계 아트앤사이언스
+                                    대구신세계, 대구이시아, 마산, 부산대, 양산증산
+                                    - 러닝타임 : 75분 / 인터미션 없음
+                                    - 공연장소: 체코 프라하 블타바 강변 The Vltava river, Praque
+                                    - 오케스트라: 체코 필하모닉 Czech Philharmonic
+                                    - 지휘: 세묜 비치코프 Semyon Bychkov
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">[유럽 클래식 투어] 프라하 블타바 강변 콘서트</p>
+                            <p class="sub">예매율 0% <span> </span> 개봉일 2023.04.20</p>
+                            <button class="like">♡ 58</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                
+                        <div class="movie05">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/75Ix2G0OqnRlPeFnJGwsFIpTSZK2vXaK_420.jpg" alt="대외비 포스터">
+                                <div class="hov">“몰랐나? 원래 세상은 더럽고, 인생은 서럽다.”
+                                    1992년 부산, 밑바닥 정치 인생을 끝내고 싶은 만년 국회의원 후보 ‘해웅’.
+                                    ‘해웅’은 이번 선거에서만큼은 금뱃지를 달 것이라 확신했지만,
+                                    정치판을 뒤흔드는 권력 실세 ‘순태’에게 버림받으며 지역구 공천에서 탈락한다.
+
+                                    “누가 센 지는 손에 뭘 쥐고 있는가 보라 안 했습니까?”
+                                    ‘순태’에 의해 짜여진 선거판을 뒤집기 위해 부산 지역 재개발 계획이 담긴 대외비 문서를 입수한 ‘해웅’.
+                                    행동파 조폭 ‘필도’를 통해 선거 자금까지 마련한 ‘해웅’은 무소속으로 선거판에 뛰어들어 승승장구한다.
+                                    ‘순태’ 역시 ‘해웅’이 가진 대외비 문서의 존재를 알게 되고, 점차 ‘해웅’의 숨통을 조여오는데…
+
+                                    대한민국을 뒤집을 비밀 문서,
+                                    이 판을 뒤집는 놈이 대한민국을 뒤집는다!
+                                </div>
+                            </div>
+                            <p class="age_15">15</p>
+                            <p class="title">대외비</p>
+                            <p class="sub">예매율 4.8% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 386</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>     
+                        </div>
+                        
+                        <div class="movie06">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/20/EQoaQIsVW7Ygf1ZKkoAUG0Eppbdumyg5_420.jpg" alt="소울메이트 포스터">
+                                <div class="hov">“날도 더웠고 수업도 지루했고.. 그렇게 졸리고 나른하던 날에 너를 처음 만났어”
+                                    1998년, 처음 만났다
+                                    
+                                    “누굴 좋아하면 용기내야 된대”
+                                    2004년, 첫사랑이 생겼다
+                                    
+                                    “몰랐어? 나 원래 이렇게 살아”
+                                    2010년, 각자 어른이 되어간다
+                                    
+                                    “가장 그리운 건…너였어”
+                                    2014년, 흔적을 따라간다
+                                    
+                                    “이젠 니 얼굴을 그리고 싶어. 사랑없인 그릴 수조차 없는 그림 말이야”
+                                    지금, 그리움을 그리다
+                                    
+                                    2023년 3월 15일, 당신의 <소울메이트>가 찾아옵니다.
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">소울메이트</p>
+                            <p class="sub">예매율 4.6% <span> </span> 개봉일 2023.03.15</p>
+                            <button class="like">♡ 314</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie07">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/02/UmgxlJgwWqM6ueiP32rhQhr2Cpq2GA5P_420.jpg" alt="서치2 포스터">
+                                <div class="hov">여행을 끝내고 월요일 귀국을 알린 엄마의 영상통화
+                                    그리고 마중 나간 딸
+                                    그러나 엄마가 사라졌다
+                                    
+                                    경찰에 도움을 요청하지만, 결정적인 단서들이 나오지 않는 가운데
+                                    딸 ‘준’은 엄마의 흔적을 찾기 위해
+                                    엄마가 방문한 호텔의 CCTV, 같이 간 지인의 SNS,
+                                    거리뷰 지도까지 온라인에 남아있는 모든 흔적을 검색하는데…
+                                    
+                                    이번에는 딸이 사라진 엄마의 흔적을 검색하다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">서치 2</p>
+                            <p class="sub">예매율 1.8% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 708</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie08">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/28/EbmyhBe0qF97CySaA1RHQE77oTY9iXnS_420.jpg" alt="[live] 2023 wbc 한국vs중국 포스터">
+                                <div class="hov">1. 상영 안내
+                                    - 일시: 3월 13일 월요일 19:00
+                                    - 러닝타임: 4시간 (당일 실제 경기시간에 따라 변동가능
+                                    2. 예매 안내
+                                    - 가격: 20,000원
+                                    - 티켓 예매오픈: 2023년 3월 3일(금) 12:00~
+                                    - 구매처: 메가박스 홈페이지, 모바일 어플 및 현장
+                                    - 당일 환불 불가 (3/13(월) 중계는 3/12(일) 24:00까지 환불 가능)
+                                    * 본 라이브중계의 경우, 일반 영화와 동일한 방식으로 예매가 진행됩니다. 상영작을 선택하신 후 예매를 진행해주시기 바랍니다.
+                                    * 본 상영은 이벤트 상영인 관계로 결제 시 제휴, 할인카드 적용이 불가합니다.
+                                    * 티켓의 높은 가격의 재판매 및 암표 판매 등은 엄격히 제한하고 있으며, 정가 이상의 티켓판매로 피해고객의 클레임이 당사로 신고·접수될 경우 해당 티켓 구매 고객의 관람 및 홈페이지 이용에 제한이 따를 수 있습니다.
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">[LIVE]2023 WBC 한국VS중국</p>
+                            <p class="sub">예매율 1.6% <span> </span> 개봉일 2023.03.13</p>
+                            <button class="like">♡ 52</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie09">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/DisAMP8RHmWtMPLRamfLXx4CiXdstLar_420.jpg" alt="카운트 포스터">
+                                <div class="hov">마이웨이, 오직 직진!
+                                    한번 물면 절대 놓지 않는 킹받는 美친 개가 온다!
+
+                                    1988년 올림픽 금메달리스트지만
+                                    1998년 지금은 평범한 고등학교 선생인 ‘시헌’(진선규).
+                                    선수 생활 은퇴 후 남은 건 고집뿐,
+                                    모두를 킹받게 하는 마이웨이 행보로 주변 사람들의 속을 썩인다.
+
+                                    그러던 어느 날, 우연히 참석한 대회에서 뛰어난 실력에도 불구하고
+                                    승부 조작으로 기권패를 당한 ‘윤우’(성유빈)를 알게 된 ‘시헌’은
+                                    복싱부를 만들기로 결심한다.
+
+                                    아내 ‘일선’(오나라)의 열렬한 반대와, ‘교장’(고창석)의 끈질긴 만류도 무시한 채,
+                                    ‘시헌’은 독기만 남은 유망주 ‘윤우’와
+                                    영문도 모른 채 레이더망에 걸린 ‘환주’(장동주), ‘복안’(김민호)을 데리고
+                                    본격적인 훈련에 돌입하기 시작하는데...!
+
+                                    쓰리, 투, 원! 2023년 새해, 긍정 파워 풀충전!
+                                    그들만의 가장 유쾌한 카운트가 시작된다
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">카운트</p>
+                            <p class="sub">예매율 1.4% <span> </span> 개봉일 2023.02.22</p>
+                            <button class="like">♡ 359</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                    
+                        <div class="movie10">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/03/02/iwYo6P5BgvBAcjRaQPTAYXnI2oyBqGri_420.jpg" alt="멍뭉이 포스터">
+                                <div class="hov">"'루니'의 새 집사를 찾아라!"
+                                    동생 같은 반려견 ‘루니’를 위해 정시 퇴근에 진심인 ‘민수’
+                                    결혼을 앞둔 그에게 닥친 집사 인생 조기 로그아웃 위기!
+                                    
+                                    야심 차게 오픈한 카페는 말아먹고 인생 자체가 위기인 사촌형 '진국',
+                                    '민수'의 다급한 SOS에 고심하다 새 집사 면접을 제안하게 되고.
+                                    
+                                    완벽한 집사를 찾기 위해 제주도로 향하는 두 형제의 여정에
+                                    느닷없는 멍뭉이들의 등장이 이어지는데!
+                                    
+                                    뜻밖의 ‘견’명적인 만남
+                                    함께 하면 개신나고! 개따뜻한!
+                                    개귀엽 버라이어티 무비!
+                                </div>
+                            </div>
+                            <p class="age_all">ALL</p>
+                            <p class="title">멍뭉이</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.03.01</p>
+                            <button class="like">♡ 367</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie11">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/16/BhL0pfLDURletyEhaeipllTO4hMKnr2v_420.jpg" alt="앤트맨과 와스프 포스터">
+                                <div class="hov">슈퍼히어로 파트너인 '스캇 랭'(폴 러드)과 '호프 반 다인'(에반젤린 릴리),
+                                    호프의 부모 '재닛 반 다인'(미셸 파이퍼)과 '행크 핌'(마이클 더글라스),
+                                    그리고 스캇의 딸 '캐시 랭'(캐서린 뉴튼)까지
+                                    미지의 ‘양자 영역’ 세계 속에 빠져버린 ‘앤트맨 패밀리’.
+                                    
+                                    그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 '캉'을 만나며,
+                                    그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…
+                                    
+                                    2023년 첫 번째 마블 블록버스터
+                                    2월, 무한한 우주의 정복자가 깨어난다!
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">앤트맨과 와스프:퀀텀매니아</p>
+                            <p class="sub">예매율 1.3% <span> </span> 개봉일 2023.02.15</p>
+                            <button class="like">♡ 1.8k</button>
+                            <button class="order_2">예매</button>
+                        </div>
+                        
+                        <div class="movie12">
+                            <div class="picture">
+                                <img src="https://img.megabox.co.kr/SharedImg/2023/02/14/LFLBj2FZIKanUyQOXSo3fxoaIewT7vRd_420.jpg" alt="탑건 매버릭 포스터">
+                                <div class="hov">한순간의 실수도 용납되지 않는 하늘 위, 가장 압도적인 비행이 시작된다!
+                                    
+                                    최고의 파일럿이자 전설적인 인물 매버릭(톰 크루즈)은 자신이 졸업한 훈련학교 교관으로 발탁된다.
+                                    그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만
+                                    실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다.
+                                    
+                                    매버릭의 지휘 아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자
+                                    매버릭은 자신이 가르친 동료들과 함께 마지막이 될지 모를 하늘 위 비행에 나서는데…
+                                </div>
+                            </div>
+                            <p class="age_12">12</p>
+                            <p class="title">[아카데미]탑건:매버릭</p>
+                            <p class="sub">예매율 1.2% <span> </span> 개봉일 2023.02.24</p>
+                            <button class="like">♡ 294</button>
+                            <button class="order">예매</button>
+                            <button class="cinema">Dolby<br>CINEMA</button>  
+                        </div>
+                        
+                    </div>
+                </div>
+
+            
+        </body>
+        </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <!-- action을 없앤 이유는 없으면 알아서 해당하는 페이지로 들어가지니까 -->
+        <!-- 1번, 2번 다 url이 다르니까 없애준 것 -->
+        <label for="">id</label>
+        <input type="text" name="id" value="<%= data.id %>" disabled/>
+        <!-- 인풋에 값을 넣기 전에 아이디값이 들어 있겠지 disabled: 읽기전용으로 만들어버리고 -->
+        <label for="">이름</label>
+        <input type="text" name="name" value="<%= data.name %>" />
+        <label for="">번호</label>
+        <input type="text" name="number" value="<%= data.number %>" />
+        <label for="">시리즈</label>
+        <input type="text" name="series" value="<%= data.series %>" />
+        <button>수정</button>
+    </form>
+</body>
+</html>

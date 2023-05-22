@@ -1,0 +1,46 @@
+
+    /*relative 속성을 가진 부모의 좌측 상단을 기준으로 위치 지정*/
+    /* position: absolute; */
+
+
+.position_1{
+
+    /*이전 영역의 위치를 기준으로 지정한다.*/
+    position: relative;
+
+    width: 500px;
+    height: 2000px;
+    border: 1px solid black;
+
+    /*태그를 해당 위치에서 움직여줘야할 때 위치를 지정하고 싶을 때*/
+    /*position 속성을 주고 top left*/
+
+    top: 100px; /*top을 주면 bottom을 주면 안됨*/
+    left: 100px; /*left를 주면 right를 주면 안됨*/
+
+
+}
+
+.position_2{
+
+    position: absolute;
+    
+    width: 100px;
+    height: 100px;
+
+    border: 1px solid;
+
+    top: 100px; 
+    left: 100px; 
+    /*relative 속성을 가진 부모를 기준으로 움직인다.
+      바로 위의 부모가 relative 속성이 없으면 해당 속성을 가진 부모를 만날때 까지 상위 태그를 찾는다.
+      relative 속성을 가진 부모가 없을 경우 body영역을 기준으로 움직인다.*/
+
+    position: fixed;
+    /*우리가 보고있는 브라우저의 위치로 고정시킨다.
+      (즉, 스크롤해도 따라서 움직인다.) ex. 홈페이지의 nav 바 등*/
+
+    position: sticky;
+    /*보고 있는 브라우저의 지정한 위치 밖으로 나가지 못하게 설정*/
+
+}

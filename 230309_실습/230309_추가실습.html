@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경일 게임부트_기획</title>
+    <link rel="stylesheet" href="./230309_추가실습.css">
+</head>
+<body>
+    <div class="nav_top">
+        <p class="navtop_title">"경력 있는 신입 양성"</p>
+        <img class="navtop_simg" src="data:image/png;base64,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" alt="돋보기">
+        <p class="search">검색</p>
+        <img class="navtop_gimg" src="data:image/png;base64,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" alt="공유">
+        <p class="share">공유</p>
+    </div>
+    <img class="banner1" src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5aae56ca-6767-43ad-8220-0fe60f06adbe%2F%25EC%25BB%25A4%25EB%25B2%2584_(1).jpg&blockId=166cb56a-2348-4276-80a0-c7cec957b95a&width=3600" alt="banner_1">
+    <div class="background">
+        <div class="main_1">
+            <h1>"경력 있는 신입 양성"</h1>
+            <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F43a1d4c5-4d63-4f39-bda0-33c4c935cb70%2F%25EA%25B2%258C%25EC%259E%2584%25ED%2594%2584%25EB%25A1%259C%25EA%25B7%25B8%25EB%259E%2598%25EB%25B0%258D_%25EC%259A%25B0%25ED%2594%25BC_%25EC%25B7%25A8%25EC%2597%2585%25EC%259E%2590%25EC%259D%25B8%25ED%2584%25B0%25EB%25B7%25B001.jpg&blockId=d9147be6-1734-4507-8fb6-3ed7252063f4" alt="경력있는 신입양성">
+            <h1>"경력 있는 신입 양성"</h1>
+        </div>
+        <div class="main_2">
+            <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F65a45751-1851-4351-b7ef-c52313f95dcb%2Fstem-list-EVgsAbL51Rk-unsplash_(1).jpg&blockId=4bcf9fdc-d2ce-4241-b9c9-e0ad55f22756" alt="강연 이미지">
+            <div class="main2_text1">
+                <h2>경일게임아카데미 모바일 게임 개발자 양성과정 C</h2>
+                <p class="main2_sub1">이 과정은 유니티 엔진을 기반으로 게임 제작에 <br>
+                    필요한 요소들과 개인,팀,기업 협업 프로젝트 등을 <br>
+                    진행하며 다양한 실무 경험을 쌀아 <br>
+                    <span class="box_yellow">비전공자라도 기업에서 원하는 인재가 되게 하는 것</span>을 <br>
+                    목표로 교육합니다.</p>
+                <p>▶ <u>KGA에게 '기업에서 원하는 인재'란</u></p>
+            </div>
+            <div class="main2_text2">
+                <h2>게임 개발자의 꿈, 6개월이면 가능합니다.</h2>
+                <p class="main2_sub1"><span class="bold">햇수로 7년</span>, 게임 프로그래밍 과정을 교육하며 <br>
+                    수 많은 시행착오 끝에 게임 개발자가 되기 위해 <br>
+                    <span class="box_yellow">최적의 커리큘럼</span>과 <span class="box_yellow">최적의 교육 시간</span>을 찾았습니다. <br>
+                    그 결과, 열정만 있다면 누구나 6개월 뒤에 <br>
+                    게임 프로그래머가 될 수 있습니다.
+                </p>
+                <p>▶ <u>7년 동안 게임 프로그래밍 교육을 하며</u></p>
+            </div>
+
+            <div class="t_info">
+                <h2 class="t_info_title">교육 과정 안내</h2>
+                    <ol>
+                        <span class="imoge">👨‍🎓</span>
+                        <li class="t_info_bold">교육 대상</li>
+                        <li>국민내일배움카드 발급 가능자</li>
+                        <li class="gray">(발급 여부가 확인이 어려우신 분들은<br>학원 상담을 통해 확인하실 수 있습니다.)</li>
+                    </ol>
+                    <ol>
+                        <span class="imoge">📅</span>
+                        <li class="t_info_bold">교육 기간</li>
+                        <li>2023년 3월 10일 ~ 2023년 8월 17일</li>
+                        <li>시간(매주 월~금): 오전 9시 ~ 오후 6시</li>
+                    </ol>
+                    <ol>
+                        <span class="imoge">💡</span>
+                        <li class="t_info_bold">수강료 전액 국비지원</li>
+                        <li><span class="info_s"><s>5,903,970</s></span>원 → <span class="info_s">0</span>원</li>
+                    </ol>
+                    <ol>
+                        <span class="imoge">💡</span>
+                        <li class="t_info_bold">훈련 장려금 혜택</li>
+                        <li>최대 매월 20만원 기본 지급 + 국민취업지원제도 매월 50만원</li>
+                    </ol>
+                    <div class="sukang" onclick="window.open('https://www.kiweb.or.kr/apply/counsel');"> 수강 신청하기  ></div>
+            </div>
+        </div>
+    </div>
+    <img class="banner2" src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe2342318-b4a5-40ca-8de6-328940bbf796%2Fimage.jfif&blockId=a301caec-0b13-4c42-a734-ccf92bc4afb0" alt="banner_2">
+    <div class="background2">
+        <div class="main_3">
+            <h1>📖 우리의 교육 철학</h1>
+            <div class="main3_text1">
+                <h2>빠르게 보다 '제대로' 교육합니다.</h2>
+                <p class="main3_sub1"><span class="bold">"누구나 3개월 안에 개발자가 될 수 있다."</span>라는 말, <br>
+                    한 번쯤 들어보셨을 거라고 생각해요. <br>
+                    KGA는 3개월 만에 취업이 된다고 한들, 취업자가 <br>
+                    원하는 회사일 가능성이 낮다는 것을 압니다. <br>
+                    그래서 시간은 좀 더 오래 걸릴지라도, <br>
+                    <span class="box_yellow_r">역량을 확실하게 개발해 원하는 회사 취업이 <br>
+                    가능할 수 있도록 굵고 길게 교육</span>합니다.</p>
+            </div>
+            <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd315784b-4805-4d5f-9a5d-c31f8895407a%2Fdeveloping-programmer-team-development-website-design-and-coding-technologies.jpg&blockId=73832a0c-a902-4f36-b36b-cc030f22f7a8" alt="제대로 교육">
+
+            <div class="main3_text2">
+                <h2>기하급수적 성장, 오프라인 교육</h2>
+                <p class="main3_sub2">많은 분들이 편리한 온라인 교육을 찾지만, <br>
+                    KGA는 오프라인 교육만을 고집합니다. <br>
+                    <span class="bold">"기쁨을 나누면 배가 되듯, 배움도 나누면 배가 <br>
+                    된다는 것"</span>을 오랜 기간 동안 교육업에<br>
+                    종사하며 깨달았기 때문이죠.<br>
+                    온라인과 오프라인, 두 가지 중에 정답을 없지만<br>
+                    확신하는 것은 <span class="box_yellow">'온라인은 편리하고 오프라인은 확실합니다'</span></p>
+            </div>
+            <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F91433b7a-c50b-481a-ba17-7fc9666ec26a%2Fmimi-thian-ZKBzlifgkgw-unsplash.jpg&blockId=ad2483d0-1deb-4327-bcdd-5c9473f36c59" alt="제대로 교육">
+            <div class="main3_text2">
+                <h2>믿음과 신념을 가지고 교육합니다.</h2>
+                <p class="main3_sub2">KGA는 <span class="box_yellow">"누구나 배우면 된다"</span>라는 것을 믿습니다.<br>
+                    우리가 어릴 적 배웠던 한글, 지금은 익숙하지만,<br>
+                    어릴 적 시절에는 한글이 가장 어려웠을 거예요. <br>
+                    배우는 과정이 어려워 보이고 힘들어 보일 뿐이지, <br>
+                    누구나 다 배우면 습득하고 해낼 수 있습니다.</p>
+            </div>
+            <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffaeda242-dbd3-4323-ad52-922307e02a00%2Fscott-graham-5fNmWej4tAA-unsplash.jpg&blockId=2cf99bf9-fdf4-4f45-92fd-42d753c4caa0" alt="제대로 교육">
+        </div>
+    </div>
+    <img class="banner3" src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F00810d0d-986e-4bca-a5f1-8e35c4c6130b%2Fdeveloping-programmer-team-development-website-design-and-coding-technologies-working-in-software-company-office.jpg&blockId=b20020a7-6dee-4034-97b5-29a291d95f33" alt="banner_3">
+    <div class="background3">
+        <div class="main_4">
+            <h2>KGA가 선택 받는 이유 <br>
+            기초부터 제대로 가르치는 커리큘럼</h2>
+            <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb858dd15-9f52-441a-a722-bf1cdd2d8488%2F%25EA%25B2%258C%25EC%259E%2584%25ED%2594%2584%25EB%25A1%259C%25EA%25B7%25B8%25EB%259E%2598%25EB%25B0%258D_%25EC%259A%25B0%25ED%2594%25BC_%25EC%25BB%25A4%25EB%25A6%25AC%25ED%2581%2598%25EB%259F%25BC03.jpg&blockId=522bbc57-b28d-4b51-8907-f0902e709108" alt="커리큘럼">
+            <a href="https://www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20210000360245&tracseTme=1&crseTracseSe=C0061&trainstCstmrId=500020031484#undefined" target="_blank">커리큘럼 더 자세히 보기</a>
+        </div>
+        <div class="main_5">
+            <div class="youtube">
+
+                <div class="youtube1">
+                    <iframe src="https://www.youtube.com/embed/-mzobnv_KTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>팀 프로젝트 과정에서 'A Dane of Fire And Ice' 게임의 <br>
+                        모작 포트폴리오 입니다. 팀원과의 협력을 통해 <br>
+                        실무에 있어 필수적인 협업 능력을 향상 시킵니다.</p>
+                </div>
+                <div class="youtube2">
+                    <iframe src="https://www.youtube.com/embed/_dqtBy7dwM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>팀 프로젝트 과정 중, '창작' 프로젝트의 포트폴리오<br>
+                        입니다. 이 과정에서는 게임 기획부터 개발까지<br>
+                        게임 개발의 전반적인 부분을 경험합니다.</p>
+                </div>
+                <div class="youtube3">
+                    <iframe src="https://www.youtube.com/embed/VBz0FcWs9E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>Unity 엔진을 활용하여 3D RPG 게임을 직접 기획부터 <br>
+                        개발하고, 제작한 게임을 플레이 스토어에 출시하여<br>
+                        소비자의 반응을 체크합니다.</p>
+                </div>
+                <div class="youtube4">
+                    <iframe src="https://www.youtube.com/embed/yYBL3DZcPmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>Unity 엔진을 활용하여 3D RPG 게임을 직접 기획부터<br>
+                        개발하고, 제작한 게임을 플레이 스토어에 출시하여<br>
+                        소비자의 반응을 체크합니다.</p>
+                </div>
+                <h2>6개월 뒤, 당신은 경력 있는 신입이 됩니다.</h2>
+            </div>
+        </div>
+        <div class="main_6">
+            <div class="career">
+                <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa3309a19-cd35-41ea-9541-455f48cbb7a3%2Fimage.jfif&blockId=47cbdf45-90f9-43b8-8b06-3fd29f5e697e" alt="이미 게임을 만들어 본 신입 개발자">
+                <h3>이미 게임을 만들어 본 신입 개발자</h3>
+                <p>현업에서의 개발은 <span class="box_yellow_r">고객의 피드백을 반영해<br>
+                서비스를 계속해서 개선하는 것</span>이 핵심입니다.<br>
+                신입 개발자인데 이미 게임을 만들어 보았다는 것<br>
+                은 상당히 큰 매리트가 되어주죠.<br>
+                직접 만든 게임을 시장에 출시하고 고객 의사까지 <br>
+                반영해 본 경력 있는 개발자가 되세요.</p>
+            </div>
+            <div class="career">
+                <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0b30035c-1c8a-4a09-a962-a51bb0e8d1ea%2Fdeveloping-programmer-team-development-website-design-and-coding-technologies.jpg&blockId=5408f439-3f8b-4d6a-abfe-2733506cce7f" alt="기획 영역 이해 개발자">
+                <h3>기획의 영역도 이해하는 개발자</h3>
+                <p>현업에서의 프로그래밍은 기획자의 기획을<br>
+                바탕으로 이행하는 것이 핵심입니다.<br>
+                기획자에 비해 역량이 부족하더라도 <br>
+                기획자에 대해 이해도를 갖추고 있다는 것은<br>
+                큰 매리트로 작용합니다.<br>
+                기획자를 이해하는 프로그래머로 거듭나세요.</p>
+            </div>
+            <div class="career">
+                <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4202fd1e-8e45-4eca-9bef-2dc6ab16281c%2F1.jpg&blockId=37ba4d10-70ef-4c53-8db1-7f9028b40a93" alt="팀 프로젝트 능숙한 개발자">
+                <h3>팀 프로젝트가 능숙한 개발자</h3>
+                <p>현업에서의 팀 협업에 있어서는 협업 툴의<br>
+                    활용과 소통의 요령이 가장 중요합니다.<br>
+                    과정 내에서 협업 툴을 능숙하게 다루고<br>
+                    팀 프로젝트를 진행하며, 팀원 간의<br>
+                    소통 요령에 대해 배우고 익히세요.<br>
+                    당신의 역량에 끝이 보이지 않을 겁니다.</p>
+            </div>
+            <div class="QnA">
+
+                <h2>자주 묻는 질문</h2>
+                <p>▶ <span class="box_orange">고등학교 졸업, 비전공자인데 취업할 수 있을까요?</span></p>
+                <p>▶ <span class="box_orange">커리큘럼에 있는 내용도 잘 모르겠어요. 괜찮을까요?</span></p>
+                <p>▶ <span class="box_orange">왜 수강료가 무료인가요?</span></p>
+                <p>▶ <span class="box_orange">문의 사항이 있어요! 어디로 문의하면 될까요?</span></p>
+                <p>▶ <span class="box_orange">수강 신청은 언제까지 하면 되나요?</span></p>
+            </div>
+            <h2>수료생들의 한 마디</h2>
+        </div>
+        <div class="main_7">
+            <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe1d9f462-df6d-4fac-90c4-18befeacf7ac%2F%25EA%25B2%258C%25EC%259E%2584%25ED%2594%2584%25EB%25A1%259C%25EA%25B7%25B8%25EB%259E%2598%25EB%25B0%258D_%25EC%259A%25B0%25ED%2594%25BC_%25EC%25B7%25A8%25EC%2597%2585%25EC%259E%2590%25EC%259D%25B8%25ED%2584%25B0%25EB%25B7%25B002.jpg&blockId=a1dec565-48a4-4403-ae22-a9783272d11c" alt="수료생 후기">
+            <h2>문의하기</h2>
+            <span>경일게임아카데미</span>
+            <a href="입학지원센터">입학지원센터</a>
+            <span>☎️ 02-479-4050</span>
+            <div class="kakao">
+                <p class="main7_title">경일게임아카데미</p>
+                <p class="main7_sub">고용노동부 5년 우수훈련기관인 경일게임아카데미는 업계에서 인정받는 직무중심의 게임전문아카데미입니다.</p>
+                <img class="main7_imoge" src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fpf.kakao.com%2Ffavicon.ico&blockId=cec1904d-64ed-4c2c-93b7-c47649df4eaf&width=32" alt="카톡 이모지">
+                <p class="main7_link">https://pf.kakao.com/_nsNxkM</p>
+                <img class="main7_logo" src="https://oopy.lazyrockets.com/api/v2/notion/image?src=http%3A%2F%2Fk.kakaocdn.net%2Fdn%2F812On%2FbtqjSHnn3I4%2FJVoieCk4b6aDMyvwMSSQV1%2Fimg_m.jpg&blockId=cec1904d-64ed-4c2c-93b7-c47649df4eaf&width=512" alt="경일로고">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

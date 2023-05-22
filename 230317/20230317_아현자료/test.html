@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div1"></div>
+    <div class="class_div">1 나는 div 태그</div>
+    <div class="class_div">2 나는 div 태그</div>
+    <div class="class_div">3 나는 div 태그</div>
+    <div class="class_div">4 나는 div 태그</div>
+    <button onclick="btn()">텍스트 통일</button>
+</body>
+<script>
+    function btn(){
+        let div = document.querySelectorAll('.class_div');
+        div.forEach(function(i){
+            i.innerHTML = "이 문자로 통일! 버튼눌렀지?";
+        });
+    }
+    
+</script>
+</html>

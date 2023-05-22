@@ -1,0 +1,120 @@
+<!-- 메뉴판 만들기
+1. 메뉴 밑으로 음식이름, 가격 나열
+2. 화면이 줄어들면 밑으로 떨어져서 나열
+3. 음식 메뉴는 하나의 묶음으로 만들기 (영역)-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴판</title>
+    <style>
+        .round{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: default;
+            width: 1200px;
+            height: 1600px;
+        }
+
+        img{
+            width: 200px; height: 100px;
+            di;
+        }
+
+        .menu{
+            width: 300px;
+            height: 450px;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+
+        table{
+            display: block;
+            text-decoration: none;
+            width: 150px;
+            height: 200px;
+        }
+
+
+        .sub{
+            width: 300px;
+            height: 450px;
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-style: dashed;
+        }
+    </style>
+
+</head>
+<body>
+
+<div style="border: 5px solid black;">
+    <div style="width: 200px; height:220px; background-color: silver;">
+        <h1 style="text-align: center;">menu</h1>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="round">
+        <div class="menu">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMDFfMjc0%2FMDAxNjc1MjE1Njc0Nzc4.LvjhvOAKHCGK1EdJTW4SarHMpcflq0PxE0cE32QVixIg.YxeaWSHTFiWStQY-yIFECY0I_D7xyJjUCR7adFFEyAwg.JPEG.maeki77%2FSmartSelect_20230201_104107_Chrome.jpg&type=a340" alt="낚지볶음 사진">
+            <h2 style="text-align: center;">낚지볶음</h2> <br><br>
+            <h3 style="text-align: center;">12.0</h3> <br>
+            <p style="text-align: center;">고춧가루를 넣어 매콤한 <br> 낚지볶음</p>
+            
+        </div>
+        <div class="menu" >
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAxMjBfMjkg%2FMDAxNjc0MTY5NDcwODgw.hYxz11nkQ_FsaKPymYmcZTwHAkvyQWjwQZCyp5TNQLog.7AW4eruftZ8uwObKt9pJM_9LvPDeQEvs7so6-hmJzeAg.PNG.hanul8158%2Fpublicdomainq-0014226emfwwc.png&type=a340" alt="샐러드 사진">
+            <h2 style="text-align: center;">샐러드</h2>
+            <h3 style="text-align: center;">7.0</h3>
+            <p style="text-align: center;">푸릇푸릇 싱싱한 야채 가득</p>
+            
+        </div>
+        <div class="menu">
+            <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2F736x%2Fae%2F2a%2F4c%2Fae2a4cb7bd754a17efb607447f52404b.jpg&type=a340" alt="햄버거 사진">
+            <h2 style="text-align: center;">햄버거</h2>
+            <h3 style="text-align: center;">6.6</h3>
+            <p style="text-align: center;">참깨빵 위에 순 쇠고기 패티 두 장</p>
+            
+        </div>
+        <div class="menu">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAxMDZfMjg0%2FMDAxNjcyOTkzNzQ0NjYz.azXOWHy0PPnna31JJrkfS5Xyk8j6s2ruf8FmGk7m_ysg.2w-zHtwOeDY5yQwf2uDj7LA7rp0vDiGf9Cb5AK5_F30g.PNG.hanul8158%2Fpublicdomainq-0004886pvocnt.png&type=a340" alt="군만두 사진">
+            <h2 style="text-align: center;">군만두</h2>
+            <h3 style="text-align: center;">5.8</h3>
+            <p style="text-align: center;">바삭 촉촉 군만두</p>
+            
+        </div>
+        <div class="menu">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODAyMThfMjU4%2FMDAxNTE4OTUxNTQxOTk1.GcT-5lCmU5kXmEn8WZlyhg5XgWuOV9HulzBxmC6qpA4g.CmKRiJnuY8tBzR0L9tOZcC-nOusPIrSUbkyoiQh3V_Ig.JPEG.worldn77art03%2F7e8c191ed488cd2d7ce5fb5900f6211f.jpg&type=a340" alt="케이크 사진">
+            <h2 style="text-align: center;">조각 케이크</h2>
+            <h3 style="text-align: center;">9.0</h3>
+            <p style="text-align: center;">달콤촉촉 케이크</p>
+        </div>
+
+        <div class="sub">
+            <h2 style="text-align: center;">조각 케이크</h2>
+            <h3 style="text-align: center;">9.0</h3>
+            <p style="text-align: center;">달콤촉촉 케이크</p>
+
+
+       
+        </div>
+    </div>
+</div>
+        </body>
+        </html>

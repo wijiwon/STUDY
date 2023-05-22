@@ -1,0 +1,99 @@
+
+/* style 태그에 작성했던 방식으로 코드를 작성 해주면 된다. */
+
+div{
+    color: blue;
+}
+
+/* basic css */
+
+.display{
+    display: block;
+    /*block은 블록 요소, div태그의 기본값, 자기의 너비를 전부 갖고 옆에 아무도 없어야한다.*/
+    display: inline;
+    /*인라인, span, a 등 기본값을 인라인으로 가지고 있고 옆으로 태그가 자리할 수 있다.*/
+    display: flex;
+    /*자식 태그들을 정렬시킬 수 있다.
+      정렬시키는 방식은 여러가지가 있다.*/
+    display: inherit;
+    /*부모한테 값을 가져와서 적용시킨다. 사용할 일이 거의 없다.*/
+    display: initial;
+    /*태그가 기본적으로 가지고 있던 속성으로 초기화시켜준다. 기본값으로 적용시킨다.*/
+    display: none;
+    /*화면에서 보이지 않도록 태그를 지워버린다. 추후 자바스크립트에서 display속성이 none으로 적용되어 있으면 선택되지 않는다.*/
+}
+
+.wh{
+    width: 100px;
+    /*태그의 너비*/
+    
+    height: 100px;
+    /*태그의 높이*/
+    
+    width: max-content;
+    /*가지고 있는 자식 태그의 너비 만큼 차지한다.*/
+    
+    width: min-content;
+    /*가지고 있는 자식 태그의 최소 만큼 너비를 차지한다.*/
+    
+    max-width: 100px;
+    /*설정한 너비 이상으로 태그가 커지지 않는다. 최대 너비*/
+
+    min-width: 100px;
+    /*설정한 너비 이하로 태그가 작아지지 않는다. 최소 너비*/
+}
+
+.content{
+    width: 200px;
+    height: 200px;
+    
+    overflow: hidden;
+    /*자식의 태그가 부모영역 이상으로 보이지 않게 설정, 넘쳤을 경우 넘친 공간을 보이지 않게 지워버림*/
+
+    overflow: scroll;
+    /*자식 태그의 내용을 스크롤 처리 하도록 만든다.*/
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /*y축만 스크롤이 가능한 방법*/
+    
+    overflow-y: hidden;
+    overflow-x: scroll;
+    /*x축만 스크롤이 가능한 방법*/
+
+    /*투명도를 설정해줄 수 있다.
+      1=최대치 (100%), 소숫점 단위로 조절*/
+    opacity: 1;
+
+}
+
+.text{
+    /*글씨의 크기. pc 크롬 기준으로 기본값은 16px이다.
+      환경(모바일, pc브라우저)에 따라 기본 값이 다를 수 있다.*/
+    font-size: 16px;
+
+    /*글씨의 굵기. 기본 값은 500이고, 글꼴을 가져왔을 때 기본값이 변할 수 있다.*/
+    font-weight: 500;
+
+    /*글씨의 색. RGB, RGBa(0,0,0,투명도) 등등으로 설정이 가능하다.*/
+    color: RGBa(0,0,0,0.5);
+
+    /*글자의 정렬을 가운데로 설정*/
+    text-align: center;
+
+    /*글자의 정렬을 오른쪽 끝으로 정렬*/
+    text-align: end;
+
+    /*글자를 왼쪽 끝으로 정렬*/
+    text-align: start;
+
+    /*텍스트에 줄 긋기 - overline: 텍스트 윗 줄 추가 / 텍스트 밑 줄 추가*/
+    text-decoration: overline;
+    text-decoration: underline;
+
+    /*텍스트 꾸밈 요소 제거*/
+    text-decoration: none;
+
+    /*글자의 간격 조절*/
+    letter-spacing: 10px;
+}

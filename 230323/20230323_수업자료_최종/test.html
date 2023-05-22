@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+</head>
+<body>
+</body>
+<script>
+    //문자열을 객체로 변환
+    let _json = '{"key" : "value"}';
+    console.log(_json);     
+    //결과: {"key" : "value"}
+
+    //JSON객체 안의 parse메소드가 객체로 객체형태의 문자열을 파싱해준다.
+    //객체로 변환해준다.
+    console.log(JSON.parse(_json));
+    /*결과
+    {key: 'value'}
+    key
+    : 
+    "value"
+    */
+    
+    //객체를 문자열로 변환
+    let obj = {key : 24}; 
+    console.log(obj);
+    /*결과 
+    {key: 24}
+    key
+    : 
+    24
+    */
+
+    //객체로 선언된 변수 obj가 문자열로 변환된다.
+    console.log(JSON.stringify(obj));  
+    //결과: {"key":24}
+
+</script>
+</html>

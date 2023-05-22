@@ -1,0 +1,31 @@
+ol{
+    list-style: none;
+    display: flex;
+    
+}
+
+li{
+    border: 1px solid;
+}
+
+.num{
+    width: 150px;
+}
+
+
+.title{
+  width: 700px;
+  
+}
+
+.add{
+    width: 200px;
+}
+
+.date{
+    width: 300px;
+}
+
+.view{
+    width: 150px;
+}

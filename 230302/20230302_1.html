@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style</title>
+</head>
+<body>
+    이틀 전까지 한 내용은
+    태그: div, p, h1~6, span, br, img, table, a
+    style속성 (attribute): style을 주자
+
+
+    
+    <div style="width: 100%; height: 60px; background-color: black; padding: 0; margin: 0; box-sizing: border-box;">
+    style 속성: CSS(Cascading style sheets,  마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어) <br>
+    width: 너비, max-width(최대), min-width(최소) <br>
+    height: 높이, max-height(최대), min-height(최소) <br>
+    background-color: 배경색, 색상을 태그에 입힐 수 있다., rgb(255,255,255)-색상명 대신으로 입력이 가능하다. <br>
+    padding:(태그 내부 여백), margin(태그 외부의 여백): top, right, bottom, left
+    값을 한개만 썼을 때 4방면이 해당 값으로 적용된다. <br>
+    4방면의 값을 각각 주고 싶을 경우 각 자리에 값을 입력하면 된다.
+    값을 2개 작성했을 경우 (상하) (좌우) 값을 적용할 수 있다. <br>
+    box-sizing: 박스 크기의 기준을 설정 <br>
+
+    <!-- div: 생성 시 처음부터 블록 요소를 가지고 있다. -->
+    <!--'display: inline-block:' 원래 있던 속성을 덧 씌워서 속성을 없앤다.
+        display: 영역의 노출 크기를 어떻게 설정할지 기준을 설정한다.
+        바디 영역의 너비는 부모 태그를 기준으로, 높이는 자식 태그를 기준으로 설정한다.-->
+    <!--속성을 추가 할 때  -> 속성명 = "속성 값"-->
+    <div style="width: 500px;">
+        <div style="display: block;">
+
+        </div>
+    </div>
+    <div style="width: 500px;">
+        <!-- 블록의 영역은 작지만 부모태그의 영역을 다 차지하려고 하기 때문에 한 영역에 한 div만 차지할 수 있다.-->
+       <div style="width: 200px; height: 200px; border: 1px solid;">디브 영역 1</div>
+       <div style="width: 200px; height: 200px; border: 1px solid;">디브 영역 2</div>
+       <br>
+      
+       <!-- inline은 자신의 영역 만큼만 차지한다.-->
+       <div style="width: 200px; height: 200px; border: 1px solid; display: inline-block;"></div>
+       <div style="width: 200px; height: 200px; border: 1px solid; display: inline-block;"></div>
+        <br>
+       
+        <!--display flex-->
+        부모의 넓이를 맞춰야 하기 때문에 자식들의 넓이가 오바되면 자식들의 넓이를 동일하게 찌그러트린다.
+        flex-wrap은 부모의 크기보다 자식의 크기가 클 경우 크기에 맞춰 나머지 크기의 자식을 밑으로 떨어트린다.
+       <div style="display: flex; flex-wrap: wrap;">
+        <div style="width: 200px; height: 200px; border: 1px solid;">디브 영역1</div>
+        <div style="width: 200px; height: 200px; border: 1px solid;">디브 영역2</div>
+        <div style="width: 200px; height: 200px; border: 1px solid;">디브 영역3</div>
+        <div style="width: 200px; height: 200px; border: 1px solid;">디브 영역4</div>
+        <div style="width: 200px; height: 200px; border: 1px solid;">디브 영역5</div>
+        <div style="width: 200px; height: 200px; border: 1px solid;">디브 영역6</div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"></div>
+        <div style="width: 200px; height: 200px; border: 1px solid;"></div>
+       </div>
+    
+
+       <div>
+        <h1 style="color: rgb(200, 100, 100);">경일 게임 아카데미</h1>
+        <h2 style="color: blue;">경일 게임 아카데미</h2>
+        <h3 style="color: aqua;">경일 게임 아카데미</h3>
+       </div>
+
+
+
+    </div>
+</div>
+<p></p>
+<h1></h1>
+</body>
+</html>

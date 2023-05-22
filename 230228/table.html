@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <!-- table태그 : 표를 작성하는 가장 밖에 위치하는 부모 태그 
+        ex. ul, li / ul태그는 li태그를 감싸고 있으므로 부모태그, 
+        li태그는 ul태그에 감싸여 있으므로 자식태그이다.-->
+        <!-- 테이블에 'border-collapse: collapse;'을 추가하면 떨어져있던 선이 겹쳐진다.-->
+    <table style="width: 100%; border-collapse: collapse;">
+        <!-- caption 태그로 테이블의 이름을 작성해준다.-->
+        <caption>
+            테이블 이름
+        </caption>
+        <!-- column의 약자 (열, 세로줄)-->
+        <col style="width: 50px;">
+        <col style="width: 100px;">
+        <col style="width: 200px;">
+        <col style="width: 200px;">
+        <col style="width: 200px;">
+    <tr>
+        <!-- th: 테이블 제일 위의 이름 테이블 헤더, 볼드체로 표기-->
+        <!-- border: 테두리를 바꿔줄 수 있는 속성 (border: '선 굵기 선의타입 선테두리색')-->
+        <th style="border: 1px solid black;">번호</th>
+        <th style="border: 1px solid black;">이름</th>
+        <th style="border: 1px solid black;">나이</th>
+        <th style="border: 1px solid black;">성별</th>
+        <th style="border: 1px solid black;">국적</th>
+    </tr>
+    <tr>
+        <!--td: 테이블 안의 내용-->
+        <th style="border: 1px solid black;">1</th>
+        <!-- clospan속성: 값을 가로로 병합시켜준다. 병합할 칸의 값을 입력한다.-->
+        <td colspan="2" style="border: 1px solid black;">위지원</td>
+        <td style="border: 1px solid black;">여자</td>
+        <!-- 'background-color: 색상;' 칸의 색상을 지정한다.-->
+        <td style="border: 1px solid black; background-color: beige;">한국</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">2</th>
+        <td style="border: 1px solid black;">위지원</td>
+        <td style="border: 1px solid black;">26</td>
+        <td style="border: 1px solid black;">여자</td>
+        <!-- 'text-align: center;'속성은 가운데 정렬-->
+        <td style="border: 1px solid black; text-align: center;">한국</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">3</th>
+        <td style="border: 1px solid black;">위지원</td>
+        <td style="border: 1px solid black;">26</td>
+        <td style="border: 1px solid black;">여자</td>
+        <!-- rowspan속성: 값을 세로로 병합시켜준다. 병합할 칸의 값을 입력한다.-->
+        <td rowspan="2" style="border: 1px solid black;">한국</td>
+    </tr>
+    <tr>
+        <th style="border: 1px solid black;">4</th>
+        <td style="border: 1px solid black;">위지원</td>
+        <td style="border: 1px solid black;">26</td>
+        <td style="border: 1px solid black;">여자</td>
+        
+    </tr>
+    </table>
+</body>
+</html>
+
+
+

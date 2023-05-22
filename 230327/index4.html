@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <!-- 외부 CSS -->
+  <!-- CSS를 min파일로 변경한 것이 서버에 있는 것을 링크로 가져온 것이다. -->
+  <!-- 인터넷이 끊기면 정상으로 작동이 안되니까 -->
+  <!-- 추후 해당 사이트의 코드를 복사해서 각 css, js 파일에 복붙 하면되고 해당 파일을 연결하면 인터넷 없이도 사용이 가능하다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <!-- 정해져 있는 값 -->
+  <!-- swiper 제작자가 사용 규격을 맞추어 놓았다.-->
+  <!-- Swiper클래스 맞춰줘야 하고 -->
+  <div class="swiper mySwiper">
+    <!-- swiper-wrapper 도 동일하게 사용해야하고 -->
+    <!-- 다른 스타일을 먹이고 싶으면 별도의 클래스를 추가해주어야 한다. -->
+    <div class="swiper-wrapper">
+        <!-- swiper-slide도 동일하게 사용해야 한다. -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    //swiper 생성자에 매개변수로 태그의 선택자를 전달햊면 된다.
+    //.mySwiper 선택자를 전달해서
+    //mySwiper 태그의 내용을 읽고 스와이프의 기능들을 입혀준 것
+    //두 번째 매개변수는 속성값을 넣어줗 수 있다.
+    //전달받은 객체로 키 값을 읽어서 기능들을 적용시켜주는 거에요
+    //정해놓은 키값을 넣으면
+    var swiper = new Swiper(".mySwiper", {
+        loop:true,
+        slidesPerView: 2,   //한 화면에 보일 슬라이드 개수
+        spaceBetween: 30}); //슬라이드 사이의 여백
+  </script>
+</body>
+
+</html>

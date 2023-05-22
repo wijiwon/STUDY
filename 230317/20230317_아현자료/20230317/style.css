@@ -1,0 +1,18 @@
+.button-div {
+  border: 1px solid black;
+  width: 100px;
+  height: 50px;
+  background-color: antiquewhite;
+  border-radius: 12px;
+
+  /* 세번째 4px : 번짐 정도 */
+  box-shadow: 1px 1px 4px black;
+
+  /* 글자 가운데로 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 마우스 올리면 손가락 */
+  cursor: pointer;
+}

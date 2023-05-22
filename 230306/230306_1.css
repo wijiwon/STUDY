@@ -1,0 +1,112 @@
+div{
+    border: 1px solid blue;
+    width: 600px;
+    height: 300px;
+}
+
+div img{
+
+    width: 100%;
+    height: 70%;
+}
+
+/*id는 앞에 #을 붙인다.*/
+.box img{
+    transform: translate(50px, 100px);
+    /*transform: translate(x축, y축)*/
+    /*해당 태그의 위치를 이동시켜준다.*/
+    /*transform 함수처럼 생김*/
+}
+
+.box_2 img{
+    transform: translateX(100px);
+    /*transformX(x축의 값)*/
+    /*y축은 없고 x축만 입력한 상태. 따라서 x축만 이동*/
+}
+
+.box_2 img{
+    /*같은 선택자일때 CSS 가장 밑에 입력한 속성이 적용된다.*/
+
+    transform: translateY(100px);
+    /*transformY(y축의 값)*/
+    /*x축은 없고 y축만 입력한 상태. 따라서 y축만 이동*/
+}
+
+.box_3 img{
+    transform: scale(2,2);
+    /*
+    1이 기본 크기이고 크기를 조절할 수 있다.
+    0.5가 태그의 50% 크기
+    scale(x의 크기,y의 크기) 
+    */
+}
+
+.box_4 img{
+    transform: rotate(125deg);
+    /*
+    태그를 회전 시켜준다. 값은 각도로 입력한다.
+    45deg=45도 회전
+    */
+}
+
+
+/*CSS에서 애니메이션을 작성할 때 사용한다. @keyframes 뒤에 작성된 내용이 애니메이션의 이름이다.*/
+@keyframes ani0 {
+    0%{
+        /*전체 동작 중 0~50%까지의 동작 내용을 입력한다.*/
+        transform: rotate(0);
+    }
+    50%{
+        /*전체 동작 중 50일때의 동작 내용을 입력한다.*/
+        transform: rotate(360deg);
+    }
+    100%{
+        /*전체 동작 중 50~100%까지의 동작 내용을 입력한다.*/
+        transform: rotate(0);
+
+    }
+}
+
+
+.box_5 img{
+    transition: transform 3s linear, border 1s ease-in-out, border-radius 1s ease-in-out;
+    /*스타일 값이 변하면서 효과를 줄 수 있다.
+        transition에 대해서 변화하는 시간 변화의 방법을 설정할 수 있다.
+        transform 3s: transform 속성이 3초간 변화 (태그가 돌아가는 것)
+        border 1s: border 값이 1초 동안 변화 (테두리가 생기는 것)
+        border-radius 1s: 값이 1초 동안 변화 (둥글게 모서리가 깎임)*/
+}
+
+.box_5 img{
+    /*animation: keyframes의 이름, 시간, 변화 방법*/
+    /* animation: ani0 1s ease; */
+
+    width: 300px;
+    height: 300px;
+}
+
+.box_5:hover img{
+    /*마우스가 태그에 올려졌을 때*/
+    transform: rotate(720deg);
+    border: 10px solid red;
+    border-radius: 50%;
+    
+}
+
+.box_6{
+    position: relative;
+}
+
+.box_6 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*태그를 영역의 50%만큼 이동*/
+
+    transform: translate(-50%, -50%);
+    /*태그를 반지름 만큼의 거리를 당긴 것. 따라서 이미지를 영역의 중앙정렬을 할 수 있게 된다.*/
+
+    width: 200px;
+    height: 200px;
+}
+
