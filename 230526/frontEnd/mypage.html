@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .mymypost{
+            display: none;
+        }
+        .mymypost.pop{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>마이페이지</h1>
+    <div>
+        <form action="http://127.0.0.1:8080/login/update" method="post">
+            <input type="text" name="user_name" id="user_name"> <br>
+            <input type="text" name="user_age" id="user_age"> <br><br>
+            <!-- <span>이름: </span><span id="user_name"></span> <br>
+                <span>나이: </span><span id="user_age"></span> <br> <br> -->
+            <button id="userUpdate">프로필 수정</button> 
+        </form>
+        <br><br><br>
+    </div>
+    
+    <span id="postView" style="background-color: antiquewhite;">내가 쓴 글 보여줘 (●-◡-●)</span> <br>
+    <div class="mymypost">
+        <div id="posts">
+        </div>
+    </div>
+
+</body>
+<script>
+        async function getAPI(){
+        try {
+            const {data} = await axios.get('http://127.0.0.1:8080/login/view',{
+                // 브라우저가 쿠키를 서버로 전달할 수 있는 옵션
+                withCredentials : true
+            })
+            const data2 = await axios.get('http://127.0.0.1:8080/Post/myposts',{
+                // 브라우저가 쿠키를 서버로 전달할 수 있는 옵션
+                withCredentials : true
+            })
+            console.log("@@@@@@@@@@@@@@@@",data);
+            user_name.value = data.user.name;
+            user_age.value = data.user.age;
+            
+            // isLoading.classList.add("disable");
+            // console.log("정보",data2.data);
+
+            // console.log("#################",data2.data)
+            // let postArr = Object.entries(data2.data);
+            
+            data2.data.forEach((el, index) => {
+                console.log("sfsdfsdfsdf",el)
+                posts.innerHTML += `
+                <div>
+                    <form action="http://127.0.0.1:8080/Post/postupdate/${el.id}" method="post">
+                        제목: ${el.title} <br>
+                        내용: ${el.content} <br>
+                        <div>
+                            <input type="text" name="postT" id="post_T">
+                            <input type="text" name="postC" id="post_C">
+                            <button>수정</button>
+                        </div>
+                    </form>
+                    <form action="http://127.0.0.1:8080/Post/postDelete/${el.id}" method="post">
+                        <br>
+                        <div>
+                            <button>삭제</button>
+                        </div>
+                    </form>
+                    <br><br><br>
+                </div>
+                `
+                // 수정하는 함수에서 post 보내줘 서버로 어케?
+                // 1. 
+                // el.id ??
+            });
+            // console.log("정보",data.user.name);
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    getAPI();
+
+    postView.onclick = ()=>{
+        document.querySelector(".mymypost").classList.toggle("pop")
+    }   
+</script>
+</html>

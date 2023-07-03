@@ -1,0 +1,4 @@
+{
+  // 설정
+  "presets": ["@babel/preset-react"] // plugins: 사용할 플러그인
+}

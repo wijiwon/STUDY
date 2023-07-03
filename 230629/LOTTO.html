@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./LOTTO.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    // 로또 숫자 랜덤뽑기 세팅을 하는 컴포넌트
+    class LottoSet extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          num: [],
+          numArr: [],
+        };
+        this.choice = this.choice.bind(this);
+        console.log("뜨라고");
+      }
+
+      choice() {
+        console.log("실햄댐");
+        let numArr = [];
+        for (let a = 1; a <= 45; a++) {
+          numArr.push(a);
+        }
+        let num2 = [];
+        for (let i = 0; i < 6; i++) {
+          let randomIndex = Math.floor(Math.random() * numArr.length);
+          let number = numArr[randomIndex];
+          numArr.splice(randomIndex, 1);
+
+          num2.push(number);
+        }
+        num2.sort((a, b) => {
+          return a - b;
+        });
+        this.setState({ num: num2, numArr: [num2, ...this.state.numArr] });
+      }
+
+      render() {
+        return (
+          <>
+            <button className="LottoBtn" onClick={this.choice}>
+              추첨
+            </button>
+            <LottoDiv lottonum={this.state.num} />
+            <LottoList List={this.state.numArr} />
+          </>
+        );
+      }
+    }
+
+    // class LottoItem extends React.Component {
+    //   constructor(props) {
+    //     super(props);
+    //   }
+
+    //   render() {
+    //     return (
+    //       <ul>
+    //         <li>{this.props.num}</li>
+    //       </ul>
+    //     );
+    //   }
+    // }
+
+    // 지난 로또 결과를 그려주는 컴포넌트
+    class LottoList extends React.Component {
+      constructor(props) {
+        super(props);
+      }
+
+      loop(value, index) {
+        return <LottoDiv key={index} lottonum={value} />;
+      }
+
+      render() {
+        return <li>{this.props.List.map(this.loop)}</li>;
+      }
+    }
+
+    // 로또번호 하나를 그려주는 컴포넌트
+    class LottoNum extends React.Component {
+      constructor(props) {
+        super(props);
+      }
+
+      // ClassName(){
+      //   let Cname = "Num" + {this.props.index}
+      // }
+
+      render() {
+        let Color = "";
+        if (this.props.num < 11) {
+          Color = "Yel";
+        } else if (this.props.num > 10 && this.props.num < 21) {
+          Color = "Blue";
+        } else if (this.props.num > 20 && this.props.num < 31) {
+          Color = "Red";
+        } else if (this.props.num > 30 && this.props.num < 41) {
+          Color = "Black";
+        } else if (this.props.num > 40 && this.props.num < 46) {
+          Color = "Green";
+        }
+
+        const className = "Num" + this.props.yuslshi + " " + Color;
+        return (
+          <div className={className}>
+            <div className="inner">{this.props.num}</div>
+          </div>
+        );
+      }
+    }
+
+    // 로또번호 전체를 그려주는 컴포넌트
+    class LottoDiv extends React.Component {
+      constructor(props) {
+        super(props);
+      }
+
+      loop(value, index) {
+        return <LottoNum yuslshi={index} num={value} />;
+      }
+
+      render() {
+        return (
+          <div className="LottoNum">{this.props.lottonum.map(this.loop)}</div>
+        );
+      }
+    }
+
+    class App extends React.Component {
+      constructor(props) {
+        super(props);
+      }
+
+      render() {
+        console.log("뜸?");
+        return (
+          <div>
+            <LottoSet />
+          </div>
+        );
+      }
+    }
+
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+    root.render(<App />);
+  </script>
+</html>
