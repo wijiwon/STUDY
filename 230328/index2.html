@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <style>
+        .board-content div {
+            border: 1px solid;
+            height: 30px;
+            min-width: 100px;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <input type="text">
+        <input type="text">
+        <button id="addBtn">등록</button>
+    </div>
+    <div class="board">
+
+    </div>
+
+</body>
+<script>
+    //보드의 내용을 담아놓을 배열
+    let boardArr = [];
+    let _index = 1;
+
+    //보드의 내용을 만들어줄 생성자함수
+    //객체에서 구조분해할당으로 값을 가져올것
+    //매개변수 부분에 중괄호 작성
+    //객체에서 가져올 키 값을 작성해준다.
+    //_name, _content, _id의 키 값을 가져와야 겠다.
+    //구조분해 할당으로
+    function creatBoard({ _name, _content, _id }) {
+        this.name = _name;
+        this.content = _content;
+        this.id = _id;
+    }
+
+    function addBoard() {
+        //배열 구조분해할당 순서대로
+        //배열의 0번 1번 순서대로
+        //첫 번째 input이 input01에 담기고
+        //두 번째 input이 input02에 담긴다.
+        let [input01, input02] = document.querySelectorAll('input');
+        //new 빈 객체 만들고
+        //뒤에 생성자 함수
+        //매개변수로 전달한 객체의 키 값을 기준으로 
+        //_name과 _content와 _id의 값이 구조분해할당으로 할당된다. 키를 기준으로 할당되기 때문에 키의 이름이 같아야 한다.
+        //글의 갯수와 맞출것인지 아니면 글 번호를 매겨놓고 게시판을 유지할 것인지
+        //다시 번호를 갱신한다하면 그냥 반복문에서 처리 가능하다.
+        let board = new creatBoard({ _name: input01.value, _content: input02.value, _id: _index });
+        _index++;
+        boardArr.push(board);
+        console.log(boardArr);
+        render();
+    }
+
+
+    function render() {
+        //내용 초기화
+        document.querySelector('.board').innerHTML = "";
+        //객체를 담고있는 배열
+        boardArr.forEach(function (item, index) {
+            //item은 객체가 순서대로 할당되고
+            let div01 = document.createElement("div");
+            let div02 = document.createElement("div");
+            let div03 = document.createElement("div");
+            let div04 = document.createElement("div");
+            let div05 = document.createElement("div");
+            div05.style.display = "none";
+            let button = document.createElement('button');
+            let Sbutton = document.createElement('button');
+            let Rbutton = document.createElement('button');
+            Rbutton.innerHTML = "수정등록";
+            Rbutton.style.display = "none";
+
+            button.onclick = function () {
+                //div01 태그 제거
+                div01.remove();
+                //boardArr배열에서 제거
+                //제거를 시작할 인덱스 몇 개를 제거할지 두 번째 매개변수로
+                boardArr.splice(index, 1);
+                render();
+
+            }
+
+            Sbutton.onclick = function () {
+                let Sinput01 = document.createElement('input');
+                let Sinput02 = document.createElement('input');
+                div05.append(Sinput01, Sinput02, Rbutton);
+                Sinput01.type = "text";
+                Sinput02.type = "text";
+                div05.style.display = "block";
+                Rbutton.style.display = "inline";
+
+                Rbutton.onclick = function () {
+                    /*방법 1_아현
+                    item['name'] = Sinput01.value;
+                    item['content'] = Sinput02.value;
+                    */
+                    //방법2_내가한것
+                    let Reboard = new creatBoard({ _name: Sinput01.value, _content: Sinput02.value, _id: item["id"] });
+                    /*이슈! push 진행 시 게시글 아래에 삽입되는 현상 발생 splice로 해결완료*/
+                    boardArr.splice(index, 1, Reboard);   //splice(index,제거할 요소개수, 배열에 추가될 요소)
+                    render();
+                }
+
+            }
+
+            button.innerHTML = "삭제";
+            Sbutton.innerHTML = "수정";
+            //구조분해할당
+            let { name, content, id } = item;
+            div02.innerHTML = id;       //글 번호   (id = 글번호 값이 삭제 추가에도 유지 / index = 글 번호 값이 삭제 추가에 따라 변한다.)
+            div03.innerHTML = content;  //글 내용
+            div04.innerHTML = name;     //작성자
+            div01.style.display = "flex";
+            div01.className = "board-content";
+
+            div01.append(div02, div03, div04, button, Sbutton, div05);
+            document.querySelector('.board').append(div01);
+        })
+    }
+
+
+    addBtn.onclick = addBoard;
+
+//만든 게시판 수정하기 버튼 추가해보기
+//기왕이면 배운거 활용해서 제적하기
+
+</script>
+
+</html>

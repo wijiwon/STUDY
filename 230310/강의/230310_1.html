@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+        자바스크립트 진행
+    
+</body>
+<!-- body 태그 밑에 script 태그 작성
+    script 태그: javascript 구문을 작성할 수 있게 도와주는 태그-->
+<script>
+    //: 한 줄 주석
+    /*
+        줄 내림 주석
+    */
+
+   // 자바스크립트 변수
+   // 변수: 데이터를 가리키는 주소, 변수는 저장한 데이터의 주소이다. 주소를 알면 데이터를 가져올 수 있다. 변수의 값은 변할 수 있다. 
+   // 변수 선언 -> 변수에 데이터를 정의 -> 데이터를 메모리에 담아둔다.
+   // 메모리: 프로그램이 실행되는 동안 필요한 데이터와 명령어를 저장하는 곳.
+   // 램: CPU사 데이터를 빠르게 접근하고 사용할 수 있는 공간
+   // CPU: 처리할 데이터나 명령어를 잠시 저장하고 사용하는 용도로 사용된다. 전원이 꺼지면 저장된 데이터가 모두 날아간다.
+
+
+   // var와 let이 있다.
+   /* 
+        var와 let의 차이점: 
+        var - 재선언이 가능하다. 알고만 있고 되도록 사용하지 않도록 한다.
+                var로 작업했을 때 팀원과 같이 작업하다가 변수명이 겹치는 경우, 먼저 선언하여 작업한 작업물이 망가지게 된다.
+        let - 재 선언이 불가능하다.
+    */
+    var var1 = 1;    //변수 var1 선언
+    // 1이라는 데이터를 메모리에 저장하고 그 이름을 var1로 지정. 이름(예.var1)은 해당 데이터에 접근할 수 있도록 변수명을 지정하는 것이다.
+
+    let let1 = 1;    //let변수 let1선언
+
+    let let2;       //값을 대입하지 않고 변수의 이름만 미리 선언해 놓을 수 있다. 
+    let2 = 56135;       //값을 넣는 방법
+
+
+    //자바 스크립트에서 변수를 선언할 때 let이나 var같은 키워드를 꼭 사용해줘야 한다.
+    let3 = 3;       // 전역변수르 선언이 되고 예상치 못한 문제가 발행한다. * 절대 하면 안되는 방법 *
+
+
+    // html상에서 변수를 로그로 확인
+    console.log(let2);       // console.log("웹브라우저 개발자 모드(f12). 콘솔창에 보여줄 값")
+
+    let let4 = "나는 글자";      //데이터 값을 문자형식으로 저장하기 위해서는 " " 안에 넣어야 한다.
+    console.log(let4);          //문자는 검은색, 숫자는 파란색
+
+    // typeof 타입 검사: 변수에는 저장되는 데이터에 따라 타입이 나뉜다.
+    console.log(typeof let4);   //string 타입
+    console.log(typeof let2);   //number 타입
+
+    // 전등 스위치처럼 참 거짓으로 구분하는 값이 필요할 때 사용하는 타입.
+    let let5 = true;        //참. boolean 타입
+    let let6 = false;       //거짓. boolean 타입
+
+    console.log(typeof let5);
+
+    let let7;
+    console.log(typeof let7);       // undefined: 값이 지정되지 않았을 때 타입. 값이 부재 상태일 때, 값이 확인되지 않을 때(=값을 넣지 않고 선언했을 때 자동으로 들어가는 데이터 타입) 나타난다.
+
+    let let8 = null;                //null: undefined와 같이 값이 없음을 나타내는 타입.(object) 개발자가 변수에 값이 없음을 의도적으로 나타낼 때 작성한다.
+    console.log(typeof let8);
+
+
+
+    // 데이터의 byte
+    // 숫자타입: 8byte
+    // 문자열: 약 2byte 이상 (길이에 따라 달라진다.)
+    // ture/false (boolean): 1byte (ture or false 둘 중 하나)
+    // null / undefined: 0byte
+    /* 추후 블록체인 과정이 진행되면 '바이트 패딩 기법 (데이터를 전송하거나 저장할 때 일정한 크기의 블록으로 나누어서 각 블록의 크기를 일정하게 맞춰서 사용.
+        데이터를 전송할 때 보안성이나 속도를 향상 시킬 수 있기 때문이다.)'이나 '암호화 (sha-256 데이터 암호화를 시켜준다.)'을 사용할 수도 있기 때문이다. */
+
+    //1. 간단히 let 선언문으로 type1이라는 변수를 만들고 값을 넣지 말고 선언
+    //2. 그 밑에 console.log() 로 type1 변수의 값을 확인하고
+    //3. 값을 확인 한 뒤에 그 밑에다가 5라는 값을 대입하고
+    //4. console.log()로 값을 확인
+    //5. console.log()변수의 type 값을 확인
+    //6. 그 다음에 밑에 "본인 이름"을 type1변수에 대입 마지막으로 console.log() 확인
+    // 주말에 변수 100번 써보기
+
+    
+    let type1;
+    console.log(type1);
+
+    type1 = 5;
+    console.log(type1);
+
+    console.log(typeof type1);
+
+    type1 = "위지원";
+    console.log(type1);
+
+    //string, number, bool, undefined, null = 원시 타입. 기초 타입
+    
+    
+
+    //객체타입
+    //중괄호로 정의
+    //object 객체타입
+    let obj = {a:1, b:2, c:3};     
+    console.log("obj : a : ",obj.a);            //obj 객체의 a값을 대입하거나 가져오려면 .으로 객체의 값에 접근할 수 있다.
+    console.log("obj : b : ",obj.b);            // 객체의 키 값: 예) a, b, c
+    console.log("obj : c : ",obj.c);
+    obj.a = 10;
+
+    obj.d = 20;                                 //객체 d 생성. d에 20의 값을 대입.
+
+
+    //배열타입
+    //대괄호로 정의
+    let arr = [1,2,3,"1","2","3"];
+    //배열의 인덱스(값의 순서)는 (0 ~ '배열의 길이 -1')
+    //따라서 해당 배열의 순서는 0 ~ 5
+    console.log("arr[0] : ",arr[0]);
+    console.log("arr[1] : ",arr[1]);
+    console.log("arr[2] : ",arr[2]);
+    console.log("arr[3] : ",arr[3]);
+    
+    //배열에 있는 리스트들 값의 맨 뒤에 새로운 값이 추가된다.
+    arr.push("4");
+
+    //object와 Array: 래퍼헌스 타입.
+
+    console.log(obj);
+    console.log(arr);
+
+    //변수의 이름을 작성하는 방법
+    /*
+        표기법 (추후 회사에서 사수가 사용하고 있는 표기법을 사용하면 된다.)
+
+        케밥 표기법(kebab Case): 예) let iten-box (CSS class 이름)
+        카멜 표기법: 자바스크립트 변수명을 선언할 때 자주 사용하는 표기법 예) let itemBox; (낙타 등처럼 구분하는 곳에 대문자를 사용)
+        스네이크 표기법: 예) let item_box;
+        헝가리안 표기법: 정한 타입을 변수명에 작성해준다.(사용도가 조금 떨어진다.) 예) let strItemBox;
+        파스칼 표기법: 추후 React에 들어가서 보게 될 예정.(컴포넌트) 예) let ItemBox;
+    */
+
+    //값을 가지고 할 수 있는 작업들
+
+    //연산자: 연산을 할 때 사용하는 구문 +, -, *, /, %
+    // +: 더하기
+    let a = 3;
+    let b = 2;
+    //값을 가져오고 싶을 땐 a와 b를 작성한 것처럼 변수의 이름을 적어주면 해당 변수명으로 저장된 값을 가져올 수 있다.
+    let c = a + b;
+    console.log(c);
+
+    let text1 = "나는 ";
+    let text2 = "배고프다";
+    //문자열을 +로 더해서 하나의 문자열로 합쳐준다.
+    console.log(text1 + text2);
+
+    console.log(a - b);
+    console.log(a * b);
+    console.log(a / b);
+    console.log("a",a % b);
+
+
+    // ++, --, **
+    a++;                    // 선언된 a의 값에서 1증가 함
+    console.log(a);
+    
+    a--;
+    console.log(a);         //마지막 a의 값에서 1감소 함
+    
+    b = b ** 3;             //변수 a에 값을 대입. a의 3제곱의 값을 대입
+    console.log(b);
+    
+    // ++, -- : 변수의 값이 변한다. (a + 1; 이라고 쓴다고 해서 a의 값이 변하진 않는다. 변하게 해주려면 a = a + 1;의 방식으로 대입 연산자를 넣어주어야 한다. )
+    let test1 = 1;
+    console.log(test1 + 1);     // 값이 +1 되도록 노출은 시켜주지만 a의 값이 변한 것은 아니다.
+    console.log(test1);         // 값이 1로 노출된다.
+
+    test1 = test1 + 1;
+    console.log(test1);         // 위에서 변수에 값을 더한 값을 대입하였기 때문에 원래 변수 값에서 다른 값이 나온다.
+
+    //값을 비교하는 연산자
+    // !, ==, ===, !=, !==, >, <
+
+    let test2 = true;
+    let test3 = false;
+    console.log(!test2);                // !: bool값을 반전시킨다.
+
+
+    let test4 = 2;
+    let test5 = 4;
+    let test6 = "2";
+    console.log(test2 == test3);        // == : 두 변수의 값이 서로 같을 경우 true, 둘의 값이 서로 다를 경우 false
+    console.log(test4 == test5);
+    console.log(test4 == test6);        //자료형이 달라도 값이 같으면 true
+
+
+    console.log(test4 === test6);           //좀 더 비교를 정밀하게 확실하게 비교하는 연산자 ===
+                                            //위의 ==은 값만 비교를 했지만 type 까지도 비교를 해주는 친구
+
+    console.log(test4 != test5);            //두 변수의 값을 비교를 하고 값의 결과를 반전시켜 값이 같으면 false, 같지않으면 true
+
+    console.log(test4 !== test6);           //두 변수의 값과 타입을 비교하고, 값의 결과를 반전시켜 값과 타입까지 같으면 false, 둘 중 하나라도 다르면 true (===의 반대)
+
+    let test8 = 3;
+    let test9 = 5;
+    let test10 = 5;
+
+    console.log(test8 > test9);             // >, <: 부등호 방향으로 값이 크면 true, 크기 않으면 false
+    console.log(test8 < test9);
+    console.log(test9 < test10);            //비교하는 값보다 초과나 미만이어야 한다. 값이 같을 경우 false로 나온다.
+    
+
+    //비교연산자 >=, <= (=은 꼭 부등호 뒤에) 이상, 이하의 값
+
+    console.log(test8 <= test9);            //테스트 8보다 테스트9가 크거나 같을 경우, 참. 아니면 거짓 
+    console.log(test9 >= test10);           //테스트 9가 테스트 10 보다 작거나 같을 경우 참. 아니면 거짓
+
+
+
+
+
+
+</script>
+</html>

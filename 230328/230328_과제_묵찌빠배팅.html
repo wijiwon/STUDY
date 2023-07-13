@@ -1,0 +1,317 @@
+<!-- 과제 2 
+묵찌빠를 추가하자.
+초기자금(플레이어, 컴퓨터): 난이도 - 쉬움 (100,000원) / 어려움 (50,000원) / 매우어려움 (10,000원)
+종료조건: 플레이어 또는 컴퓨터가 소지금을 모두 소비했을 때
+배팅금액: 2~3000원 / 플레이어와 컴퓨터는 동일한 배팅금을 지닌다.
+지는 사람이 배팅 금액의 2~3배의 금액을 지불한다.
+컴퓨터와 플레이어는 생성자 함수로 객체를 만들어서 작업진행 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>묵찌빠 배팅</title>
+    <style>
+        .ground1,
+        .ground2{
+            width: 800px;
+            height: 800px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            border: 1px solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .ground1{
+            display: none;
+        }
+        .select-ground{
+            display: flex;
+        }
+        .player-select,
+        .computer-select{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            background-size: cover
+        }
+
+        .rock{
+            background-image: url(/image/묵.png);
+        }
+        .scissors{
+            background-image: url(/image/찌.png);
+        }
+        .paper{
+            background-image: url(/image/빠.png);
+        }
+
+        .player-btn{
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        .level-btn{
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="ground2">
+            <h2 class="sub">난이도를 선택하세요!</h2>
+
+                <button class="level-btn easy">쉬움</button>
+                <button class="level-btn hard">어려움</button>
+                <button class="level-btn veryhard">매우 어려움</button>
+        </div>
+    
+
+        <div class="ground1">
+            <p>내 소지금: <span class="mymoney"></span></p>
+            <p>컴퓨터 소지금: <span class="commoney"></span></p>
+            <h2 class="game-sub"></h2>
+            <div class="select-ground">
+                <div class="player-select"></div>
+                <div class="computer-select"></div>
+            </div>
+            <h1 class="result">결과</h1>
+            <p class="subResult">내용</p>
+            <div>
+                <!-- JS의 rcp와 순서가 맞아야 한다. index값으로 들어가기 때문 -->
+                <button class="player-btn">묵</button>
+                <button class="player-btn">찌</button>
+                <button class="player-btn">빠</button>
+            </div>
+            <label for="batting">배팅금(2000~3000원)</label>
+            <input type="text" name="batting">
+                <button class="batting-btn">등록</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+
+
+
+    //클래스의 이름으로 사용하고 가위바위보, 묵찌빠에서 사용할 패를 담은 문자열 배열
+    let rcp = ["rock", "scissors", "paper"];
+    //묵찌빠 버튼을 담는 객체
+    let rcpbtn = document.querySelectorAll('.player-btn');
+    //플레이어의 선택결과를 보여주는 객체
+    let playerSelect = document.querySelector('.player-select');
+    //컴퓨터의 랜덤값을 보여주는 객체
+    let computerSelect = document.querySelector('.computer-select');
+    //난이도 선택을 담는 객체
+    let levelBtn = document.querySelectorAll('.level-btn');
+    //난이도 별 소지금을 담는 객체
+    let _easy = document.querySelector('.easy');
+    let _hard = document.querySelector('.hard');
+    let _veryhard = document.querySelector('.veryhard');
+
+    let _mymoney = document.querySelector('.mymoney');
+    let _commoney = document.querySelector('.commoney');
+
+    let battingBtn = document.querySelector('.batting-btn');
+
+    let maintext = document.querySelector('.result');
+    let subtext = document.querySelector('.subResult');
+
+    let comSelect;      //컴퓨터 가위바위보
+
+    let money = 0;      //소지금
+    let batting;    //배팅금
+
+    let a; //가위바위보 선공권 2일 경우 컴퓨터 선공 / 1일 경우 플레이어 선공
+    let b; //묵찌빠 선공권 2일 경우 컴퓨터 선공 / 1일 경우 플레이어 선공
+
+    let gameSub = document.querySelector('.game-sub');
+
+
+    function creatBoard({_money}){
+        this.money = _money;
+    }
+
+    let playerinfo = new creatBoard({_money : money});
+    let cominfo = new creatBoard({_money : money});
+
+    console.log(playerinfo);
+    console.log(cominfo);
+    console.log(money);
+
+
+
+    //배팅금 설정
+    _easy.onclick = function(){
+            console.log("easy 소지금 등록");
+            playerinfo.money = 100000;
+            cominfo.money = 100000;
+            console.log(playerinfo);
+            _mymoney.innerHTML = `${playerinfo.money}원`
+            _commoney.innerHTML = `${cominfo.money}원`
+            document.querySelector('.ground1').style.display = "flex";
+            document.querySelector('.ground2').style.display = "none";
+        }
+    _hard.onclick = function(){
+            console.log("hard 소지금 등록");
+            playerinfo.money = 50000;
+            cominfo.money = 50000;
+            _mymoney.innerHTML = `${playerinfo.money}원`
+            _commoney.innerHTML = `${cominfo.money}원`
+            document.querySelector('.ground1').style.display = "flex";
+            document.querySelector('.ground2').style.display = "none";
+        }
+    _veryhard.onclick = function(){
+            console.log("veryhard 소지금 등록");
+            playerinfo.money = 10000;
+            cominfo.money = 10000;
+            _mymoney.innerHTML = `${playerinfo.money}원`
+            _commoney.innerHTML = `${cominfo.money}원`
+            document.querySelector('.ground1').style.display = "flex";
+            document.querySelector('.ground2').style.display = "none";
+        }
+        //배팅금 등록
+    battingBtn.onclick = function(){
+
+        let batinput = document.querySelector('input');
+        if(batinput.value < 2000){
+            alert("배팅금 적음! 2000~3000원 사이의 값을 입력하세요!");
+        }
+        else if(batinput.value > 3000){
+            alert("배팅금 많음! 2000~3000원 사이의 값을 입력하세요!");
+        }
+        else{
+            batting = batinput.value;
+            console.log(batting);
+        }
+    }
+
+
+    //batting = parseInt(prompt(`${bat_subtext}\n 배팅금을 입력하세요. (최소금액: ${MinBatting}원  |  소지금: ${money}원)`));
+
+    //묵찌빠 버튼 선택 시 플레이어 선택화면에 노출 될 이미지
+    function Pinit(){
+        rcp.forEach(function(item,index){
+            rcpbtn[index].addEventListener('click',function(){
+                playerSelect.className = "player-select "+item;
+                gameStart();
+                
+            })
+        })
+    }
+    Pinit();
+
+    //컴퓨터의 랜덤 묵찌빠 값을 나타날 함수
+    /*
+    function Cinit(){
+        console.log("가위바위보 시작");
+        comSelect = rcp[Math.floor(Math.random() * rcp.length)];
+        computerSelect.className = 'computer-select '+comSelect;
+        let {value,text} = gameStart(item);
+                //결과
+                document.querySelector('.result').innerHTML = value;
+                //내용
+                document.querySelector('.subResult').innerHTML = text;
+    }
+*/
+    function gameStart(player){
+        console.log("가위바위보 시작");
+        comSelect = rcp[Math.floor(Math.random() * rcp.length)];
+        computerSelect.className = 'computer-select '+comSelect;
+        gameSub.innerHTML = "가위바위보를 진행하세요!";
+        while(playerinfo.money > 0){   
+            console.log("가위바위보 정말시작");
+            if(player == comSelect){     //가위바위보 시 비김
+                maintext.innerHTML = "가위바위보 비김!";
+                subtext.innerHTML = "다시 가위바위보 하세요!";
+                continue;
+            }
+            else if(player == "rock" && comSelect == "scissors" || 
+                    player == "paper" && comSelect == "rock" || 
+                    player == "scissors" && comSelect == "paper"){
+                maintext.innerHTML = "가위바위보 승리!";
+                subtext.innerHTML = "플레이어 선공!";
+                a = 3;
+                rcpPlay();
+            }
+            else{
+                maintext.innerHTML = "가위바위보 패배!";
+                subtext.innerHTML = "컴퓨터 선공!";
+                a = 4;
+                rcpPlay();
+            }
+            break;
+        }
+    }
+
+    function rcpPlay(player){
+        gameSub.innerHTML = "묵찌빠를 진행하세요!";
+        while(playerinfo.money > 0){
+            if(a == 3){     //플레이어 선공권
+                console.log("묵찌빠 진행 플선");
+                if(player === comSelect){
+                    subtext.innerHTML = `묵찌빠 승리! 배팅금 ${batting}원의 2배를 흭득합니다!`;
+                    addbatting();
+                }
+                else if(player == "rock" && comSelect == "scissors" || 
+                        player == "paper" && comSelect == "rock" || 
+                        player == "scissors" && comSelect == "paper"){
+                    maintext.innerHTML = "묵찌빠 게임 중 승리!";
+                    subtext.innerHTML = "플레이어 선공!";
+                    continue;
+                }
+                else{
+                    maintext.innerHTML = "묵찌빠 게임 중 패배!";
+                    subtext.innerHTML = "컴퓨터 선공!";
+                    a = 4;
+                    continue;
+                }
+            }
+            else if(a == 4) {         //컴퓨터 선공권
+                console.log("묵찌빠 진행 컴선");
+                if(player === comSelect){
+                    subtext.innerHTML = `묵찌빠 패배! 배팅금 ${batting}원의 2배를 잃었습니다!`;
+                    addbatting();
+                }
+                else if(player == "rock" && comSelect == "scissors" || 
+                        player == "paper" && comSelect == "rock" || 
+                        player == "scissors" && comSelect == "paper"){
+                    maintext.innerHTML = "묵찌빠 게임 중 승리!";
+                    subtext.innerHTML = "플레이어 선공!";
+                    a = 3;
+                    continue;
+                }
+                else{
+                    maintext.innerHTML = "묵찌빠 게임 중 패배!";
+                    subtext.innerHTML = "컴퓨터 선공!";
+                    a = 4;
+                    continue;
+                }
+            }
+            break;
+        }
+    }
+    
+    
+    function addbatting(){
+        if(a == 3){
+            playerinfo.money = playerinfo.money + (batting * 2); 
+            cominfo.money = cominfo.money - (batting * 2); 
+        }
+        else if(a == 4){
+            playerinfo.money = playerinfo.money - (batting * 2); 
+            cominfo.money = cominfo.money + (batting * 2); 
+        }
+
+    }
+</script>
+</html>

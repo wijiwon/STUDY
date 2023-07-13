@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>관리자 페이지</h1>
+    <% data.forEach((el) => { %>
+        <% if(el.user_level == 0){ %>
+            <div>
+                <span><%= el.id %></span>
+                <span><%= el.user_id %></span>
+                <span><%= el.user_name %></span>
+                <span><%= el.user_level %></span>
+                <a href="/userUpdate/<%= el.id %>">승인</a>
+                <a href="/userDelete/<%= el.id %>">거절</a>
+            </div>
+            <br><br>
+        <% } %>
+    <% }); %>
+
+<br><br><br><br><br><br><br>
+    <% data.forEach((el) => { %>
+        <% if(el.user_level != 0){ %>
+            <div>
+                <span><%= el.id %></span>
+                <span><%= el.user_id %></span>
+                <span><%= el.user_name %></span>
+                <span><%= el.user_level %></span>
+                <a href="/userDelete/<%= el.id %>">삭제</a>
+            </div>
+            <br><br>
+        <% } %>
+    <% }); %>
+</body>
+</html>

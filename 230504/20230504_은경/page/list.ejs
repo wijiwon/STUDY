@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>리스트 페이지</h2>
+    <a href="/insert">추가 페이지로 이동</a>
+    <table>
+        <tr>
+            <th>삭제</th>
+            <th>수정</th>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>시리즈</th>
+        </tr>
+        <% if(data){ %>
+            <% data.forEach((el,index) => { %>
+                <tr>
+                    <td> <a href="/delete/<%= el.id %>">삭제</a></td>
+                    <td> <a href="/edit/<%= el.id %>">수정</a></td>
+                    <td><%= el.id %></td>
+                    <td><%= el.name %></td>
+                    <td><%= el.number %></td>
+                    <td><%= el.series %></td>
+                </tr>
+            <% }); %>
+
+        <% }else{ %>
+
+        <% } %>
+    </table>
+</body>
+<!-- 데이터 베이스로 요청해서 ㅇㅁㅅㅁ 객체로 전달 해주면 -->
+<!-- 우리가 데이터 베이스에 등록해 놓은 지금은 값이 
+    	1	내이름	010-0000-0000	123
+    	2	내이름2	010-5555-5555	456
+        이렇게 데이터 베이스에 값이 있다고 가정할 떄
+        [{id : 1, name : 내이름, number : 010-0000-0000, series : 123},
+        {id : 2, name : 내이름2, number : 010-5555-5555, series : 456},]     
+        이렇게 들어있는 것
+
+-->
+<!-- <script>
+    // data = [];
+    // data.forEach((el,index) => {
+    //     // data의 내용이 순서대로 el에 전달 받겠지
+    // });
+</script> -->
+</html>

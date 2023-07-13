@@ -1,0 +1,81 @@
+.tab-menu > input {
+    display: none;
+}
+
+/* '>': 한 뎁스 밑에 속한
+    '+': 인접한 형제요소 선택자
+        tab-menu 클래스를 가지고 있는 태그의
+        자식 중 input 태그 바로 아래 붙은 태그*/
+
+.tab-menu > input + label {
+    display: inline-block;
+    padding: 30px;
+    background-color: gray;
+    color: white;
+    font-size: 14px;
+
+    /*마우스를 올렸을 때 보여줄 커서를 설정할 수 있다.*/
+    cursor: pointer;
+}
+
+/* checked 속성이 있는 input 태그*/
+/*tab-menu 클래스를 가지고 있는 태그의 자식인 inpot태그가
+    checked된 속성이 있으면 인접 형제인 label의 스타일을 적용할 수 있다.*/
+.tab-menu > input:checked + label {
+    background: #157;
+    color: antiquewhite;
+}
+
+.box{
+    width: 500px;
+    height: 600px;
+    background-color: #291;
+    margin: 0 auto;
+    display: none;
+}
+/*input 태그 중 class가 tab01이고 checked 속성이 
+있고 형제요소 중 밑에 있는 태그 중에 item01클래스를
+가지고 있는 태그*/
+input[class="tab01"]:checked ~ .item1{
+    color: white;
+    display: block;
+}
+
+input[class="tab02"]:checked ~ .item2{
+    color: white;
+    display: block;
+}
+
+input[class="tab03"]:checked ~ .item3{
+    color: white;
+    display: block;
+}
+
+
+
+
+.text-box::before{
+
+    position: absolute;
+
+    top: 7px;
+    left: 184px;
+
+    background-size: 12px;
+
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    display: block;
+    content: "";
+    background-image: url("https://img.megabox.co.kr/static/pc/images/common/btn/btn-search-input.png");
+}
+
+.text-box{
+    position: relative;
+    
+}
+
+.text-box input{
+    padding-right: 24px;
+}

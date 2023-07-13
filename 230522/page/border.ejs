@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>작성자 : <%= data.name %></h3> <br> <br>
+    <ul>
+        <% data.Posts.forEach((post) => { %>
+        <li>
+            <p><%= post.msg %></p>
+            <form action="/border/view_update/<%= post.id %>" method="post">
+                <input type="text" name="msg" placeholder="수정할 내용">
+                <button>수정</button>
+            </form>
+            <a href="/border/del/<%= post.id %>">삭제</a>
+        </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

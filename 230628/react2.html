@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- React, ReactDom 라이브러리 -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <!-- babel을 가져와서 JSX 문법을 사용한다. -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- Babel은 자바스크립트 코드를 변환해주는 착한 도구이다. 
+            자바스크립트를 컴파일 해준다.
+            자바스크립트 문법은 꾸준히 진화를 했는데
+            자바스크립트 문법이 진화하면, ES6 -> ES5 변환
+        
+            babel을 통해서 문법을 쉽게 고칠 수 있다.
+            babel은 JSX구문을 브라우저에서 읽을 수 있는 자바스크립트로도 변환해준다. -->
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    class Clock extends React.Component{
+        constructor(props){
+            super(props);
+            this.state = {
+                Time : new Date().toLocaleTimeString()
+            }
+        }
+
+        //---------------------------------------------------------------------------
+        // update(){
+        //     setState({})
+        //     // 아직 변경 전 상태가 찍힘
+        //     console.log(this.state);
+        // }
+
+        // react 생명주기
+        // 생명주기
+        // 화면이 그려지는 시기와 state값이 변했을 때 동작해야하는 작업이 있을경우
+        // 이런 부분을 제어할 수 있게 리엑트에서 만들어준 lifecycle 함수이다.(생명주기)
+        //---------------------------------------------------------------------------
+
+        componentDidMount(){
+            // 여기 내용이 컴포넌트가 생성되면 호출된다. 최초에 딱 한 번만
+            // 비동기 작업을 처리하는 메소드이다.
+            setInterval(()=>{
+                this.setState({Time : new Date().toLocaleTimeString()})
+            },1000);
+            console.log("최초에 실행됨")
+        }
+
+        componentDidUpdate(){
+            // 리렌더링을 완료한 후 실행한다.
+            console.log("State 업데이트 됨");
+        }
+
+        render(){
+            return(
+                // 한 번에 두 개의 태그를 내 보낼 수 없으니, 태그 하나에 묶어서 내보내야 한다.
+                // 묶을 때 밖의 태그가 필요없으면 태그에 값을 비우면 된다.
+                <>
+                    <h1>안녀어엉 내 컴퓨터 시간</h1>
+                    <h2>time : {this.state.Time}</h2>
+                </>
+                
+            )
+        }
+    }
+
+    const root = ReactDOM.createRoot(document.querySelector("#root"))
+    root.render(<Clock />);
+</script>
+</html>

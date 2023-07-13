@@ -1,0 +1,29 @@
+.ground{
+    position: relative;
+
+
+}
+
+ul{
+    position: absolute;
+    list-style: none;
+    display: flex;
+}
+
+li{
+    border: 1px solid black;
+
+}
+
+
+.butt{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(111, 172, 237);
+    box-shadow: 1px 1px 1px black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

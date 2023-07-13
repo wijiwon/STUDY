@@ -1,0 +1,249 @@
+<!-- 전체 강의 내용 목차 -->
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+
+<div style="width: 70%; height: auto; background-color: rgba(85, 200, 215, 0.2); border-radius: 30px; left: 50%; transform: translate(-50%); position: relative; padding-top: 10px; padding-bottom: 10px;">
+<h2 style="text-align: center;" data-ke-size="size26"><b>목차</b></h2>
+<h4 data-ke-size="size20"><b> </b> <span style="color: #666666;">
+    
+<a style="color: #666666; margin-left: 30px;" href="#01"> 1. HTML? </a> </span><br /><span style="color: #666666;">
+<a style="color: #666666; margin-left: 30px;" href="#02"> 2. 주석 </a> </span><br /><span style="color: #666666;">
+<a style="color: #666666; margin-left: 30px;" href="#03"> 3. 코드 작성 방법 </a></span> <br/>
+
+<br/>
+</h4>
+</div>
+
+
+<p id="01" data-ke-size="size16">&nbsp;</p>
+
+
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style1" />
+<h2 style="text-align: center;" data-ke-size="size26"><b>HTML?</b><b></b></h2>
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>HTML이란?
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>hyper text markup language</li>
+<li>웹페이지 표시를 위해 개발된 마크업 언어.</li>
+<li><span style="color: #0593d3;">제목, 목록</span> 같은 구문을 <span style="color: #0593d3;">구조적</span>으로 나타낼 수 있다.</li>
+<li>따라서, 구조적 문서를 만들 수 있는 방법</li>
+</ol>
+</li>
+<li>메모장으로도 코드를 작성하여 구현이 가능하나, visual studio code를 사용하면 자동으로 입력되는 태그들이 있기 때문에 작성이 간편하다.
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>비쥬얼 코드에서 새 파일 작성 시, &lsquo;파일이름<span style="color: #0593d3;">.html</span>&rsquo;로 작성되어야 한다.</li>
+</ol>
+</li>
+</ol>
+<h2 style="text-align: center;" data-ke-size="size26">&nbsp;</h2>
+<h2 style="text-align: center;" data-ke-size="size26">&nbsp;</h2>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style1" />
+<p id="02" data-ke-size="size16">&nbsp;</p>
+<h2 style="text-align: center;" data-ke-size="size26"><b>주석</b></h2>
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>주석이란, 개발자가 개발하면서 <span style="color: #0593d3;">메모하는 방법</span>을 일컫는다. 주석으로 처리된 내용은 코드로 읽지 않는다.</li>
+<li>입력방법
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li><span style="color: #409d00;">&lt;!--</span> 주석에 삽입 될 내용 <span style="color: #409d00;">--&gt;</span></li>
+</ol>
+</li>
+<li>단축키
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>주석 설정: <span style="background-color: #c0d1e7;">ctrl + k + c</span></li>
+<li>주석 해제: <span style="background-color: #c0d1e7;">ctrl + k + u</span></li>
+</ol>
+</li>
+</ol>
+<pre id="code_1678666467373" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;!-- 주석처리 될 내용 --&gt;</code></pre>
+<h2 style="text-align: center;" data-ke-size="size26">&nbsp;</h2>
+<h2 style="text-align: center;" data-ke-size="size26">&nbsp;</h2>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style1" />
+<p id="03" data-ke-size="size16">&nbsp;</p>
+<h2 style="text-align: center;" data-ke-size="size26"><b>코드 작성 방법</b></h2>
+<h3 data-ke-size="size23"><b>&lt;!DOCTYPE&gt;</b></h3>
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>현재 작성하는 웹 문서가 어떤 버전의 HTML 기술로 작성되었는지 웹브라우저에 전달하는 역할</li>
+<li>html 문서에서 가장 먼저 선언되어야 한다.
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>태그가 아니다. (끝나는 &lt;/DOCTYPE&gt;가 없다.)</li>
+</ol>
+</li>
+<li>웹페이지에 필요한 <span style="color: #0593d3;">제목, 내용 등</span>을 작성할 수 있다.</li>
+<li>단축키:<span style="background-color: #c0d1e7;"> ! (enter)</span>
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>html의 기본 골조를 자동완성 시켜주는 단축키이다.</li>
+</ol>
+</li>
+</ol>
+<pre id="code_1678666445950" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h3 data-ke-size="size23"><b>Live server</b></h3>
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>visual studio code에서 제공되는 기술 중 하나로, <span style="color: #0593d3;">프로그램에서 작성 중인 코드가 웹페이지에 반영되는 모습을 실시간으로 확인</span>할 수 있다.</li>
+<li>코드 수정 시에는 &lsquo;<span style="color: #0593d3;">저장</span>&rsquo;을 눌러야 웹페이지에 반영이 가능하다.</li>
+<li>단축키:<span style="background-color: #c0d1e7;"> alt + l + o</span></li>
+</ol>
+<p>[##_Image|kage@dqPQlV/btr3eXfF2cv/i3KNkXB4E1CWJhbwoK7y91/img.png|CDM|1.3|{"originWidth":735,"originHeight":377,"style":"alignCenter","filename":"Untitled.png"}_##]</p>
+<h3 data-ke-size="size23"><b>Tag</b></h3>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><span style="color: #0593d3;">html 문서를 구성</span>하고 있는 요소. <span style="color: #0593d3;">태그는 이름과 속성이 존재</span>한다.</li>
+</ul>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>html</b>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li>실제 문서, 정보, 내용이 <span style="color: #0593d3;">시작되고 끝나는 것을 표시</span>하는 태그</li>
+</ul>
+</li>
+<li><b>tatle</b>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li>제목. <span style="color: #0593d3;">페이지(페이지 상단의 탭)의 이름</span>을 작성</li>
+<li>코드화면</li>
+</ul>
+</li>
+</ul>
+<pre id="code_1678666495061" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;안녕하세요&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    반갑습니다
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>[##_Image|kage@KHIg1/btr3eWHPlhC/OYWXkhiQvEXMS56tclakS0/img.png|CDM|1.3|{"originWidth":735,"originHeight":377,"style":"alignCenter","caption":"title 적용화면","filename":"Untitled.png"}_##]</p>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>body</b>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li>실제로 <span style="color: #0593d3;">웹 브라우저 화면에 나타낼 내용</span>이 들어간다.</li>
+</ul>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li style="list-style-type: none;">&nbsp;</li>
+</ul>
+</li>
+</ul>
+<pre id="code_1678666651768" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;안녕하세요&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    반갑습니다
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>[##_Image|kage@TjJGM/btr3eAkGnwr/UNiLmN8IIlZpQLNgKxc45K/img.png|CDM|1.3|{"originWidth":735,"originHeight":377,"style":"alignCenter","caption":"body 적용화면","filename":"Untitled.png"}_##]</p>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>h1 ~ h6</b>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><span style="color: #0593d3;">문자 스타일(볼드, 크기 등) 값을 가지고 있는 태그</span>. 문자들의 제목을 작성할 때 주로 사용하는 태그이다.</li>
+<li>1, 2, 3, 4, 5, 6 순차적으로 글씨 크기가 작아진다. (h1 &gt; h2 &gt; h3 &gt; h4 &gt; h5 &gt; h6)</li>
+</ul>
+</li>
+</ul>
+<pre id="code_1678666716764" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;안녕하세요&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;안녕하세요&lt;/h1&gt;
+    &lt;h2&gt;헬로&lt;/h2&gt;
+    &lt;h3&gt;니하오&lt;/h3&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>[##_Image|kage@q6gwl/btr3gMycIAF/AVmv4SppDKOv1GC4XwHHpK/img.png|CDM|1.3|{"originWidth":796,"originHeight":576,"style":"alignCenter","caption":"h1 ~ h6 적용화면","filename":"Untitled.png"}_##]</p>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>p, br</b>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li>p 태그
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><span style="color: #0593d3;">문단을 작성</span>할 때 사용하는 태그</li>
+<li><span style="color: #0593d3;">본문 내용을 작성</span>할 때 사용된다.</li>
+</ul>
+</li>
+<li>br 태그
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><span style="color: #0593d3;">줄을 내려줄 때 사용</span>하는 태그</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre id="code_1678666751819" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;예시 화면&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;튀르키예 지진 기사&lt;/h1&gt;
+    &lt;p&gt;무너진 건물 잔해 사이, 세상을 떠난 딸의 손을 꼭 잡고 차마 자리를 뜨지 못하던 아버지. &lt;br&gt;
+      튀르키예 대지진이 빚어낸 참상을 전 세계에 보여준 한 장의 사진이다. &lt;br&gt;
+      형언하기 어려운 표정을 짓고 있던 사진 속 아버지, &lt;br&gt;
+      메수트 한제르(49)는 "내 딸은 침대에서 천사처럼 자고 있었다"며 &lt;br&gt;
+      "그 애의 손을 놓을 수 없었다"라고 당시 심경을 전했다.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>[##_Image|kage@yos3G/btr3uFro0CS/UwYK3cCIyAvImV8GVYlcVK/img.png|CDM|1.3|{"originWidth":982,"originHeight":740,"style":"alignCenter","caption":"p태그, br 태그 적용화면","filename":"Untitled.png"}_##]</p>
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li><b>div, span</b>
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>div 태그
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>웹 페이지 작성 시 <span style="color: #0593d3;">영역을 나눠줄 때 사용</span>하는 태그</li>
+<li>div태그는 <span style="color: #0593d3;">블록 속성</span>이 있다.
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>div 태그는<span style="color: #0593d3;"> 한 줄의 영역을 전부 차지</span>한다.
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li>div태그 안에 br태그 사용이 가능하다.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>span 태그
+<ol style="list-style-type: decimal;" data-ke-list-type="decimal">
+<li><span style="color: #0593d3;">inline 속성</span>의 태그이다.</li>
+<li>liline 속성: div 속성과 반대로 한 줄을 차지하지 않고, 그 옆에 배치되어 <span style="color: #0593d3;">필요한 만큼의 공간만을 차지</span>한다.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<pre id="code_1678666801792" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;예시 화면&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;블록체인 9기&lt;/h1&gt;
+    블록체인 9기는 &lt;div&gt;2023년 02월 27일에 개강하였다.&lt;/div&gt;
+    블록체인 9기는 &lt;div&gt;&lt;br&gt; 2023년 02월 27일에 개강하였다.&lt;/div&gt;
+    블록체인 9기는 &lt;span&gt;2023년 02월 27일에 개강하였다.&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>[##_Image|kage@cmcTDW/btr3Bwgy4yB/J5QexOsITJ7VJqUkORGork/img.png|CDM|1.3|{"originWidth":1206,"originHeight":731,"style":"alignCenter","caption":"div태그, span태그 적용화면","filename":"Untitled.png"}_##]</p>

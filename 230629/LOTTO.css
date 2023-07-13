@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#root {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.LottoNum {
+  display: flex;
+}
+
+.Num0,
+.Num1,
+.Num2,
+.Num3,
+.Num4,
+.Num5 {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: 0px 5px 7px 1px gray;
+}
+
+.inner {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.Yel {
+  background-color: yellow;
+}
+.Blue {
+  background-color: blue;
+}
+.Red {
+  background-color: red;
+}
+.Black {
+  background-color: black;
+}
+.Green {
+  background-color: green;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  margin: 30px;
+  border-radius: 2em;
+  background-color: rgb(197, 135, 255);
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(140, 98, 179);
+}
+
+li {
+  margin-top: 80px;
+  list-style: none;
+}

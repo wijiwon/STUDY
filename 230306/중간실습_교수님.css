@@ -1,0 +1,18 @@
+/*
+    폰트 파일을 다운 받고
+    @font-face를 작성한다.
+    @font-face{
+        font-family: 사용할 폰트의 이름을 정해준다.
+        src: url(사용할 폰트 파일의 경로를 적어준다.)
+
+*/
+
+@font-face{
+    font-family: 'flower';
+    src: url(./Gamja_Flower/GamjaFlower-Regular.ttf) format('truetype');
+}
+
+body {
+        font-family: 'flower';
+
+}

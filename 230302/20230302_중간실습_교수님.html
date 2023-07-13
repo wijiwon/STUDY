@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴판</title>
+    <style>
+        /* class로 작성할 때 */
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            width: 250px;
+            height: 500px;
+            flex-wrap: wrap;
+        }
+
+        img{
+            width: 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+
+        #content{
+            width: 800px;
+            height: 1000px;
+            /* calc로 수치 연산을 추가할 수 있다.*/
+            background-color: darkgreen;
+            border: 1px solid;
+            /*border-radius: 모서리 부분을 타원으로 변경해준다.*/
+            border-radius:30px ;
+            padding: 50px;
+        }
+
+        #wrap {
+            display: flex;
+            width: 800px;
+            height: 1000px;
+            background-color: white;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 1.여러개의 메뉴 만들고 메뉴에 필요한 내용 (이미지, 제목, 서브제목)
+            메뉴가 여러 개 이므로 class로 만듬-->
+
+    
+    
+    <div id="content">
+
+        <div id="wrap">
+
+            <div class="item">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMzBfODgg%2FMDAxNjY5Nzk4MjgyODI0.EFssavw-b7AsBGKj0ezMQsICDfjuYU_KKpsVG4zt9VEg.nmY5ocTJeXX0gk7FIHtK9-UsoVZ-lkXDfFqXTzrV6Jgg.JPEG.ilovezzangv2%2FIMG_5792-1.JPG&type=a340" alt="볶음밥 사진">
+                <h1>볶음밥</h1>
+                <h2>0.5</h2>
+            <div class="item">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMzBfODgg%2FMDAxNjY5Nzk4MjgyODI0.EFssavw-b7AsBGKj0ezMQsICDfjuYU_KKpsVG4zt9VEg.nmY5ocTJeXX0gk7FIHtK9-UsoVZ-lkXDfFqXTzrV6Jgg.JPEG.ilovezzangv2%2FIMG_5792-1.JPG&type=a340" alt="볶음밥 사진">
+                <h1>볶음밥</h1>
+                <h2>0.5</h2>
+            <div class="item">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMzBfODgg%2FMDAxNjY5Nzk4MjgyODI0.EFssavw-b7AsBGKj0ezMQsICDfjuYU_KKpsVG4zt9VEg.nmY5ocTJeXX0gk7FIHtK9-UsoVZ-lkXDfFqXTzrV6Jgg.JPEG.ilovezzangv2%2FIMG_5792-1.JPG&type=a340" alt="볶음밥 사진">
+                <h1>볶음밥</h1>
+                <h2>0.5</h2>
+            <div class="item">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMzBfODgg%2FMDAxNjY5Nzk4MjgyODI0.EFssavw-b7AsBGKj0ezMQsICDfjuYU_KKpsVG4zt9VEg.nmY5ocTJeXX0gk7FIHtK9-UsoVZ-lkXDfFqXTzrV6Jgg.JPEG.ilovezzangv2%2FIMG_5792-1.JPG&type=a340" alt="볶음밥 사진">
+                <h1>볶음밥</h1>
+                <h2>0.5</h2>
+            <div class="item">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMzBfODgg%2FMDAxNjY5Nzk4MjgyODI0.EFssavw-b7AsBGKj0ezMQsICDfjuYU_KKpsVG4zt9VEg.nmY5ocTJeXX0gk7FIHtK9-UsoVZ-lkXDfFqXTzrV6Jgg.JPEG.ilovezzangv2%2FIMG_5792-1.JPG&type=a340" alt="볶음밥 사진">
+                <h1>볶음밥</h1>
+                <h2>0.5</h2>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
