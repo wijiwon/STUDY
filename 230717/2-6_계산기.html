@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 600px;
+        color: white;
+        background-color: rgb(72, 72, 72);
+        font-size: 40px;
+      }
+
+      .answer,
+      .row1,
+      .row2,
+      .row3 {
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        /* border: 2px solid rgb(72, 72, 72); */
+        display: flex;
+        box-sizing: border-box;
+      }
+
+      .row2 {
+        height: 300px;
+      }
+
+      .num1 div,
+      .add1 div,
+      .num2 div,
+      .add2 div,
+      .num3 div,
+      .add3 div {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-sizing: border-box;
+        border: 2px solid rgb(72, 72, 72);
+      }
+
+      .add1 div:hover,
+      .add2 div:hover,
+      .add3 div:hover {
+        background-color: rgb(255, 201, 102);
+      }
+
+      .num1 div:hover,
+      .num2 div:hover,
+      .num3 div:hover {
+        background-color: rgb(173, 173, 173);
+      }
+
+      .num1 div {
+        width: 300px;
+        background-color: rgb(84, 84, 84);
+      }
+
+      .num1 div:hover {
+        background-color: rgb(117, 117, 117);
+      }
+
+      .num2 div,
+      .num3 div {
+        width: 100px;
+        background-color: rgb(120, 120, 120);
+      }
+
+      .add1 div,
+      .add2 div,
+      .add3 div {
+        width: 100px;
+        background-color: orange;
+      }
+
+      .num2,
+      .num3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .num3 div:first-child {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="answer"></div>
+      <div class="row1">
+        <div class="num1">
+          <div class="ac">AC</div>
+        </div>
+        <div class="add1">
+          <div class="adds">÷</div>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="num2">
+          <div class="nums">7</div>
+          <div class="nums">8</div>
+          <div class="nums">9</div>
+          <div class="nums">4</div>
+          <div class="nums">5</div>
+          <div class="nums">6</div>
+          <div class="nums">1</div>
+          <div class="nums">2</div>
+          <div class="nums">3</div>
+        </div>
+        <div class="add2">
+          <div class="adds">×</div>
+          <div class="adds">-</div>
+          <div class="adds">+</div>
+        </div>
+      </div>
+      <div class="row3">
+        <div class="num3">
+          <div class="nums">0</div>
+          <div class="nums">.</div>
+        </div>
+        <div class="add3">
+          <div class="res2">=</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const answer = document.querySelector(".answer");
+    const num = document.querySelectorAll(".nums");
+    const add = document.querySelectorAll(".adds");
+    const ac = document.querySelector(".ac");
+    const res2 = document.querySelector(".res2");
+    const string = "";
+    const in1 = "";
+    const in2 = "";
+    answer.innerHTML = `${string}`;
+
+    num.forEach((el) => {
+      el.onclick = (e) => {
+        console.log(e.target.innerHTML);
+        const val = e.target.innerHTML;
+        answer.innerHTML += `${val}`;
+        const c = answer.innerHTML;
+        console.log("필터?", c);
+        const b = c.find("+");
+        console.log("필터?", b);
+      };
+    });
+
+    add.forEach((el) => {
+      el.onclick = (e) => {
+        console.log(e.target.innerHTML);
+        const val = e.target.innerHTML;
+        answer.innerHTML += `${val}`;
+      };
+    });
+
+    ac.onclick = () => {
+      console.log("asd");
+      answer.innerHTML = "";
+    };
+
+    res2.onclick = () => {
+      const res = answer.innerHTML;
+      const a = Number(res) + Number(res);
+      console.log("ddbnf", res);
+      console.log("ddbnf", a);
+      answer.innerHTML = `${a}`;
+    };
+
+    function yaho(value) {
+        
+    }
+  </script>
+</html>

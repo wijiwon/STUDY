@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function base10ToString(n) {
+      console.log("-----", n);
+      const arr = [];
+      // a가 0이 될때까지 반복
+      let a = n;
+      base10ToStringHelper(a);
+      while (a > 1) {
+        console.log("####", a);
+        a = Math.floor(a / 2);
+        base10ToStringHelper(a);
+      } 
+
+      
+      function base10ToStringHelper(n) {
+        console.log("2222222",n);
+        console.log("!!!!!!!",n % 2);
+        arr.unshift(n % 2);
+      }
+      console.log("@@@@@", arr);
+      // let res = arr.join(',',);
+    //   let res = arr.splice(',');
+      let res = arr.toString();
+      console.log("@@@@@", res);
+    //   res = res.splice(',')
+      //  res = res.split(',')
+      console.log("%%%%%%", res);
+      return 
+    }
+
+    console.log(base10ToString(100)); // 1100100
+  </script>
+</html>
