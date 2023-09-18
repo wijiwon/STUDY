@@ -1,0 +1,26 @@
+{
+  // compilerOptions: typescript 컴파일 진행시 어떤 형태로 컴파일할지 속성을 정의 
+  "compilerOptions": {
+    // module: 모듈 시스템을 지정 
+    "module": "CommonJS",
+    // outDir: 내보낼 경로를 지정
+    "outDir": "./dist",
+    // target: 번들링 문법을 지정
+    "target": "ES6",
+    // esModuleInterop: 문법을 자연스럽게 변경. 주로 true로 설정 
+    "esModuleInterop": true,
+    // baseUrl: 모듈의 상대 경로 지정
+    "baseUrl": ".",
+    // paths: 'baseUrl' 경로를 기준으로 상대 위치를 가져오는 매핑 값.
+    "paths": {
+      // baseUrl 경로 부터 별칭 사용
+      "@core/*": ["src/core/*"]
+    }
+  },
+  "ts-node": {
+    // tsconfig-paths/register: 타입스크립트 모듈 경로를 해석하고 관리하는 라이브러리인 
+    // 'tsconfig-paths'의 등록(register)명령을 실행한다.
+    // 따라서, baseUrl과 paths 설정을 기반으로 모듈 경로를 해석하고 실제 파일의 경로로 변환하는데 사용된다.
+    "require": ["tsconfig-paths/register"]
+  }
+}
