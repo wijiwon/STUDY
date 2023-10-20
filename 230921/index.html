@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // RPC 통신을 편하게 사용할 수 있게 도와주는 web3 라이브러리
+    // 이더리움 재단에서 지원한다.
+    // web3 관련 공식문서
+    //// https://web3js.readthedocs.io/en/v1.10.0/
+
+    const web3 = new Web3("http://127.0.0.1:8545");
+    //보낸 주소
+    web3.eth.getBalance("0xF9AC2f03b40d1CF1DC72105DC6Fec3251D71B49A").then(
+      (el) => console.log(el) // 결과 : 99999579990000000000
+    );
+
+    // 받은주소
+    web3.eth
+      .getBalance("0x1c250b0cafA7C7cB62B7612B73780900bD747120")
+      .then((el) => {
+        console.log(el); // 결과 : 100000000010000000000
+
+        const value = web3.utils.fromWei(el);
+        console.log(value);
+      });
+
+    // web3.eth
+    //   .sendTransaction({
+    //     from: "0xF9AC2f03b40d1CF1DC72105DC6Fec3251D71B49A",
+    //     to: "0x1c250b0cafA7C7cB62B7612B73780900bD747120",
+    //     // 10eth => Wei단위로 변환
+    //     value: web3.utils.toWei("10", "ether"),
+    //   })
+    //   .then(console.log);       //결과 : 110
+
+    // CA를 생성. 솔리디티로 작성한 코드를 스마트 컨트랙트 배포
+    web3.eth
+      .sendTransaction({
+        from: "0xF9AC2f03b40d1CF1DC72105DC6Fec3251D71B49A",
+        gas: "3000000",
+        // test_sol_Counter.bin의 바이트 코드 내용 기입
+        data: "60806040523480156100115760006000fd5b505b5b610019565b61016b806100286000396000f3fe60806040523480156100115760006000fd5b506004361061003b5760003560e01c80632096525514610041578063552410771461005f5761003b565b60006000fd5b61004961007b565b60405161005691906100f2565b60405180910390f35b610079600480360381019061007491906100b7565b61008d565b005b6000600060005054905061008a565b90565b8060006000508190909055505b5056610134565b6000813590506100b081610119565b5b92915050565b6000602082840312156100ca5760006000fd5b60006100d8848285016100a1565b9150505b92915050565b6100eb8161010e565b82525b5050565b600060208201905061010760008301846100e2565b5b92915050565b60008190505b919050565b6101228161010e565b811415156101305760006000fd5b5b50565bfea2646970667358221220961b207b6a3382f383ed074388ff523b5fdcfa9cbe5f4cdad0940d9530b41ff464736f6c63430008000033",
+      })
+      .then(console.log);
+      /* 결과
+        blockHash: "0x6fdd924ff9c2afbd401aa8cc14066cd659064a7c5dba466a0c6328174e1d881a"
+        blockNumber: 7
+        contractAddress: "0x47d3DcD6aE930be367b09ED6947649578aDfB8Cb"
+        cumulativeGasUsed: 131573
+        from: "0xf9ac2f03b40d1cf1dc72105dc6fec3251d71b49a"
+        gasUsed: 131573
+        logs: []
+        logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        status: true
+        to: null
+        transactionHash: "0xc5f53f2f9df101f4ef40ad5d8c4a8246dc79af1cd07260465da75bb5673476e9"
+        transactionIndex: 0
+      */
+
+    // contractAddress : "0x47d3DcD6aE930be367b09ED6947649578aDfB8Cb"
+    // CA 매핑되어 잇는 코드가 활성화되고 컨트랙트 코드가 실행된다.
+
+    // call과 send
+
+    // 트랜잭션을 발생시킬 때는 send
+    // 조회를 할 때는 call로 값을 조회
+  </script>
+</html>

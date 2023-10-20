@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <title>Web 3 맛보기 냠냠</title>
+  </head>
+  <body></body>
+  <script>
+    // web3.js
+    // 맛보기. 간단히 html javascript를 사용해서
+
+    // Ganache를 사용할 것.
+    // npm i -g ganache-cli
+    // 실행 명령어는
+    // npx ganache-cli
+    /* 결과
+        Available Accounts
+        ==================
+        (0) 0xA0A7e3f7eD2726ff500cfE409981aB2De64328e6 (100 ETH)
+        (1) 0x1C2AbdE613628eDe5575210399c98724816608EF (100 ETH)
+        (2) 0xD7a1e4a97F9EE8BAd5C9fbbB3938495158C02Ddd (100 ETH)
+        (3) 0xf50CE8305cd526680146C51ee2D809aAFFD183B8 (100 ETH)
+        (4) 0xC3343BA734E693c48D50045f038bf22be3f9C378 (100 ETH)
+        (5) 0x1D928592d24272b932cc48DC193EEB4B35f74cC6 (100 ETH)
+        (6) 0x3862bAf03bcb6DE04064e5D404e180137f948CB2 (100 ETH)
+        (7) 0xA5B191e1224572a4AAAeE44280b2Bba2Fffe8719 (100 ETH)
+        (8) 0xb8C7068C71268986712c36B2C90Fa258EF33FbcC (100 ETH)
+        (9) 0x6ea0c70f7d6F7C968Fee4192cBA0EEF7c697c69e (100 ETH)
+
+        Private Keys
+        ==================
+        (0) 0xbbc7f76cdd99c2f8d740f96bc8f24a7d4a8d1bc8564e04b6a7c96d199d264d52
+        (1) 0x7246f51424328022950d391a29608a66fa0112f7163db03312c00c94399baef0
+        (2) 0x6c9ff1135108757ec83c213453a35515abc66d9c6b905c5e0e4163090c18b082
+        (3) 0xc52482370f6478fe78b9f78bd7df2ac0cb55e29c0b58d8aeb70cced6bbdc8611
+        (4) 0xaaf498156208ba98c22c846fb36dcce65ed8b91f975755939ef952abe12e09ea
+        (5) 0xbc3ef7bc70ee9490306d250ba7875eeaa59b2de5360ffecd19902686a2c134a2
+        (6) 0x29255fd5a23642dd6908a693472bd16464cc75be6c15487afa91a137c5cd8ced
+        (7) 0x2fc74c5c230d0a7cc9e36297adbaeebbc53723933933929f40d809e91e1ada59
+        (8) 0x6cb00fffdeea0f5f0b73139945df6b2ad4213867917209f377bbe65a208007e8
+        (9) 0xeca677d0f1b425be37862a6b1f6e3a8baf83ce403ade616aaa337092b466ca33
+
+        HD Wallet
+        ==================
+        Mnemonic:      undo salmon expect awake spirit reject rain harbor guide shed decline move
+        Base HD Path:  m/44'/60'/0'/0/{account_index}
+
+        Gas Price
+        ==================
+        20000000000
+
+        Gas Limit
+        ==================
+        6721975
+
+        Call Gas Limit
+        ==================
+        9007199254740991
+
+        Listening on 127.0.0.1:8545
+    */
+
+    // npx ganache-cli -h 0.0.0.0
+
+    // web3로 어떤 네트워크로 요청할건지 지정을 해주자
+    const web3 = new Web3("http://127.0.0.1:8545");
+
+    web3.eth.getAccounts().then(console.log);
+    /* 결과
+        (10) ['0xA0A7e3f7eD2726ff500cfE409981aB2De64328e6', 
+        '0x1C2AbdE613628eDe5575210399c98724816608EF', 
+        '0xD7a1e4a97F9EE8BAd5C9fbbB3938495158C02Ddd', 
+        '0xf50CE8305cd526680146C51ee2D809aAFFD183B8', 
+        '0xC3343BA734E693c48D50045f038bf22be3f9C378', 
+        '0x1D928592d24272b932cc48DC193EEB4B35f74cC6', 
+        '0x3862bAf03bcb6DE04064e5D404e180137f948CB2', 
+        '0xA5B191e1224572a4AAAeE44280b2Bba2Fffe8719', 
+        '0xb8C7068C71268986712c36B2C90Fa258EF33FbcC', 
+        '0x6ea0c70f7d6F7C968Fee4192cBA0EEF7c697c69e']
+    */
+
+    web3.eth
+      .getBalance("0xA0A7e3f7eD2726ff500cfE409981aB2De64328e6")
+      .then((data) => {
+        console.log(data);
+        /* 결과
+            100000000000000000000 */
+        // wei라는 단위로 뜨는데
+        // 10 ** 18으로 측정이 됩니다.
+        // 이 단위가 있는 이유는 가스비 연산에 사용하기 위해서
+
+        // 단위 변환
+        const value = web3.utils.fromWei(data);
+        console.log(value);
+        /* 결과
+            100 */
+      });
+  </script>
+</html>

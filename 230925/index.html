@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="Accounts"></ul>
+
+    <div>
+      <label for="">use Account</label>
+      <input type="text" id="useAccount" /> <br />
+      <br />
+      <label for="">use Contract</label>
+      <textarea name="" id="contract" cols="30" rows="10"></textarea> <br />
+      <br />
+      <button id="sendTransactionBtn">컨트랙트 배포</button>
+    </div>
+
+    <div>카운트 앱</div>
+    <div id="counterValue"></div>
+    <button id="callBtn">조회</button>
+    <button id="sendBtn">증가</button>
+    <button id="Btn">감소</button>
+  </body>
+  <script>
+    // 이더리움 네트워크 연결. 현재는 로컬 가나슈 테스트 네트워크에 연결
+    // ganache == http://127.0.0.1:8545
+    const web3 = new Web3("http://127.0.0.1:8545");
+
+    // getAccount == 네트워크의 계정들 조회
+    web3.eth.getAccounts().then((data) => {
+      let items = "";
+      data.forEach(async (i) => {
+        // getBalance : 계정의 잔액 조회. Wei단위
+        const balance = await web3.eth.getBalance(i);
+
+        // ETH단위로 단위변경.
+        // fromWei : wei 단위를 ether 단위로 변경
+        const eth_balance = await web3.utils.fromWei(balance);
+        items += `<li>${i} : ${eth_balance}ETH</li>`;
+        Accounts.innerHTML = items;
+      });
+    });
+
+    // 컨트랙트 배포
+    // 코드 배포
+    // npx solc --bin --abi 파일의 경로
+    // npx solc --bin --abi Counter.sol
+
+    // 컨트랙트를 배포할 때 수수료를 지불할 컨트랙트 배포자 계정
+    // bin 컴파일된 컨트랙트 코드 내용
+    // 트랜잭션 생성
+    sendTransactionBtn.onclick = () => {
+      web3.eth
+        .sendTransaction({
+          // 컨트랙트 배포자 계정
+          from: useAccount.value,
+          // 거래 gas 제한량. 해당 값보다 더 많은 가스를 소비해야 한다면 트랜잭션은 실패한다.
+          gas: "3000000",
+          // 컴파일된 컨트랙트 바이트 코드
+          data: contract.value,
+        })
+        .then(console.log);
+      // 컨트랙트 배포 후
+      // 트랜잭션 처리가 되면 응답으로 컨트랙트 주소를 주는데 CA
+      // 컨트랙트 참조에 사용하는 주소 CA
+      // 결과 : 0x56b7639290C4421fBDbc53c063DD94058e25a12f
+    };
+
+    // 배포한 컨트랙트 실행
+    // abi를 사용해서 컨트랙트 코드를 정의하고 실행
+    // interface
+    // 코드를 활성화 시켜서 사용할 때 정의한 구조대로 사용하기 위해서
+    const abi = [
+      // 생성자 함수를 의미. 스마트 컨트랙트를 배포할 때 한 번만 실행된다.
+      //// inputs : 매개변수. 전달할 매개변수가 없으므로 빈 배열
+      //// stateMutability === nonpayable : 이더리움을 받지 않는 상태 전환 함수
+      //// stateMutability === payable : 이더를 전달 받을 수 있는 상태 전환 함수
+      //// type == constructor : 생성자 함수의 타입
+      { inputs: [], stateMutability: "nonpayable", type: "constructor" },
+
+      // getValue 함수
+      {
+        //// inputs : 매개변수를 받지 않으므로 빈 문자열
+        inputs: [],
+        //// name : 함수의 이름. 지금은 getValue
+        name: "getValue",
+        //// outputs : 함수의 출력 내용. 반환하는 값
+        ////// internalType : 상태 변수의 함수 값에 대한 타입. uint256로 반환하는 값은 부호없는 256비트 정수형이다.
+        ////// name : 사용하는 매개변수의 이름
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        //// stateMutability == view : 상태 변경을 하지 않고 view 속성. 조회만 한다.
+        stateMutability: "view",
+        //// type == function 함수 타입
+        type: "function",
+      },
+      // setValue 함수
+      {
+        ////// internalType : 함수의 값에 대한 타입
+        ////// name : 사용하는 매개변수 이름. _value
+        inputs: [{ internalType: "uint256", name: "_value", type: "uint256" }],
+        //// name : 함수의 이름. setValue
+        name: "setValue",
+        //// outputs : 함수의 출력. 없으니까 빈배열
+        outputs: [],
+        //// stateMutability === nonpayable : 이더리움을 받지 않는 상태 전환 함수
+        stateMutability: "nonpayable",
+        //// type == function 함수 타입
+        type: "function",
+      },
+    ];
+
+    // 카운트의 값을 조회하는 함수
+    const getValue = async () => {
+      // encodeFunctionCall
+      // 첫 번째 매개변수 : abi의 내용. 실행시킬 함수의 interface
+      // 두 번째 매개변수 : 함수에 전달할 매개변수 값
+
+      // encodeFunctionCall : 16진수 문자열을 반환
+      // 컨트랙트 함수의 내용과 우리가 전달할 매개변수를 전달해서 해시코드로 변환
+      // EVM애서 실행을 시킨다.
+      const getCodeHash = await web3.eth.abi.encodeFunctionCall(abi[1], []);
+      console.log("~~~",getCodeHash);
+
+      // call : 읽기 전용. 원격 프로시저 호출. 값을 조회한다.
+      const data = await web3.eth.call({
+        // CA 넣기
+        to: "0x56b7639290C4421fBDbc53c063DD94058e25a12f",
+        data: getCodeHash,
+      });
+      console.log(data);
+      // data에는 16진수로 변환된 값이 넘어오는데 10진수로 바꿔서 사용해보자
+      const result = await web3.utils.toBN(data).toString(10);
+      console.log(result);
+      counterValue.innerHTML = result;
+      return parseInt(result);
+    };
+    // 상태 변수를 조회했고
+    getValue();
+
+    callBtn.onclick = getValue;
+
+    // setValue 상태변수 변경
+    const setValue = async () => {
+      // 현재 상태 값을 가져온다.
+      const _getValue = await getValue();
+      const setCodeHash = await web3.eth.abi.encodeFunctionCall(abi[2], [
+        _getValue + 1,
+      ]);
+      console.log(setCodeHash);
+      // 0x552410770000000000000000000000000000000000000000000000000000000000000002
+      //// '000000000000000000000000000000000000000000000000000000000000000' 사이의 0 값은 의미 없는 값이다. 구분을 짓기 위해 사용한다.
+      
+      // 사용자가 계정을 입력하지 않았으면 경고 메세지를 띄워준다.
+      if (!useAccount.value) return alert("Account 입력하세요");
+      const tx = {
+        from: useAccount.value, // 트랜잭션을 발생시키는 계정
+        to: "0x56b7639290C4421fBDbc53c063DD94058e25a12f", // CA 계정주소
+        data: setCodeHash,
+        gas: 500000,
+        gasPrice: 200000000,
+      };
+      const data = await web3.eth.sendTransaction(tx);
+      console.log(data);
+      getValue();
+    };
+
+    const setValue2 = async () => {
+      const _getValue = await getValue();
+      const setCodeHash = await web3.eth.abi.encodeFunctionCall(abi[2], [
+        _getValue - 1,
+      ]);
+      console.log(setCodeHash);
+      // 0x552410770000000000000000000000000000000000000000000000000000000000000002
+      //// '000000000000000000000000000000000000000000000000000000000000000' 사이의 0 값은 의미 없는 값이다. 구분을 짓기 위해 사용한다.
+      if (!useAccount.value) return alert("Account 입력하세요");
+      const tx = {
+        from: useAccount.value, // 트랜잭션을 발생시키는 계정
+        to: "0x56b7639290C4421fBDbc53c063DD94058e25a12f", // CA 계정주소
+        data: setCodeHash,
+        gas: 500000,
+        gasPrice: 200000000,
+      };
+      const data = await web3.eth.sendTransaction(tx);
+      console.log(data);
+      getValue();
+    };
+
+    sendBtn.onclick = setValue;
+    Btn.onclick = setValue2;
+
+    /*
+Available Accounts
+==================
+(0) 0xA072858cF087BD712e48c0e4A29FA81821620653 (100 ETH)
+(1) 0xE080C9cE719081427Ea44020b9dc5dF4Df96021A (100 ETH)
+(2) 0x05Dd44EFd883C45340E269bD17E702699A604491 (100 ETH)
+(3) 0x3a590aF3Bd2FfB7f783369684E06CE633127f34C (100 ETH)
+(4) 0x61044e3505B983CFd3962a025C60ed87984dF415 (100 ETH)
+(5) 0x57c53386A1d315086BeAcA21B7b8B7E6c7379Ce4 (100 ETH)
+(6) 0xB0F4CF33A21d027E90f7d78B3164E106De71Aa28 (100 ETH)
+(7) 0x5b6dfC78d3875Ab53280DDAC01B9A192188e4912 (100 ETH)
+(8) 0x283Af71Bc397352c51B1c70FA178A0a41F40a2Ef (100 ETH)
+(9) 0x26B2c15f66F42228e65F8FF377c586D9A41598Be (100 ETH)
+
+Private Keys
+==================
+(0) 0x140d6e965af6863c7d01a54e5635f176720e65d6abbe105f0d7083f41370ed6a
+(1) 0x4f9de134674ba7d082547cb6d7e4835c674b5193935c27dd84525a3b4174a5e7
+(2) 0x8e84306b6371763437f757e8b43e53dfad1810abaf9ce3fb257e4552ed2b32cc
+(3) 0x38870d64cf8188134c6545df118cb3005e9366378427cd42594226ba3b28d2a7
+(4) 0x58c62ed0f842aa230af05b7c72fe6a49708851adc4cec1ea59ba2aa803a7fe87
+(5) 0x538998a9da3aeec27d83bb18d9fbeafbcc78458dce25f9d93471ad7f43a3f0dc
+(6) 0x3cbb423c50257d9281c2b80f905bc5f21707bb29f2b45a8cedc366920def700d
+(7) 0xe7664515dfc43ff8c080dd3cee1e130c58697181c7fb2a08a4b4eadf3eaad532
+(8) 0x07cae6c215f40209538357a77a3100edad686605a3359dcdf0a66e03da746029
+(9) 0x86f9a510999d3589f433825061c9f86075c417c71f9730309f785d2b15c7b2d8
+    */
+  </script>
+</html>
