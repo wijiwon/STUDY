@@ -1,0 +1,51 @@
+ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+
+}
+
+ol:first-child{
+    text-align: center;
+    font-weight: 700;
+    background-color: bisque;
+
+}
+
+.no {
+    width: 80px;
+    height: 30px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.title {
+    width: 370px;
+    border: 1px solid;
+}
+
+.add {
+    width: 110px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.date {
+    width: 110px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.view {
+    width: 80px;
+    border: 1px solid;
+    text-align: center;
+}
+
+img{
+    width: 25px;
+    height: 25px;
+}
