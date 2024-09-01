@@ -1,6 +1,13 @@
-import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
+import {
+  GetServerSidePropsContext,
+  GetStaticPropsContext,
+  InferGetServerSidePropsType,
+  InferGetStaticPropsType,
+} from "next";
 import style from "./[id].module.css";
 import fetchOneBook from "@/lib/fetch-one-book";
+import { useRouter } from "next/router";
+import { notFound } from "next/navigation";
 
 const mockData = {
   id: 1,
@@ -14,18 +21,50 @@ const mockData = {
     "https://shopping-phinf.pstatic.net/main_3888828/38888282618.20230913071643.jpg",
 };
 
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext
-) => {
+// export const getServerSideProps = async (
+//   context: GetServerSidePropsContext
+// ) => {
+//   // [id].tsx라고 파일명을 지정해주었기 때문에 무조건 id 값이 있을 수 밖에 없다. 따라서 params!로 undefined가 아닐것이라도 단언해도 괜찮은 경우다.
+//   const id = context.params!.id;
+//   // id 값이 string이기 때문에 Number()메소드로 형변환을 하여 넘겨준다.
+//   const book = await fetchOneBook(Number(id));
+
+//   return { props: { book } };
+// };
+export const getStaticPaths = () => {
+  return {
+    paths: [
+      { params: { id: "1" } },
+      { params: { id: "2" } },
+      { params: { id: "3" } },
+    ],
+    fallback: true,
+  };
+};
+
+export const getStaticProps = async (context: GetStaticPropsContext) => {
+  // [id].tsx라고 파일명을 지정해주었기 때문에 무조건 id 값이 있을 수 밖에 없다. 따라서 params!로 undefined가 아닐것이라도 단언해도 괜찮은 경우다.
   const id = context.params!.id;
+  // id 값이 string이기 때문에 Number()메소드로 형변환을 하여 넘겨준다.
   const book = await fetchOneBook(Number(id));
+
+  if (!book) {
+    return {
+      notFound: true,
+    };
+  }
 
   return { props: { book } };
 };
 
+// export default function Page({book}: InferGetServerSidePropsType<typeof getServerSideProps>) {}
 export default function Page({
   book,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const router = useRouter();
+  if (router.isFallback) return "로딩 중입니다.";
+
+  // 서버에서 book의 반환이 실패할 수도 있기 때문에 예외처리를 한다.
   if (!book) return "문제가 발생했습니다. 다시 시도하세요.";
   const { id, title, subTitle, description, author, publisher, coverImgUrl } =
     book;
