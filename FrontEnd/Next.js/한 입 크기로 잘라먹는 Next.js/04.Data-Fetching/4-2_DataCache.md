@@ -32,7 +32,7 @@ const nextConfig = {
 
   ### `no-store`의 흐름
 
-  ![alt text](image-4.png)
+  ![alt text](4-2_noStore_img1.png)
 
   1. 브라우저로부터 접속요청이 들어오게되면 Next 서버는 사전 렌더링을 진행한다.
   2. 사전 렌더링 진행과정에서 fetch 옵션이 `"no-store"`이면 캐싱된 데이터를 사용하지 않기 때문에 데이터 캐시를 무시하여 `SKIP`하게 된다.
@@ -44,7 +44,7 @@ const allRes = await fetch(`${process.env.NEXT_PUBLIC_API_SERVER_URL}/book`, {
 });
 ```
 
-![alt text](image.png)
+![alt text](4-2_noStore_img2.png)
 
 - '~/book/random': (cache skip)으로 데이터 캐싱이 동작하지 않음을 알려주고 자동으로 캐싱되지 않았다고 적혀있다.(기본값이기 때문)
 - '~/book': (cache skip)으로 데이터 캐싱이 동작하지 않음을 알려주고 'no-store'로 설정되었기 때문이라고 이유가 적혀있다.
@@ -60,7 +60,7 @@ const allRes = await fetch(`${process.env.NEXT_PUBLIC_API_SERVER_URL}/book`, {
 
   ### `force-cache`의 흐름
 
-  ![alt text](image-5.png)
+  ![alt text](4-2_forceCache_img1.png)
 
   1. 브라우저로부터 접속요청이 들어오게되면 Next 서버는 사전 렌더링을 진행한다.
   2. 사전 렌더링 진행과정에서 fetch 옵션이 `"force-cache"`이면 데이터 캐시에서 먼저 저장된 데이터를 찾아본다.
@@ -77,11 +77,11 @@ const recoRes = await fetch(
 );
 ```
 
-![alt text](image-1.png)
+![alt text](4-2_forceCache_img2.png)
 
 - '~/book/random': (cache hit)으로 데이터 캐싱에 추가적인 동작이 발생하지 않았다는 것을 알 수 있다.
 
-![alt text](image-2.png)
+![alt text](4-2_forceCache_img3.png)
 
 - '.next/cache/fetch-cache/~': 해당 폴더 안에 JSON 형태로 캐시된 데이터가 보관된 것을 확인할 수 있다.
 
@@ -91,10 +91,10 @@ const recoRes = await fetch(
 - 마치 Page Router의 ISR 방식과 유사함
 - `next: {revalidate: 3}`: 페치 요청으로부터 불러온 데이터를 캐싱하고 캐싱한 데이터를 3초 주기로 자동으로 Next 서버가 업데이트 한다.
 
-  ### `force-cache`의 흐름
+  ### `next: {revalidate: 3}`의 흐름
 
-  ![alt text](image-6.png)
-  ![alt text](image-7.png)
+  ![alt text](4-2_revalidate_img1.png)
+  ![alt text](4-2_revalidate_img2.png)
 
   1. force-cache와 동일하게 첫 번째 접속 요청이 들어오면 캐싱된 데이터가 없으니 `MISS`가 발생하고 최초로 백엔드 서버에서 데이터를 불러와 데이터 캐시에 `SET`하고 나서발생하는 요청들에는 저장해두었던 캐시된 데이터를 데이터 캐시로부터 찾아서 가져다 이용하는 방식으로 작동된다.
   2. 설정해둔 시간이 지나고 브라우저에서 접속 요청이 들어오게되면 일단 데이터 캐시의 데이터를 확인하는데 유효시간이 지난 데이터는 상한(`STALE`) 상태로 설정해두고 상한 데이터라도 빠르게 캐시된 데이터로 응답을 해서 페이지를 생성한다.
@@ -107,7 +107,7 @@ const recoRes = await fetch(
 );
 ```
 
-![alt text](image-3.png)
+![alt text](4-2_revalidate_img3.png)
 
 ## `next: {tags: 3}`
 
