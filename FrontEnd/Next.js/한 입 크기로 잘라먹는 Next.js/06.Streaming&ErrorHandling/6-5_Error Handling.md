@@ -109,7 +109,7 @@ export default function Error({ error }: { error: Error }) {
 
 # Error.tsx의 위치에 따른 에러 처리 결과
 
-![alt text](<스크린샷 2024-09-06 오전 12.17.26.png>)
+![alt text](6-5_errorHandling_img.png)
 
 1. 동일한 파일의 경로의 페이지 컴포넌트와 그 하위 경로의 컴포넌트에 적용된다. (노란색)
 2. 상위에 에러 컴포넌트가 있지만 별도의 에러 컴포넌트가 필요할 경우 필요한 컴포넌트와 동일한 경로에 error.tsx 파일 생성 후 Error 컴포넌트 생성하면 해당 에러 컴포넌트가 우션적으로 적용된다.
