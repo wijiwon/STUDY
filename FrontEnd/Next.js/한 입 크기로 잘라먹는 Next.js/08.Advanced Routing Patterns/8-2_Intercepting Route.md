@@ -1,6 +1,6 @@
 # Intercepting Route
 
-![alt text](image.png)
+![alt text](8-2_interceptingRoute_img1.png)
 
 - 사용자가 특정 경로로 접속해서 새로운 페이지를 요청할 때 이 요청을 가로채서 원래 렌더링 되어야 하는 페이지가 아닌 개발자가 원하는 어떠한 페이지를 대신 렌더링하도록 설정하는 라우팅 패턴이다.
 - 사용자가 동일한 경로에 접속하더라도 특정 조건에 만족하면 그땐 원래 페이지가 아닌 다른 페이지가 렌더링되는 것이다.
@@ -8,10 +8,10 @@
 - 예시. 인스타그램 피드
 
   - 마이페이지에서 특정 피드를 누르면 모달로 피드가 뜬다.
-    ![alt text](image-1.png)
+    ![alt text](8-2_interceptingRoute_img2.png)
 
   - 새로고침이나 해당 피드의 경로를 입력하면 피드의 페이지가 렌더링된다.
-    ![alt text](image-2.png)
+    ![alt text](8-2_interceptingRoute_img3.png)
 
 # 인터셉트 라우팅 실습하기(~/book)
 
