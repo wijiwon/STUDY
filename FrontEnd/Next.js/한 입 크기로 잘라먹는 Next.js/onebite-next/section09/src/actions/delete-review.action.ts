@@ -1,6 +1,5 @@
 "use server";
 
-import { spawn } from "child_process";
 import { revalidateTag } from "next/cache";
 
 export async function deleteReviewAction(_: any, formData: FormData) {
